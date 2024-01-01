@@ -1,11 +1,19 @@
 import './index.css';
+import './custom-css/home.css'
+import Home from './Pages/Home';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-4xl font-bold">Hello World!</h1>
-    </>
+    <div className="home-container">
+      <div className="navbar">
+          <Navbar />
+      </div>
+      <div className="home-container">
+          <Home />
+      </div>
+    </div>
   )
 }
 

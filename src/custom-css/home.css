@@ -1,0 +1,308 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-color: hsl(189, 98%, 50%);
+  --secondary-color: rgb(77, 75, 184);
+  --black-color: hsl(0, 0%, 0%);
+  --black-color-light: hsl(0, 0%, 40%);
+  --white-color: hsl(0, 0%, 95%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 64%);
+  --body-color: hsl(0, 0%, 87%);
+  --container-color: hsl(0, 0%, 83%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "DM sans", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*==================== NAVBAR FORMATTING =====================*/
+.navbar{
+  /* background-color: red; */
+  /* height: var(--header-height); */
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.nav-socials{
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  place-items: center;
+  color: var(--title-color);
+  padding: 1rem 1.5rem;
+  color: var(--white-color);
+  font-size: 20px;
+}
+.primary-info{
+  display: flex;
+  column-gap: .5rem;
+}
+.primary-info p i{
+  margin-right: .25rem;
+  transform: rotateY(180deg);
+}
+.platforms{
+  display: flex;
+}
+.platforms i{
+  margin-left: .5rem;
+  border: 2px solid #fff;
+  padding: 5px;
+  z-index: 99;
+  position: relative;
+}
+.platforms i::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  opacity: .7;
+  scale: 0;
+  background-color: var(--secondary-color);
+  transition: all .4s;
+}
+.platforms i:hover::after{
+  scale: 1;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding: .25rem 1.5rem;
+}
+.nav-logo img{
+  width: 300px;
+}
+.links ul{
+  display: flex;
+  column-gap: 1rem
+}
+.links ul li{
+  font-weight: var(--font-semi-bold);
+  position: relative;
+}
+.links ul li a{
+  font-size: 20px;
+  color: var(--title-color);
+  transition: color .4s ease-in-out;
+}
+.links ul li a:hover{
+  color: var(--primary-color);
+}
+.links ul li a::before{
+  content: '';
+  position: absolute;
+  background-color: var(--primary-color);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  transition: all .4s;
+}
+.links ul li:hover a::before{
+  width: 40%;
+}
+.responsive{
+  display: none;
+}
+
+/*======================== HOME CONTAINER FORMATTING ===================*/
+.home-container{
+  width: 100%;
+}
+.showcase{
+  display: flex;
+  padding: 2rem 1.5rem;
+}
+
+.discount{
+  background: lightblue;
+  display: inline-block;
+  padding: 0.25rem .5rem;
+  font-size: 25px;
+}
+.discount p {
+  display: flex;
+}
+.discount p span{
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.main-text {
+  margin: 1rem 0;
+}
+.main-text h1{
+  font-size: 72px;
+  margin-bottom: 1rem;
+}
+.main-text .tagline{
+  font-size: 20px;
+  margin-bottom: 1rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+.main-text .typing{
+  font-size: 25px;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+.main-text .typing span {
+  color: var(--secondary-color);
+}
+.home-info .buttons{
+  display: flex;
+  column-gap: 2rem;
+}
+.home-info .buttons a{
+  /* background-color: var(--primary-color); */
+  color: var(--primary-color);
+  font-weight: var(--font-semi-bold);
+  padding: .5rem 1rem;
+  font-size: 15px;
+  position: relative;
+  border: 2px solid var(--primary-color);
+  /* border-radius: 10px; */
+  letter-spacing: .8px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all .4s;
+  z-index: 99;
+}
+.home-info .buttons a:hover{
+  color: var(--black-color);
+}
+.home-info .buttons a::after{
+  content: '';
+  position: absolute;
+  background-color: var(--primary-color);
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all .4s;
+  opacity: .5;
+  z-index: -99;
+}
+.home-info .buttons a:hover::after{
+  width: 100%;
+}
+
+.showcase .home-image img{
+  width: 100%;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+}
+.card{
+  /* border: 2px solid #000; */
+  padding: 1rem;
+  transition: background-color .4s;
+}
+.card:hover{
+  background-color: #fff;
+}
+.card-title{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  row-gap: .125rem;
+  margin-bottom: 1rem;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+.card-title i {
+  font-size: 25px;
+  position: relative;
+}
+.card-title::before {
+  content: '';
+  background-color: var(--primary-color);
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+.card p {
+  margin-top: 4rem;
+}
