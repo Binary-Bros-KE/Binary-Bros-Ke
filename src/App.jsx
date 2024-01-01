@@ -1,5 +1,6 @@
 import './index.css';
 import './custom-css/home.css'
+import './custom-css/index-responsive.css'
 import Home from './Pages/Home';
 import Navbar from './components/Navbar';
 
