@@ -5,10 +5,14 @@ import card from '../Assets/services/triangle.png';
 import mobile from '../Assets/mobile&wordpress/banner-mob-app.png';
 import wordpress from '../Assets/mobile&wordpress/wordpress.png';
 import { TypeAnimation } from 'react-type-animation';
+import CountUp from 'react-countup';
+import ScrollTrigger from 'react-scroll-trigger';
+import { useState } from 'react';
 
 
 const Home = () => {
 
+  const [counterOn, setCounterOn] = useState(false)
 
 
   return (
@@ -222,6 +226,79 @@ const Home = () => {
         </div>
 
       </section>
+
+      <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+  <section className="counter" id='counter'>
+    <div className="counter-header">
+      <h3>Our Impact</h3>
+      <h1>Key Metrics</h1>
+    </div>
+    <div className="counter-cards">
+
+      <div className="counter-card">
+        <div className="card-icon">
+          <div className="card-icon-holder">
+            <i className="fa fa-code"></i>
+          </div>
+        </div>
+        <div className="card-info">
+          <h1>Lines of Code Written</h1>
+          <div className="counter-number">
+            {counterOn && <CountUp start={0} end={120000} duration={2} delay={0} />} +
+          </div>
+        </div>
+      </div>
+
+      <div className="counter-card">
+        <div className="card-icon">
+          <div className="card-icon-holder">
+            <i className="fa fa-users"></i>
+          </div>
+        </div>
+        <div className="card-info">
+          <h1>Satisfied Clients</h1>
+          <div className="counter-number">
+            {counterOn && <CountUp start={0} end={150} duration={2} delay={0} />} +
+          </div>
+        </div>
+      </div>
+
+      <div className="counter-card">
+        <div className="card-icon">
+          <div className="card-icon-holder">
+            <i className="fa fa-globe"></i>
+          </div>
+        </div>
+        <div className="card-info">
+          <h1>Global Presence</h1>
+          <div className="counter-number">
+            {counterOn && <CountUp start={0} end={25} duration={2} delay={0} />} +
+          </div>
+        </div>
+      </div>
+
+      <div className="counter-card">
+        <div className="card-icon">
+          <div className="card-icon-holder">
+            <i className="fa fa-cogs"></i>
+          </div>
+        </div>
+        <div className="card-info">
+          <h1>Technologies Mastered</h1>
+          <div className="counter-number">
+            {counterOn && <CountUp start={0} end={10} duration={2} delay={0} />} +
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</ScrollTrigger>
+
+
+<section className="testimonials">
+  
+</section>
 
 
     </div>
