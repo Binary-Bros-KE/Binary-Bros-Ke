@@ -1,5 +1,6 @@
 import showcase from '../Assets/home/web-development.png';
 import discount from '../Assets/home/discount.png';
+import about from '../Assets/about/banner.png';
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -10,7 +11,7 @@ const Home = () => {
   return (
     <div className="home-container">
 
-      <div className="showcase">
+    <div className="showcase">
 
       <div className="home-info">
           <div className="discount">
@@ -57,7 +58,33 @@ const Home = () => {
           <div className="home-image">
             <img src={showcase} alt="web-development" />
           </div>
+    </div>
+
+    <div className="about-us">
+      <div className="about-image">
+        <img src={about} alt="about-image" />
       </div>
+      <div className="about-boxes">
+        <div className="box"><i className="fas fa-paint-brush"></i>Design</div>
+        <div className="box"><i className="fa fa-code"></i>Development</div>
+        <div className="box"><i className="fas fa-rocket"></i>Deployment</div>
+        <div className="box"><i className="fas fa-chart-line"></i>Optimization</div>
+      </div>
+      <div className="about-info">
+        <h3>About us</h3>
+        <h1>Best Business<br/> Software Solutions</h1>
+        <p> We are seasoned software developers delivering
+           optimal business solutions and SEO expertise.
+            Specializing in propelling brands to new heights,
+             we craft innovative solutions for a robust online presence.
+              Choose us for unparalleled professionalism, driving growth
+               in the dynamic digital landscape.
+        </p>
+        <div className="about-button">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
 
       <div className="cards">
         <div className="card">
@@ -78,6 +105,63 @@ const Home = () => {
         </div>
       </div>
 
+
+      <section className="services">
+        <div className="service-header">
+          <h3>Our Services</h3>
+          <h1>Core Services</h1>
+        </div>
+        <div className="service-cards">
+          <div className="service-card">
+            <div className="service-logo">
+              <i className='fa fa-code'></i>
+            </div>
+            <div className="service-ifo">
+              <h1>Web Design</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Illum nulla quaerat ipsum vero recusandae repellat deleniti
+                  perspiciatis vitae tenetur, omnis corrupti dolorum ea doloribus
+                   maxime aperiam, soluta dicta consequatur eos?</p>
+            </div>
+            <div className="service-buttons">
+              <i className="fa fa-external-link"></i>
+              <p>Read More</p>
+            </div>
+          </div>
+          <div className="service-card">
+            <div className="service-logo">
+              <i className='fa fa-code'></i>
+            </div>
+            <div className="service-ifo">
+              <h1>Web Design</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Illum nulla quaerat ipsum vero recusandae repellat deleniti
+                  perspiciatis vitae tenetur, omnis corrupti dolorum ea doloribus
+                   maxime aperiam, soluta dicta consequatur eos?</p>
+            </div>
+            <div className="service-buttons">
+              <i className="fa fa-external-link"></i>
+              <p>Read More</p>
+            </div>
+          </div>
+          <div className="service-card">
+            <div className="service-logo">
+              <i className='fa fa-code'></i>
+            </div>
+            <div className="service-ifo">
+              <h1>Web Design</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Illum nulla quaerat ipsum vero recusandae repellat deleniti
+                  perspiciatis vitae tenetur, omnis corrupti dolorum ea doloribus
+                   maxime aperiam, soluta dicta consequatur eos?</p>
+            </div>
+            <div className="service-buttons">
+              <i className="fa fa-external-link"></i>
+              <p>Read More</p>
+            </div>
+          </div>
+        </div>
+      </section> 
     </div>
   )
 }

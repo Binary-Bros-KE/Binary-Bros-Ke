@@ -20,7 +20,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "DM sans", sans-serif;
+  --body-font: "IBM Plex Sans", sans-serif;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
@@ -299,6 +299,7 @@ a {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem 1.5rem;
+  margin: 2rem 0;
 }
 .card{
   /* border: 2px solid #000; */
@@ -307,7 +308,7 @@ a {
   border-bottom: 4px solid var(--primary-color);
 }
 .card:hover{
-  background-color: #fff;
+  background-color: lightblue;
 }
 .card-title{
   position: absolute;
@@ -333,4 +334,83 @@ a {
 }
 .card p {
   margin-top: 4rem;
+}
+
+/*=================================== ABOUT FORMATTING ==============================*/
+.about-us {
+  margin: 1rem 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr;
+  padding: 1rem;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-right: 4px solid var(--primary-color);
+}
+.about-us img{
+  height: 500px;
+  border-radius: 10px;
+}
+.about-boxes{
+  margin: 0 1rem;
+  padding: 0.5rem .5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5rem;
+}
+.about-boxes i {
+  font-size: 25px;
+}
+.box{
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  place-items: center;
+  font-size: 15px;
+  color: var(--white-color);
+}
+.about-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1rem;
+  padding: 1rem 2rem 1rem 0;
+}
+.about-info h3{
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
+}
+.about-info h1{
+  font-size: 62px;
+  line-height: 60px;
+}
+.about-info p{
+  font-size: 20px;
+}
+.about-info .about-button a {
+  font-size: 20px;
+  background-color: bisque;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+
+/*============================== Services Formatting ==========================*/
+.services{
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.services .service-header h3{
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
+}
+.services .service-header h1{
+  font-size: 62px;
+  line-height: 60px;
 }
