@@ -25,8 +25,7 @@ const Navbar = () => {
             <i className="fab fa-twitter"></i>
             <i className="fab fa-github"></i>
             <i className="fab fa-instagram"></i>
-       </div>
-
+        </div>
       </div>
 
       <div className="nav-links">
@@ -40,10 +39,11 @@ const Navbar = () => {
         <div className="links">
           <ul>
               <li><a href="/" className='active'>Home</a></li>
-              <li><a href="/">Services</a></li>
-              <li><a href="/">Portfolio</a></li>
-              <li><a href="/">Pricing</a></li>
-              <li><a href="/">Contact</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/portfolio">Portfolio</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/seo">SEO</a></li>
           </ul>
         </div>
       </div>

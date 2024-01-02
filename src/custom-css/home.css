@@ -1133,3 +1133,48 @@ textarea.input {
     padding: 0.45rem 1.2rem;
   }
 }
+
+/*============================== FOOTER FORMATING ===================================*/
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+  background-image: url(../Assets/footer/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.quick-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+.logo-recap{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.logo-recap .footer-socials {
+  display: flex;
+  column-gap: 1rem;
+}
+.logo-recap .footer-socials i {
+  border: 2px solid var(--white-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+.quick-links{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 2rem;
+}
+.quick-links h1{
+  font-size: 20px;
+}
