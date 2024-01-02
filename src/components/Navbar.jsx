@@ -5,6 +5,7 @@ import close from '../Assets/home/close.png';
 import { useState } from 'react';
 // import { Pricing } from '../Pages';
 
+
 const Navbar = () => {
 
   const [toggle, setToggle] = useState(false);
