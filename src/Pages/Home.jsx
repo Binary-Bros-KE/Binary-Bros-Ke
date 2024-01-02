@@ -11,6 +11,7 @@ import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import Slider from 'react-slick';
+import ContactOne from '../components/ContactOne';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"
 import { useState } from 'react';
@@ -459,13 +460,13 @@ const Home = () => {
 </section>
 
 
-<section className="services" id='services'>
-        <div className="service-header">
+<section className="contact" id='contact'>
+        {/* <div className="contact-header">
           <h3>Stay in Touch.!</h3>
           <h1>Contact Us</h1>
-        </div>
-        <div className="service-cards">
-          
+        </div> */}
+        <div className="contact">
+           <ContactOne />
         </div>
       </section> 
 

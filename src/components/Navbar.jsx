@@ -4,6 +4,7 @@ import menu from '../Assets/home/menu.png';
 import close from '../Assets/home/close.png';
 import { useState } from 'react';
 
+
 const Navbar = () => {
 
   const [toggle, setToggle] = useState(false);
