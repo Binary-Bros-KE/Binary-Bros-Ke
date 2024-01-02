@@ -3,6 +3,7 @@ import logoWhite from '../Assets/logo-blue.png';
 import menu from '../Assets/home/menu.png';
 import close from '../Assets/home/close.png';
 import { useState } from 'react';
+// import { Pricing } from '../Pages';
 
 const Navbar = () => {
 
@@ -25,8 +26,8 @@ const Navbar = () => {
             <i className="fab fa-twitter"></i>
             <i className="fab fa-github"></i>
             <i className="fab fa-instagram"></i>
-       </div>
-
+        </div>
+{/* <Pricing /> */}
       </div>
 
       <div className="nav-links">
@@ -42,7 +43,7 @@ const Navbar = () => {
               <li><a href="/" className='active'>Home</a></li>
               <li><a href="/">Services</a></li>
               <li><a href="/">Portfolio</a></li>
-              <li><a href="/">Pricing</a></li>
+              <li><a href="/pricing">Pricing</a></li>
               <li><a href="/">Contact</a></li>
           </ul>
         </div>
