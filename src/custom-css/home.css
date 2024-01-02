@@ -770,6 +770,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
 }
 .form {
   display: flex;
@@ -1138,8 +1139,8 @@ textarea.input {
 
 .footer {
   width: 100%;
-  margin: 0;
-  padding: 2rem;
+  /* margin-top: 6rem; */
+  padding: 6rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   color: var(--white-color);
@@ -1177,4 +1178,83 @@ textarea.input {
 }
 .quick-links h1{
   font-size: 20px;
+}
+.quick-links ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+.quick-links ul li a{
+  font-size: 16px;
+  display: flex;
+  column-gap: 10px;
+}
+.blog{
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+.blog h1{
+  font-size: 20px;
+}
+.blog .blog-element{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 20px;
+}
+.blog .blog-element img{
+  max-width: 150px;
+}
+.blog .blog-element h3{
+  color: var(--white-color);
+  font-weight: 400;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.newsletter h1{
+  font-size: 20px;
+}
+.newsletter .footer-input {
+  padding: 20px 10px;   
+  justify-content: space-between;
+  display: inline-block;
+}
+
+.newsletter .footer-input input{
+  border-bottom: 2px solid var(--secondary-color);
+  height: 3rem;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+}
+.newsletter .footer-input input::placeholder{
+  color: var(--text-color);
+}
+.newsletter .footer-input a {
+  background-color: var(--white-color);
+  padding: 5px 10px;
+  color: var(--black-color);
+  font-size: 20px;
+  font-weight: var(--font-semi-bold);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ScrollToTop{
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 10px;
+  padding: 2px;
+  background-color: var(--black-color);
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.ScrollToTop i {
+  transform: rotate(-90deg);
 }

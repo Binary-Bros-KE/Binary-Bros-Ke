@@ -15,6 +15,7 @@ import ContactOne from "../components/ContactOne";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -271,38 +272,40 @@ const Home = () => {
       </section>
 
       <section className="mobile-wordpress" id="mobile-wordpress">
+
         <div className="mobile">
           <div className="mobile-image">
-            <img src={mobile} alt="" />
+            <img src={mobile} alt="Mobile Application" />
           </div>
           <div className="mobile-info">
-            <h1>Mobile Application</h1>
+            <h1>Let us build your Mobile App.!</h1>
             <div className="quality">
               <h2>
-                <i className="fa fa-check"></i> Cross Platform Apps
+                <i className="fas fa-check"></i> Cross-Platform Expertise
               </h2>
               <p>
-                Unlock the power of cross-platform mobile applications with
-                Binary Bros. Our development expertise ensures your app works
-                seamlessly on various devices, reaching a broader audience.
+                Elevate your reach with Binary Bros' cross-platform mobile
+                applications. We ensure seamless performance across various
+                devices, expanding your audience reach.
               </p>
             </div>
             <div className="quality">
               <h2>
-                <i className="fa fa-check"></i> Robust, Responsive and Modern
+                <i className="fas fa-check"></i> Robust, Responsive, Modern
+                Design
               </h2>
               <p>
-                Experience robust, responsive, and modern mobile solutions that
-                elevate user engagement and satisfaction. Take your business
-                mobile with Binary Bros.
+                Immerse users in robust, responsive, and modern mobile solutions
+                that enhance engagement. Go mobile with Binary Bros and
+                transform your business.
               </p>
             </div>
             <div className="mobile-buttons">
               <a href="#">
-                <i className="fa fa-mobile"></i> Get Service
+                <i className="fas fa-mobile-alt"></i> Get Service
               </a>
               <a href="#">
-                <i className="fa fa-link"></i> Read More
+                <i className="fas fa-external-link-alt"></i> Learn More
               </a>
             </div>
           </div>
@@ -310,40 +313,38 @@ const Home = () => {
 
         <div className="wordpress">
           <div className="wordpress-info">
-            <h1>Wordpress</h1>
+            <h1>We offer WordPress development.</h1>
             <div className="quality">
               <h2>
-                <i className="fa fa-check"></i> Cross Platform Apps
+                <i className="fas fa-check"></i> Powerful Content Management
               </h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-                maxime animi iure aut totam eos laborum officia ut error
-                aspernatur, quis provident iste recusandae a tempora inventore,
-                dignissimos esse tempore!
+                Experience the strength of WordPress with Binary Bros. Harness
+                powerful content management capabilities, providing you with
+                unparalleled control over your digital presence.
               </p>
             </div>
             <div className="quality">
               <h2>
-                <i className="fa fa-check"></i> Robust, Responsive and Modern
+                <i className="fas fa-check"></i> Customization and Flexibility
               </h2>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-                maxime animi iure aut totam eos laborum officia ut error
-                aspernatur, quis provident iste recusandae a tempora inventore,
-                dignissimos esse tempore!
+              Customize and shape your online presence with WordPress. Benefit
+              from its flexibility and adaptability, allowing you to tailor your
+               website to meet your unique business needs.
               </p>
             </div>
             <div className="wordpress-buttons">
               <a href="#">
-                <i className="fa fa-mobile"></i> Get Service
+                <i className="fas fa-bolt"></i> Get Service
               </a>
               <a href="#">
-                <i className="fa fa-external-link"></i> Read More
+                <i className="fas fa-external-link-alt"></i> Discover More
               </a>
             </div>
           </div>
           <div className="wordpress-image">
-            <img src={wordpress} alt="" />
+            <img src={wordpress} alt="WordPress" />
           </div>
         </div>
       </section>
@@ -588,8 +589,8 @@ const Home = () => {
         </div>
       </section>
 
-
       <section className="footer" id="footer">
+        <ScrollToTop />
         <Footer />
       </section>
     </div>
