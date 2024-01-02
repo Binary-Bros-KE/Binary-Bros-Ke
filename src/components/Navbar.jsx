@@ -1,5 +1,4 @@
 import logo from '../Assets/logo-black.png';
-import logoWhite from '../Assets/logo-blue.png';
 import menu from '../Assets/home/menu.png';
 import close from '../Assets/home/close.png';
 import { useState } from 'react';
