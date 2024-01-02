@@ -1,21 +1,29 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import './custom-css/home.css'
-import './custom-css/index-responsive.css'
+import './custom-css/home.css';
+import './custom-css/index-responsive.css';
 import Home from './Pages/Home';
+import Contact from './Pages/Contact';
+import Pricing from './Pages/Pricing';
+import SEO from './Pages/SEO';
+import Services from './Pages/Services';
+import Portfolio from './Pages/Portfolio';
 import Navbar from './components/Navbar';
 
 function App() {
-
   return (
-    <div className="home-container">
-      <div className="navbar">
-          <Navbar />
-      </div>
-      <div className="home-container">
-          <Home />
-      </div>
-    </div>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='contact' element={<Contact />} />
+        <Route path='pricing' element={<Pricing />} />
+        <Route path='seo' element={<SEO />} />
+        <Route path='services' element={<Services />} />
+        <Route path='portfolio' element={<Portfolio />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

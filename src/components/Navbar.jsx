@@ -3,7 +3,6 @@ import logoWhite from '../Assets/logo-blue.png';
 import menu from '../Assets/home/menu.png';
 import close from '../Assets/home/close.png';
 import { useState } from 'react';
-// import { Pricing } from '../Pages';
 
 
 const Navbar = () => {
@@ -42,10 +41,11 @@ const Navbar = () => {
         <div className="links">
           <ul>
               <li><a href="/" className='active'>Home</a></li>
-              <li><a href="/">Services</a></li>
-              <li><a href="/">Portfolio</a></li>
+              <li><a href="/services">Services</a></li>
+              <li><a href="/portfolio">Portfolio</a></li>
               <li><a href="/pricing">Pricing</a></li>
-              <li><a href="/">Contact</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/seo">SEO</a></li>
           </ul>
         </div>
       </div>
