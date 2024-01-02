@@ -9,7 +9,7 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --primary-color: #0084C8;
   --secondary-color: #4D4BB8;
-  --black-color: hsl(0, 0%, 0%);
+  --black-color: #0e232eff;
   --black-color-light: hsl(0, 0%, 40%);
   --white-color: hsl(0, 0%, 95%);
   --title-color: hsl(0, 0%, 0%);
@@ -606,7 +606,7 @@ a {
   /* max-width: 200px; */
 }
 .card-icon {
-  background-color: green;
+  background-color: var(--primary-color);
   display: flex;
   place-items: center;
   justify-content: center;
@@ -643,4 +643,102 @@ a {
   font-size: 40px;
   font-weight: var(--font-bold);
   opacity: .5;
+}
+
+
+/*======================= TESTIMONIAL FORMATTING ==========================*/
+.testimonials{
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: 2rem 3rem;
+}
+.testimonials .testimonial-header h3{
+  font-size: 20px;
+  color: var(--text-color);
+  font-weight: var(--font-semi-bold);
+}
+.testimonials .testimonial-header h1{
+  font-size: 62px;
+  line-height: 60px;
+  color: var(--white-color);
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  max-width: 350px;
+  min-height: 320px;
+  background-color: var(--white-color);
+  color: var(--title-color);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.testimonial-text p {
+  font-size: 20px;
+  color: var(--text-color);
+}
+.testimonial-icon {
+  position: relative;
+  height: 20px;
+}
+.testimonial-icon img{
+  height: 80px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-2rem);
+}
+.testimonial-client {
+  position: absolute;
+  display: flex;
+  column-gap: 1rem;
+  width: 100%;
+  bottom: 10px;
+}
+.testimonial-client .client-image img{
+  border-radius: 50%;
+  height: 50px;
+}
+.testimonial-client .client-info h1{
+  font-size: 20px;
+}
+
+/* couresel formatting */
+.custom-prev-arrow {
+  background: none; 
+  border: none; 
+  color: #ffffff;
+  font-size: 18px; 
+  cursor: pointer;
+}
+
+/* Custom styles for next arrow */
+.custom-next-arrow {
+  background: none; 
+  border: none; 
+  color: #ffffff; 
+  font-size: 18px; 
+  cursor: pointer;
+}
+
+/* Custom styles for dots */
+.custom-dot {
+  width: 10px; 
+  height: 10px; 
+  background-color: #ffffff; 
+  border-radius: 50%; 
+  display: inline-block;
+  margin: 0 5px; 
+  cursor: pointer;
+}
+
+/* Active dot style */
+.custom-dot.slick-active {
+  background-color: #cccccc;
 }

@@ -9,7 +9,7 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --primary-color: #0084C8;
   --secondary-color: #4D4BB8;
-  --black-color: hsl(0, 0%, 0%);
+  --black-color: #0e232eff;
   --black-color-light: hsl(0, 0%, 40%);
   --white-color: hsl(0, 0%, 95%);
   --title-color: hsl(0, 0%, 0%);
