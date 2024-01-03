@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import './custom-css/home.css';
 import './custom-css/index-responsive.css';
+import './custom-css/portfolio.css';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import Pricing from './Pages/Pricing';
