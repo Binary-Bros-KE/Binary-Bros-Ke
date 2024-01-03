@@ -9,6 +9,9 @@ import SEO from './Pages/SEO';
 import Services from './Pages/Services';
 import Portfolio from './Pages/Portfolio';
 import Navbar from './components/Navbar';
+import Notification from "./components/Notification";
+import ScrollToTop from "./components/ScrollToTop";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
         <Route path='services' element={<Services />} />
         <Route path='portfolio' element={<Portfolio />} />
       </Routes>
+      <Notification />
+      <ScrollToTop />
+      <Footer />
     </Router>
   );
 }

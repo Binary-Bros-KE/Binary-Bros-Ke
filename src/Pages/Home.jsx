@@ -15,6 +15,7 @@ import ContactOne from "../components/ContactOne";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import Notification from "../components/Notification";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
 
@@ -39,17 +40,35 @@ const Home = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
     customPaging: (i) => <div className="custom-dot">{}</div>,
+    slidesToShow: 3, // Default value
+  
+    // Responsive settings
+    responsive: [
+      {
+        breakpoint: 640, // Screen width less than 640px
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 768, // Screen width less than 768px
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
+  
 
   return (
     <div className="home-container">
+      {/*========================== HERO CONTAINER ==================================*/}
       <section className="hero" id="hero">
         <div className="showcase">
           <div className="home-info">
@@ -77,7 +96,7 @@ const Home = () => {
                     sequence={[
                       // Same substring at the start will only be typed out once, initially
                       "Web Design",
-                      1000, // wait 1s before replacing "Mice" with "Hamsters"
+                      1000, 
                       "Web Development",
                       1000,
                       "SEO",
@@ -100,18 +119,16 @@ const Home = () => {
             </div>
             <div className="buttons">
               <a href="#">Hire Us</a>
-              <a href="#">About Us</a>
+              <a href="#about">About Us</a>
             </div>
           </div>
           <div className="home-image">
             <img src={showcase} alt="web-development" />
           </div>
-          <div className="notification">
-            <i className="fa fa-comments"></i> Notification
-          </div>
         </div>
       </section>
 
+      {/*========================================= ABOUT US ===================================*/}
       <section className="about" id="about">
         <div className="about-us">
           <div className="about-image">
@@ -146,12 +163,19 @@ const Home = () => {
               growth in the dynamic digital landscape.
             </p>
             <div className="about-button">
-              <a href="#">Read More</a>
+              <a href="#">
+                Read More&nbsp;<i className="fa fa-arrow-right"></i>
+              </a>
+              <a href="#">
+                Get a Professional Website Today&nbsp;
+                <i className="fa fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      {/*======================= WHY CHOOSE US ====================================*/}
       <section className="why" id="why">
         <div className="cards">
           <div className="card">
@@ -198,9 +222,10 @@ const Home = () => {
         </div>
       </section>
 
+      {/*=================================================== CORE SERVICES ==============================*/}
       <section className="services" id="services">
         <div className="service-header">
-          <h3>Our Services</h3>
+          <h3>What we do.!</h3>
           <h1>Core Services</h1>
         </div>
         <div className="service-cards">
@@ -271,8 +296,8 @@ const Home = () => {
         </div>
       </section>
 
+      {/*==================================================== MOBILE AND  WORDPRESS ============================*/}
       <section className="mobile-wordpress" id="mobile-wordpress">
-
         <div className="mobile">
           <div className="mobile-image">
             <img src={mobile} alt="Mobile Application" />
@@ -329,9 +354,9 @@ const Home = () => {
                 <i className="fas fa-check"></i> Customization and Flexibility
               </h2>
               <p>
-              Customize and shape your online presence with WordPress. Benefit
-              from its flexibility and adaptability, allowing you to tailor your
-               website to meet your unique business needs.
+                Customize and shape your online presence with WordPress. Benefit
+                from its flexibility and adaptability, allowing you to tailor
+                your website to meet your unique business needs.
               </p>
             </div>
             <div className="wordpress-buttons">
@@ -349,6 +374,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/*====================================== COUNTER SECTION =====================================*/}
       <ScrollTrigger
         onEnter={() => setCounterOn(true)}
         onExit={() => setCounterOn(false)}
@@ -359,6 +385,7 @@ const Home = () => {
             <h1>Key Metrics</h1>
           </div>
           <div className="counter-cards">
+
             <div className="counter-card">
               <div className="card-icon">
                 <div className="card-icon-holder">
@@ -366,13 +393,13 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-info">
-                <h1>Lines of Code Written</h1>
                 <div className="counter-number">
                   {counterOn && (
-                    <CountUp start={0} end={120000} duration={2} delay={0} />
+                    <CountUp start={0} end={235} duration={2} delay={0} />
                   )}{" "}
                   +
                 </div>
+                <h1>Projetcs Completed</h1>
               </div>
             </div>
 
@@ -383,13 +410,14 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-info">
-                <h1>Satisfied Clients</h1>
+                
                 <div className="counter-number">
                   {counterOn && (
-                    <CountUp start={0} end={150} duration={2} delay={0} />
+                    <CountUp start={0} end={230} duration={2} delay={0} />
                   )}{" "}
                   +
                 </div>
+                <h1>Satisfied Clients</h1>
               </div>
             </div>
 
@@ -400,13 +428,14 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-info">
-                <h1>Global Presence</h1>
+                
                 <div className="counter-number">
                   {counterOn && (
                     <CountUp start={0} end={25} duration={2} delay={0} />
                   )}{" "}
                   +
                 </div>
+                <h1>Global Presence</h1>
               </div>
             </div>
 
@@ -417,24 +446,27 @@ const Home = () => {
                 </div>
               </div>
               <div className="card-info">
-                <h1>Technologies Mastered</h1>
+                
                 <div className="counter-number">
                   {counterOn && (
                     <CountUp start={0} end={10} duration={2} delay={0} />
                   )}{" "}
                   +
                 </div>
+                <h1>Technologies Mastered</h1>
               </div>
             </div>
           </div>
         </section>
       </ScrollTrigger>
 
+      {/*================================ TESTIMONIALS  =======================================*/}
       <section className="testimonials">
         <div className="testimonial-header">
           <h3>Testimonials</h3>
           <h1>What Our Clients Say!</h1>
         </div>
+
 
         <div className="text-holder">
           <Slider {...settings}>
@@ -487,10 +519,7 @@ const Home = () => {
             <div className="testimonial-card">
               <div className="testimonial-text">
                 <p>
-                  "Binary Bros' expertise and professionalism are unparalleled.
-                  They transformed our vision into reality, delivering a
-                  seamless and user-friendly solution. I highly recommend their
-                  services."
+                  "Binary Bros' commitment to excellence is evident in every aspect of their work. Their innovative solutions and prompt communication make them a reliable partner for any software development needs."
                 </p>
               </div>
               <div className="testimonial-icon">
@@ -510,10 +539,7 @@ const Home = () => {
             <div className="testimonial-card">
               <div className="testimonial-text">
                 <p>
-                  "Binary Bros' expertise and professionalism are unparalleled.
-                  They transformed our vision into reality, delivering a
-                  seamless and user-friendly solution. I highly recommend their
-                  services."
+                  "Working with Binary Bros was an absolute pleasure. They delivered a cutting-edge solution that exceeded our expectations. The team's attention to detail and commitment to quality are truly commendable."
                 </p>
               </div>
               <div className="testimonial-icon">
@@ -533,10 +559,7 @@ const Home = () => {
             <div className="testimonial-card">
               <div className="testimonial-text">
                 <p>
-                  "Binary Bros' expertise and professionalism are unparalleled.
-                  They transformed our vision into reality, delivering a
-                  seamless and user-friendly solution. I highly recommend their
-                  services."
+                  "Binary Bros' expertise and professionalism are unparalleled. They transformed our vision into reality, delivering a seamless and user-friendly solution. I highly recommend their services."
                 </p>
               </div>
               <div className="testimonial-icon">
@@ -556,10 +579,7 @@ const Home = () => {
             <div className="testimonial-card">
               <div className="testimonial-text">
                 <p>
-                  "Binary Bros' commitment to excellence is evident in every
-                  aspect of their work. Their innovative solutions and prompt
-                  communication make them a reliable partner for any software
-                  development needs."
+                  "We are extremely satisfied with the services provided by Binary Bros. Their technical proficiency and dedication to our project ensured its success. It's rare to find a team that truly cares about client satisfaction."
                 </p>
               </div>
               <div className="testimonial-icon">
@@ -579,6 +599,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/*==================================== CONTACT ============================================*/}
       <section className="contact" id="contact">
         {/* <div className="contact-header">
           <h3>Stay in Touch.!</h3>
@@ -589,7 +610,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/*=================================== FOOTER ================================================*/}
       <section className="footer" id="footer">
+        <Notification />
         <ScrollToTop />
         <Footer />
       </section>

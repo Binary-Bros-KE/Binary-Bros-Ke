@@ -7,11 +7,6 @@ const Contact = () => {
   return (
     <div>
       <ContactOne />
-
-      <section className="footer" id="footer">
-        <ScrollToTop />
-        <Footer />
-      </section>
     </div>
   )
 }

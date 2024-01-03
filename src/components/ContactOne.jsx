@@ -45,7 +45,7 @@ const ContactOne = () => {
                 </div>
                 <div class="information">
                   <img src={email} class="icon" alt="" />
-                  <p>binarybros@gmail.com</p>
+                  <p>binarybroske@gmail.com</p>
                 </div>
                 <div class="information">
                   <img src={phone} class="icon" alt="" />
