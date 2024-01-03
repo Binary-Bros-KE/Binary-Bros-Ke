@@ -1,5 +1,4 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -20,7 +19,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "IBM Plex Sans", sans-serif;
+  /* --body-font: "IBM Plex Sans", sans-serif; */
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.75rem;
   --h2-font-size: 1.25rem;
@@ -65,7 +64,7 @@ html {
 }
 
 body {
-  font-family: var(--body-font);
+  /* font-family: var(--body-font); */
   font-size: var(--normal-font-size);
   background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
   color: var(--text-color);
