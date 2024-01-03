@@ -14,7 +14,7 @@ const Portfolio = () => {
                 </div>
                 <div className="button">
                   <a href="#">
-                    <i className="fa fa-home"></i>
+                  <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
               </div>
