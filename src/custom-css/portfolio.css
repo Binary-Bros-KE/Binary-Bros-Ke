@@ -1,0 +1,183 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-color: #0084C8;
+  --secondary-color: #4D4BB8;
+  --black-color: #0e232eff;
+  --black-color-light: hsl(0, 0%, 40%);
+  --white-color: hsl(0, 0%, 95%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 64%);
+  --body-color: hsl(0, 0%, 87%);
+  --container-color: hsl(0, 0%, 83%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "IBM Plex Sans", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--black-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.portfolio {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+.project-cards{
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+}
+.project-card {
+    border-bottom: 4px solid var(--secondary-color);
+    padding: 1rem;
+}
+.project-card:hover {
+    background-color: var(--white-color);
+}
+
+.image-button {
+    width: 100%;
+    position: relative;
+}
+
+.image-button .button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: 15px;
+    position: absolute;
+    right: 10px;
+    bottom: -25px;
+}
+.image-button .button i {
+    transform: rotate(-45deg);
+}
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    padding: 0rem 1rem;
+    margin: 1rem 0;
+}
+.project-title .small-text {
+    font-size: var(--small-font-size);
+    color: var(--secondary-color);
+    font-weight: var(--font-semi-bold);
+    position: relative;
+    transform: translateX(25px);
+}
+
+.project-title .small-text::before {
+    content: '';
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    position: absolute;
+    height: 4px;
+    width: 20px;
+    left: 0;
+    top: 40%;
+    transform: translateX(-25px);
+}
+
+.project-title .large-text {
+    font-size: 20px;
+    color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.project-description {
+    margin: .5rem 0;
+}
+
+.project-status {
+    display: flex; 
+    justify-content: space-between;
+    margin-bottom: 10px;
+    row-gap: 5px;
+    width: 100%;
+    color: green;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.previews{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+.previews a {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: .5rem 1rem;
+    font-size: 14px;
+    color: var(--white-color);
+}

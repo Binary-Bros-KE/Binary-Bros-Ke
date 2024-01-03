@@ -1,7 +1,7 @@
 import logo from '../Assets/logo-black.png';
-import logoWhite from '../Assets/logo-blue.png';
 import menu from '../Assets/home/menu.png';
 import close from '../Assets/home/close.png';
+import NavButton from './NavButton';
 import { useState } from 'react';
 
 
@@ -27,7 +27,6 @@ const Navbar = () => {
             <i className="fab fa-github"></i>
             <i className="fab fa-instagram"></i>
         </div>
-{/* <Pricing /> */}
       </div>
 
       <div className="nav-links">
@@ -36,20 +35,32 @@ const Navbar = () => {
         </div>
         <div className="responsive">
           <img className='resposniveLogo' src={logo} alt='img'/>
-          <img onClick={switchToggle} src={toggle ? close : menu  } alt="menu" />
+          <img className='menu' onClick={switchToggle} src={toggle ? close : menu  } alt="menu" />
         </div>
         <div className="links">
-          <ul>
+          <ul className="md:flex hidden uppercase items-center gap-4">
               <li><a href="/" className='active'>Home</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/portfolio">Portfolio</a></li>
               <li><a href="/pricing">Pricing</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><a href="/seo">SEO</a></li>
           </ul>
         </div>
       </div>
 
+        {/* Mobile Nav */}
+        <div className={`mobile-nav md:hidden ${ toggle ? 'left-0' : 'left-[-100%]' }`}>
+            <ul className={`bg-primary absolute w-full h-full bottom-0 ${ toggle ? 'top-0' : 'top-[-100%]' }`}>
+                  <li><a href="/" className='active'>Home</a></li>
+                  <li><a href="/services">Services</a></li>
+                  <li><a href="/portfolio">Portfolio</a></li>
+                  <li><a href="/pricing">Pricing</a></li>
+                  <li><a href="/contact">Contact</a></li>
+            </ul>
+            {/* <div className="nav-button">
+              <NavButton />
+            </div> */}
+        </div>
     </div>
   )
   }
