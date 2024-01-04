@@ -609,13 +609,6 @@ const Home = () => {
           <ContactOne />
         </div>
       </section>
-
-      {/*=================================== FOOTER ================================================*/}
-      <section className="footer" id="footer">
-        <Notification />
-        <ScrollToTop />
-        <Footer />
-      </section>
     </div>
   );
 };

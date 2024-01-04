@@ -88,13 +88,13 @@ a {
 .portfolio {
     margin-top: 2rem;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 .project-cards{
     padding: 1rem 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
 }
 .project-card {
     border-bottom: 4px solid var(--secondary-color);

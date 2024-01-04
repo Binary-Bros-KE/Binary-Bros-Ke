@@ -8,7 +8,7 @@ import project from '../Assets/portfolio/project-2.jpg';
 export const webDesignProjects = [
     {
         "img" : arobisca,
-        "name" : "website",
+        "name" : "React App",
         "Title" : "Arobisca Training Cente",
         "description" : "Arobisca Training is an institute specializing in training coffee baristas and coffee art. A website, designed with a green-brown theme to align with their logo and uniforms, is currently under construction and will be hosted online upon completion.",
         "status" : "Completed",

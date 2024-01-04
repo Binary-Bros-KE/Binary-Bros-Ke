@@ -2,8 +2,8 @@ import React from 'react'
 
 const NavButton = () => {
   return (
-    <div>
-      <a href="#">Get Started</a>
+    <div className='navButton'>
+      <a href="#">Get Free Quote&nbsp;&nbsp;<i className="fa fa-arrow-right"></i></a>
     </div>
   )
 }

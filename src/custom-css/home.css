@@ -202,6 +202,18 @@ a {
   display: none;
 }
 
+.navButton{
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: var(--white-color);
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  font-weight: var(--font-semi-bold);
+}
+
+.navButton:hover {
+  background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
+}
+
 /*======================== HOME CONTAINER FORMATTING ===================*/
 .home-container{
   width: 100%;
@@ -1185,13 +1197,13 @@ textarea.input {
 
 .footer {
   width: 100%;
-  /* margin-top: 6rem; */
+  padding-top: 6rem;
   padding: 6rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   color: var(--white-color);
   background-image: url(../Assets/footer/background.png);
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1298,9 +1310,29 @@ textarea.input {
   padding: 2px;
   background-color: var(--black-color);
   display: flex;
+  color: var(--white-color);
   justify-content: center;
   place-items: center;
 }
 .ScrollToTop i {
   transform: rotate(-90deg);
 }
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: lightblue; /* Set the color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* Set the color of the scrollbar thumb */
+  border-radius: 0px; /* Set the border radius of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color); /* Set the color of the scrollbar thumb on hover */
+}
+

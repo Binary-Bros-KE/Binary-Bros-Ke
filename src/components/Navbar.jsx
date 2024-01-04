@@ -38,13 +38,17 @@ const Navbar = () => {
           <img className='menu' onClick={switchToggle} src={toggle ? close : menu  } alt="menu" />
         </div>
         <div className="links">
-          <ul className="md:flex hidden uppercase items-center gap-4">
+          <ul className="md:flex hidden items-center gap-4">
               <li><a href="/" className='active'>Home</a></li>
-              <li><a href="/services">Services</a></li>
+              <li><a href="/services">Services&nbsp;<i className="fas fa-chevron-down"></i></a></li>
               <li><a href="/portfolio">Portfolio</a></li>
-              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="/pricing">Pricing&nbsp;<i className="fas fa-chevron-down"></i></a></li>
               <li><a href="/contact">Contact</a></li>
           </ul>
+        </div>
+
+        <div className="nav-button">
+          <NavButton />
         </div>
       </div>
 
@@ -57,9 +61,7 @@ const Navbar = () => {
                   <li><a href="/pricing">Pricing</a></li>
                   <li><a href="/contact">Contact</a></li>
             </ul>
-            {/* <div className="nav-button">
-              <NavButton />
-            </div> */}
+            
         </div>
     </div>
   )
