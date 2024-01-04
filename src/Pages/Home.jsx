@@ -8,19 +8,15 @@ import quote from "../Assets/testimonial/quote.png";
 import john from "../Assets/testimonial/John-Doe.jpg";
 import jane from "../Assets/testimonial/Jane-Doe.jpg";
 import { TypeAnimation } from "react-type-animation";
-import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
 import Slider from "react-slick";
 import ContactOne from "../components/ContactOne";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import Notification from "../components/Notification";
-import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+import Counter from "../components/Counter";
+import WhyCards from "../components/WhyCards";
 
 const Home = () => {
-  const [counterOn, setCounterOn] = useState(false);
 
   // Custom component for previous arrow
   const CustomPrevArrow = (props) => (
@@ -67,7 +63,12 @@ const Home = () => {
   
 
   return (
-    <div className="home-container">
+    <motion.div
+     className="home-container"
+     initial={{opacity: 0}}
+     animate={{opacity: 1}}
+     exit={{opacity: 0}}
+     >
       {/*========================== HERO CONTAINER ==================================*/}
       <section className="hero" id="hero">
         <div className="showcase">
@@ -177,49 +178,7 @@ const Home = () => {
 
       {/*======================= WHY CHOOSE US ====================================*/}
       <section className="why" id="why">
-        <div className="cards">
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-users"></i> Client-Centric Approach
-            </div>
-            <p>
-              {" "}
-              From the initial consultation to the final delivery, we work
-              closely with our clients, understanding their goals, addressing
-              concerns, and adapting our strategies to align with their vision.{" "}
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-lightbulb"></i> Innovative Problem-Solving
-            </div>
-            <p>
-              We thrive on challenges, approaching each project with a creative
-              mindset to find unique solutions that push the boundaries of
-              what's possible.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-cogs"></i> Diverse Technologies
-            </div>
-            <p>
-              From front-end development using the latest frameworks to robust
-              back-end solutions, our team is well-versed in the tools and
-              languages that drive innovation in the digital realm.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-clock"></i> 24/7 Support
-            </div>
-            <p>
-              Our dedicated support team is always at your service, ready to
-              address inquiries, provide assistance, and ensure the smooth
-              operation of your digital assets.{" "}
-            </p>
-          </div>
-        </div>
+          <WhyCards/>
       </section>
 
       {/*=================================================== CORE SERVICES ==============================*/}
@@ -375,91 +334,9 @@ const Home = () => {
       </section>
 
       {/*====================================== COUNTER SECTION =====================================*/}
-      <ScrollTrigger
-        onEnter={() => setCounterOn(true)}
-        onExit={() => setCounterOn(false)}
-      >
-        <section className="counter" id="counter">
-          <div className="counter-header">
-            <h3>Our Impact</h3>
-            <h1>Key Metrics</h1>
-          </div>
-          <div className="counter-cards">
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-code"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={235} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Projetcs Completed</h1>
-              </div>
-            </div>
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-users"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={230} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Satisfied Clients</h1>
-              </div>
-            </div>
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-globe"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={25} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Global Presence</h1>
-              </div>
-            </div>
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-cogs"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={10} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Technologies Mastered</h1>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollTrigger>
-
+      <section className="counter" id="counter">
+        <Counter />
+      </section>
       {/*================================ TESTIMONIALS  =======================================*/}
       <section className="testimonials">
         <div className="testimonial-header">
@@ -609,7 +486,7 @@ const Home = () => {
           <ContactOne />
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

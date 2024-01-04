@@ -1,0 +1,27 @@
+import Home from '../Pages/Home';
+import Contact from '../Pages/Contact';
+import Pricing from '../Pages/Pricing';
+import SEO from '../Pages/SEO';
+import Services from '../Pages/Services';
+import Portfolio from '../Pages/Portfolio';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
+const AnimatedRoutes = () => {
+    const location = useLocation();
+
+  return (
+  <AnimatePresence> 
+        <Routes location={location} key={location.pathname}> 
+            <Route path='/' element={<Home />} />
+            <Route path='contact' element={<Contact />} />
+            <Route path='pricing' element={<Pricing />} />
+            <Route path='seo' element={<SEO />} />
+            <Route path='services' element={<Services />} />
+            <Route path='portfolio' element={<Portfolio />} />
+        </Routes>
+    </AnimatePresence> 
+  )
+}
+
+export default AnimatedRoutes

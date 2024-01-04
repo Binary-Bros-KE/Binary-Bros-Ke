@@ -325,6 +325,40 @@ a {
 .notification:hover{
   opacity: 1;
 }
+.notication-div {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  max-width: 200px;
+  min-height: 200px;
+  transform: translateY(150%) translateX(-100%);
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: 10px;
+  opacity: 0;
+  border-radius: 10px;
+  z-index: 999;
+  /* transition: all .4s ease-in-out; */
+}
+.notication-div p {
+  font-size: 20px;
+}
+.notication-div .box {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 30%;
+  right: -1rem;
+  transform: rotate(-45deg);
+  border-radius: 0;
+  background-color: var(--black-color);
+}
+.notification:hover > .notication-div {
+  transform: translateY(150%) translateX(100%);
+}
 
 .cards{
   display: grid;
@@ -839,7 +873,7 @@ textarea {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
