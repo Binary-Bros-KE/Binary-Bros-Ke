@@ -36,10 +36,10 @@ const SeoCard2 = ({ title, description, price, button, consist, item1, item2, it
   }
 
   return (
-    <div className="bg-white py-8 p-5 border-0 border-neutral-300 rounded-[2rem] duration-300 scale-90 hover:last:scale-100 hover:first:scale-100 hover:scale-100">
+    <div className="bg-white py-8 p-5 border-0 border-neutral-300 rounded-[2rem] duration-300 scale-90 hover:last:scale-100 hover:first:scale-100 even:scale-95 hover:scale-100">
       <h1 className='py-2 px-5 bg-black inline-block text-white rounded-3xl'>{title}</h1>
       <p className='text-md my-2'>{description}</p>
-      <h2 className='py-2'>{price}</h2>
+      <h2 className='text-3xl py-2'>{price}</h2>
       <div className="grid">
         <SeoButton>{button}</SeoButton>
       </div>
