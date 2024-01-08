@@ -1,8 +1,4 @@
 import './index.css';
-import './custom-css/home.css';
-import './custom-css/index-responsive.css';
-import './custom-css/portfolio.css';
-import './custom-css/services.css'
 import Navbar from './components/Navbar';
 import Notification from "./components/Notification";
 import ScrollToTop from "./components/ScrollToTop";

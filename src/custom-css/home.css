@@ -260,6 +260,8 @@ a {
   /* font-weight: var(--font-semi-bold); */
 }
 .main-text .typing{
+  display: flex;
+  column-gap: .5rem;
   font-size: 25px;
   color: var(--black-color);
   font-weight: var(--font-semi-bold);
@@ -308,57 +310,6 @@ a {
   width: 100%;
 }
 
-.notification {
-  position: fixed;
-  top: 0;
-  right: 0;
-  transform: translateY(800%) translateX(40px) rotate(90deg);
-  /* transform-origin: top right; */
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  padding: 10px;
-  opacity: .5;
-  white-space: nowrap;
-  z-index: 999;
-  /* transition: all .4s ease-in-out; */
-}
-.notification:hover{
-  opacity: 1;
-}
-.notication-div {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  top: 0;
-  right: 0;
-  max-width: 200px;
-  min-height: 200px;
-  transform: translateY(150%) translateX(-100%);
-  background-color: var(--black-color);
-  color: var(--white-color);
-  padding: 10px;
-  opacity: 0;
-  border-radius: 10px;
-  z-index: 999;
-  /* transition: all .4s ease-in-out; */
-}
-.notication-div p {
-  font-size: 20px;
-}
-.notication-div .box {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 30%;
-  right: -1rem;
-  transform: rotate(-45deg);
-  border-radius: 0;
-  background-color: var(--black-color);
-}
-.notification:hover > .notication-div {
-  transform: translateY(150%) translateX(100%);
-}
 
 .cards{
   display: grid;
@@ -1334,22 +1285,95 @@ textarea.input {
   text-align: center;
 }
 
+
+
+
+
+
+
+/*============================ NOTIFICATION FORMATING =======================*/
+
+.notification {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateY(800%) translateX(40px) rotate(90deg);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px;
+  opacity: .5;
+  white-space: nowrap;
+  z-index: 999;
+}
+.notification:hover{
+  opacity: 1;
+}
+.notication-div {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  max-width: 200px;
+  min-height: 200px;
+  transform: translateY(150%) translateX(100%);
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: 10px;
+  opacity: 0;
+  border-radius: 10px;
+  z-index: 999;
+  transition: all .4s ease-in-out;
+}
+.notication-div span {
+  color: aqua;
+  font-weight: var(--font-semi-bold);
+}
+
+.notication-div.visible-div{
+  opacity: 1;
+  transform: translateY(150%) translateX(-45%);
+}
+.notication-div p {
+  font-size: 20px;
+}
+.notication-div .box {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 30%;
+  right: -1rem;
+  transform: rotate(-45deg);
+  border-radius: 0;
+  background-color: var(--black-color);
+}
+
+
+
+
+
+
+/*===================================== SCROLL TO TOP FORMATING ==========================*/
+
 .ScrollToTop{
   position: fixed;
   height: 30px;
   width: 30px;
   right: 2rem;
-  bottom: 2rem;
+  bottom: -2rem;
   padding: 10px;
   padding: 2px;
   background-color: var(--black-color);
-  display: flex;
   color: var(--white-color);
+  transition: all .2s ease-in-out;
+  display: flex;
   justify-content: center;
   place-items: center;
 }
-.ScrollToTop i {
-  transform: rotate(-90deg);
+
+.ScrollToTop.visible{
+  bottom: 2rem;
 }
 
 /* For WebKit browsers (Chrome, Safari) */
@@ -1370,3 +1394,499 @@ textarea.input {
   background-color: var(--secondary-color); /* Set the color of the scrollbar thumb on hover */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Phones (Small Screens) */
+
+@media only screen and (max-width: 640px) {
+  body{
+      width: 100%;
+      overflow-x: hidden;
+      z-index: 1;
+  }
+
+  /*========================== NAVBAR ==============================*/
+  .navbar{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      overflow-x: hidden;
+      row-gap: .125rem;
+      background-color: var(--primary-color);
+      overflow: hidden;
+  }
+  .nav-socials {
+      display: none;
+      flex-direction: column;
+      padding: .125rem 2rem;
+  }
+  .primary-info:first-child{
+      display: none;
+  }
+  .nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+  }
+  .nav-logo img{
+    width: 250px;
+    display: none; 
+  }
+  .responsive{
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    width: 100%;
+  }
+  .responsive .resposniveLogo{
+    width: 250px;
+  }
+
+  .mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+    place-items: center;
+    color: var(--white-color);
+    font-size: 20px;
+    transition: all .4s ease-in-out; 
+    /* background-color: red; */
+  }
+  .responsive .menu {
+    z-index: 9999;
+  }
+
+  /*========================= HOME ================================*/
+  .home-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: -999;
+    overflow-x: hidden;
+  }
+  .hero{
+    position: relative;
+    z-index: -999;
+  }
+  .showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+  }
+  .home-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+  }
+  .discount p{
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+  }
+  .main-text h1{
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .main-text .tagline{
+    font-size: 15px;
+    color: var(--text-color);
+  }
+  .main-text .typing {
+    font-size: 20px;
+  }
+  .buttons{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: .125rem 1rem; */
+  }
+  .cards{
+    width: 100%;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .card {
+    max-width: 320px;
+  }
+  
+
+  /*=================================== ABOUT ======================================*/
+  .about-us{
+    display: flex;
+    flex-direction: column;
+  }
+  .about-info {
+    order: -1; 
+  }
+  .about-info h1{
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .about-image img{
+    height: auto;
+    width: 100%;
+  }
+  .about-info .about-button {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-info .about-button a{
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  /*================================ SERVICES =========================================*/
+  .services .service-header h1 {
+    font-size: 50px;
+  }
+  .service-cards{
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 0;
+  }
+  .service-card{
+    height: fit-content;
+    min-width: 350px;
+  }
+  .service-buttons{
+    display: flex;
+    column-gap: 1rem;
+  }
+  .service-buttons a{
+    opacity: 1;
+  }
+
+
+  /*======================================= MOBILE AND WORDPRESSS  ==========================*/
+  .mobile,
+  .wordpress{
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+    width: 100%;
+  }
+  .mobile-wordpress {
+    /* padding: 0 2rem; */
+  }
+  .mobile .mobile-info h1,
+  .wordpress .wordpress-info h1{
+    font-size: 20px;
+    min-width: 100%;
+    display: inline-block;
+    /* color: red; */
+    /* background-color: #0084C8; */
+  }
+  .mobile .mobile-info .quality h2{
+    font-size: 15px;
+  }
+  .wordpress-info h1{
+    transform: translateX(-2rem);
+  }
+  .mobile .mobile-image img,
+  .wordpress .wordpress-image img {
+    height: auto;
+  }
+  .mobile-info{
+    order: -1;
+  }
+  .mobile-info .mobile-buttons,
+  .wordpress-info .wordpress-buttons {
+    display: flex;
+    width: 100%;
+  }
+  .mobile .mobile-info .mobile-buttons a{
+    font-size: 14px;
+    display: inline-block;
+    padding: .125rem .5rem;
+  }
+  .wordpress .wordpress-info .wordpress-buttons a{
+    font-size: 14px;
+    display: inline-block;
+    padding: .125rem .2rem;
+  }
+
+
+  /*======================================== COUNTER ==================================*/
+  .counter .counter-header h1 {
+    font-size: 50px;
+  }
+  .counter-cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  /*=========================================== FOOTER =======================*/
+  .footer{
+    padding-top: 4rem;
+  }
+  .quick-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* place-items: center; */
+  }
+
+  /*================================== TESTIONIAL ===============================*/
+  .testimonials .testimonial-header h1{
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .testimonials .testimonial-card {
+    height: fit-content;
+    min-height: 380px;
+  }
+  .notification {
+    transform: translateY(800%) translateX(40px) rotate(90deg);
+    opacity: .4;
+  }
+  .notification:hover {
+    opacity: 1;
+  }
+}
+
+/* Tablets (Medium Screens) */
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*========================== NAVBAR ==============================*/
+.navbar{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: .125rem;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  padding: 0 .5rem;
+}
+.platforms i{
+color: var(--white-color);
+border: 2px solid var(--white-color)
+}
+
+.nav-links{
+width: 100%;
+display: flex;
+justify-content: space-between;
+place-items: center;
+}
+.nav-logo img{
+width: 250px;
+display: none; 
+}
+.responsive{
+display: block;
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* background-color: red; */
+width: 100%;
+}
+.responsive .resposniveLogo{
+width: 250px;
+}
+.links{
+display: none;
+}
+
+/*========================= HOME ================================*/
+.home-container{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.showcase{
+display: flex;
+flex-direction: column;
+padding: 1rem 4rem;
+}
+.home-info{
+display: flex;
+flex-direction: column;
+justify-content: center;
+place-items: center;
+}
+.discount p{
+font-size: 19px;
+display: flex;
+justify-content: center;
+place-items: center;
+}
+.main-text h1{
+font-size: 60px;
+line-height: 60px;
+}
+.main-text br{
+display: none;
+}
+.main-text .tagline{
+font-size: 15px;
+color: var(--text-color);
+}
+.main-text .typing {
+font-size: 20px;
+}
+.buttons{
+width: 100%;
+/* background-color: red; */
+display: flex;
+justify-content: space-between;
+/* padding: .125rem 1rem; */
+}
+.cards{
+width: 100%;
+margin: 0 1rem;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.card {
+max-width: 320px;
+}
+
+
+/*=================================== ABOUT ======================================*/
+.about-us{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto auto;
+gap: 10px;
+}
+.about-info {
+grid-column: 1 / span 2;
+order: -1; 
+}
+.about-image img{
+height: auto;
+width: 100%;
+}
+.about-info .about-button {
+display: flex;
+/* flex-direction: column; */
+}
+.about-info .about-button a{
+display: inline-block;
+font-size: 16px;
+}
+
+/*================================ SERVICES =========================================*/
+.services .service-header h1 {
+font-size: 50px;
+}
+.service-cards{
+flex-direction: column;
+row-gap: 1rem;
+padding: 0;
+}
+.service-card{
+height: fit-content;
+min-width: 350px;
+}
+.service-buttons{
+display: flex;
+column-gap: 1rem;
+}
+.service-buttons a{
+opacity: 1;
+}
+
+
+/*======================================= MOBILE AND WORDPRESSS  ==========================*/
+.mobile,
+.wordpress{
+display: flex;
+flex-direction: column;
+padding: 0 .5rem;
+}
+.wordpress-info h1{
+transform: translateX(-2rem);
+}
+.mobile .mobile-image img,
+.wordpress .wordpress-image img {
+height: auto;
+}
+.mobile-info{
+order: -1;
+}
+.mobile-info .mobile-buttons,
+.wordpress-info .wordpress-buttons {
+display: flex;
+width: 100%;
+}
+.mobile .mobile-info .mobile-buttons a{
+font-size: 16px;
+display: inline-block;
+padding: .125rem 1rem;
+}
+.wordpress .wordpress-info .wordpress-buttons a{
+font-size: 17px;
+display: inline-block;
+padding: .125rem .5rem;
+}
+
+
+/*======================================== COUNTER ==================================*/
+.counter .counter-header h1 {
+font-size: 50px;
+}
+.counter-cards {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.quick-info{
+display: grid;
+grid-template-columns: 1fr 1fr;
+/* place-items: center; */
+}
+.logo-recap{
+grid-column: 1 / span 2;
+}
+.newsletter {
+grid-column: 1 / span 2;
+}
+.newsletter .footer-input {
+display: flex;
+justify-content: start;
+column-gap: 2rem;
+}
+.newsletter .footer-input a {
+height: 3rem;
+border-radius: 0;
+}
+.footer {
+margin-top: 2rem;
+}
+}

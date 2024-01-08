@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import CardList from '../components/CardList';
 import SeoCardList2 from '../components/SeoCardList2';
-// import { Link } from 'react-router-dom'
+import { motion } from "framer-motion";
 
 
 const StyledButton = styled.button`
@@ -34,7 +34,11 @@ const InverseButton = styled.button`
 
 const Pricing = () => {
   return (
-    <div>
+    <motion.div
+        intial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+    >
       <div className="text-lg pricing-container">
 
       {/*====== Banner Container ========*/}
@@ -86,7 +90,7 @@ const Pricing = () => {
       {/*====== Footer Container ========*/}
 
       </div>
-    </div>
+    </motion.div>
   )
 }
 

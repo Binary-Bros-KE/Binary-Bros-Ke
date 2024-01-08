@@ -4,6 +4,7 @@ import Pricing from '../Pages/Pricing';
 import SEO from '../Pages/SEO';
 import Services from '../Pages/Services';
 import Portfolio from '../Pages/Portfolio';
+import Blog from '../Pages/Blog';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
@@ -19,6 +20,7 @@ const AnimatedRoutes = () => {
             <Route path='seo' element={<SEO />} />
             <Route path='services' element={<Services />} />
             <Route path='portfolio' element={<Portfolio />} />
+            <Route path='blog' element={<Blog />} />
         </Routes>
     </AnimatePresence> 
   )

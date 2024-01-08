@@ -1,13 +1,15 @@
-import React from 'react'
 import ContactOne from '../components/ContactOne';
-import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div>
+    <motion.div
+        intial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+    >
       <ContactOne />
-    </div>
+    </motion.div>
   )
 }
 

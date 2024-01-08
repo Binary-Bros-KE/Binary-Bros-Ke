@@ -44,10 +44,11 @@ const Navbar = () => {
               <li><a href="/portfolio">Portfolio</a></li>
               <li><a href="/pricing">Pricing&nbsp;<i className="fas fa-chevron-down"></i></a></li>
               <li><a href="/contact">Contact</a></li>
+              <li><a href="/blog">Blog</a></li>
           </ul>
         </div>
 
-        <div className="nav-button">
+        <div className="nav-button md:block hidden">
           <NavButton />
         </div>
       </div>
@@ -60,6 +61,7 @@ const Navbar = () => {
                   <li><a href="/portfolio">Portfolio</a></li>
                   <li><a href="/pricing">Pricing</a></li>
                   <li><a href="/contact">Contact</a></li>
+                  <li><a href="/blog">Blog</a></li>
             </ul>
             
         </div>

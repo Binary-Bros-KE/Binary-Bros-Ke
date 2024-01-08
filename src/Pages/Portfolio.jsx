@@ -1,9 +1,16 @@
-import React from 'react';
+import { motion } from "framer-motion";
+import '../custom-css/portfolio.css';
 import { webDesignProjects } from '../constants/portfolio';
 
 const Portfolio = () => {
   return (
-    <section className="portfolio" id="portfolio">
+    <motion.section 
+    className="portfolio"
+    id="portfolio"
+    intial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    >
       <div className="project-cards">
         {webDesignProjects.map((project, index) => {
           return (
@@ -41,7 +48,7 @@ const Portfolio = () => {
           );
         })}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

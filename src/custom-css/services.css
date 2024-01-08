@@ -102,6 +102,10 @@
     justify-content: center;
     place-items: center;
     text-align: center;
+    transition: all 1s ease-in-out;
+  }
+  .service-page-card:hover {
+    transform: translateY(-1.5rem);
   }
   .service-page-card .service-title h1{
     color: var(--black-color);

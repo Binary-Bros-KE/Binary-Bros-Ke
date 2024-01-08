@@ -24,11 +24,13 @@ const Footer = () => {
         <div className="quick-links">
             <h1>Useful Links</h1>
             <ul>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Services</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Pricing</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Portfolio</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Blog</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Contact</a></li>
+                <li><a href="/"><i className="fas fa-chevron-right"></i>Home</a></li>
+                <li><a href="/services"><i className="fas fa-chevron-right"></i>Services</a></li>
+                <li><a href="/pricing"><i className="fas fa-chevron-right"></i>Pricing</a></li>
+                <li><a href="/portfolio"><i className="fas fa-chevron-right"></i>Portfolio</a></li>
+                <li><a href="/blog"><i className="fas fa-chevron-right"></i>Blog</a></li>
+                <li><a href="/SEO"><i className="fas fa-chevron-right"></i>SEO</a></li>
+                <li><a href="/contact"><i className="fas fa-chevron-right"></i>Contact</a></li>
             </ul>
         </div>
 

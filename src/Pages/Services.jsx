@@ -1,10 +1,18 @@
 import { developmentServices, marketingMaintenanceServices, designServices } from '../constants/services'
+import '../custom-css/services.css'
 import Counter from "../components/Counter";
 import WhyCards from "../components/WhyCards";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <section className="services-page" id="services-page">
+    <motion.section
+        className="services-page" 
+        id="services-page"
+        intial={{opacity: 0}}
+        animate={{opacity: 1}}
+        exit={{opacity: 0}}
+     >
 
       <div className="service-page-cards" id='development'>
         <div className="services-nav-button">
@@ -101,7 +109,7 @@ const Services = () => {
       </div>
 
 
-    </section>
+    </motion.section>
   )
 }
 
