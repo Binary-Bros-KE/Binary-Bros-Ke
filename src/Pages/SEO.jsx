@@ -146,36 +146,41 @@ const SEO = () => {
 
           <div className="work-content">
             <div className="work-icon">
-              <i className="fa fa-link"></i>
+              <i className="fas fa-check-circle"></i>
             </div>
             <div className="work-text">
               <h1>Guaranteed Results</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Animi sed perspiciatis dolorem vel nemo odit. </p>
+              <p>
+               Our commitment to a results-driven approach ensures
+                  your business experiences tangible success,
+                   with proven outcomes that elevate your digital
+                    presence and impact. </p>
             </div>
           </div>
 
 
           <div className="work-content">
             <div className="work-icon">
-              <i className="fa fa-bars"></i>
+              <i className="fas fa-users"></i>
             </div>
             <div className="work-text">
-              <h1>Guaranteed Results</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Animi sed perspiciatis dolorem vel nemo odit.</p>
+              <h1>Seasoned Experts</h1>
+              <p>
+                 Our skilled professionals navigate the dynamic digital landscape,
+                  offering insights and strategies that align with your unique business objectives.</p>
             </div>
           </div>
 
 
           <div className="work-content">
             <div className="work-icon">
-              <i className="fa fa-search"></i>
+              <i className="fas fa-dollar-sign"></i>
             </div>
             <div className="work-text">
-              <h1>Guaranteed Results</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Animi sed perspiciatis dolorem vel nemo odit.</p>
+              <h1>Affordable Packages</h1>
+              <p>Our goal is to offer top-notch services that cater to your specific needs
+                 without breaking the bank. With transparent and flexible pricing structures,
+                  we ensure you get the most value for your money.</p>
             </div>
           </div>
           
@@ -240,7 +245,7 @@ const SEO = () => {
 
         <div className="seo-about-us">
           <h1>About Our Company</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ducimus perferendis dolor delectus, illum unde maiores est quia repellat eos neque asperiores fugiat molestias, saepe deleniti, amet consectetur eligendi aut?</p>
+          <p>Binary Bros is a results-driven and impact-focused technology company, dedicated to providing cutting-edge solutions that propel businesses into the digital forefront. As a dynamic firm, we specialize in delivering innovative services tailored to enhance your digital presence, captivate audiences, and foster substantial growth.</p>
           <a href="#"><i className="fa fa-phone"></i>Contact Us</a>
         </div>
         

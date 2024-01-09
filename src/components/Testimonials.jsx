@@ -40,7 +40,7 @@ const testimonials = () => {
         },
       },
       {
-        breakpoint: 768, // Screen width less than 768px
+        breakpoint: 1150, // Screen width less than 768px
         settings: {
           slidesToShow: 2,
         },

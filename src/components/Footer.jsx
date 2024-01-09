@@ -11,7 +11,7 @@ const Footer = () => {
                 <img src={logo} alt="binary_bros_logo" />
             </div>
             <div className="footer-paragagraph">
-                <p>Empowering businesses with innovative software solutions. Connect with us to elevate your digital presence and achieve success. Let's build the future together!</p>
+                <p>  Rooted in a commitment to excellence and driven by results, Binary Bros stands as a pillar of technological advancement, ready to empower and elevate businesses in the ever-evolving digital landscape.</p>
             </div>
             <div className="footer-socials">
                 <i className="fab fa-facebook"></i>
