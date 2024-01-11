@@ -16,22 +16,21 @@ const WhyCards = () => {
     </div>
     <div className="card">
       <div className="card-title">
-        <i className="fa fa-lightbulb"></i> Innovative Problem-Solving
+        <i className="fa fa-lightbulb"></i> Guaranteed Results
       </div>
       <p>
-        We thrive on challenges, approaching each project with a creative
-        mindset to find unique solutions that push the boundaries of
-        what's possible.
+      Our commitment to a results-driven approach ensures your business
+       experiences tangible success, with proven outcomes that elevate
+        your digital presence and impact.
       </p>
     </div>
     <div className="card">
       <div className="card-title">
-        <i className="fa fa-cogs"></i> Diverse Technologies
+        <i className="fa fa-cogs"></i> Experienced Consultants
       </div>
       <p>
-        From front-end development using the latest frameworks to robust
-        back-end solutions, our team is well-versed in the tools and
-        languages that drive innovation in the digital realm.
+      Our skilled professionals navigate the dynamic digital landscape,
+       offering insights and strategies that align with your unique business objectives.
       </p>
     </div>
     <div className="card">

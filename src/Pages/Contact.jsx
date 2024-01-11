@@ -11,7 +11,7 @@ const Contact = () => {
         exit={{opacity: 0}}
     >
 
-      <section className="quote-form-section">
+      <section className="quote-form-section" id="contact">
           <QuoteForm/>
       </section>
 
@@ -24,7 +24,7 @@ const Contact = () => {
       </section>
 
 
-      <section className="contact-form-section">
+      <section className="contact-form-section" id="quote">
          <ContactOne />
       </section>
 

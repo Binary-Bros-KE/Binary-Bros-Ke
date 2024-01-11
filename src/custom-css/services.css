@@ -104,9 +104,13 @@
     text-align: center;
     transition: all 1s ease-in-out;
   }
-  .service-page-card:hover {
-    transform: translateY(-1.5rem);
+
+  .service-page-image {
+    margin-bottom: 1rem;
   }
+
+
+
   .service-page-card .service-title h1{
     color: var(--black-color);
     font-size: 20px;

@@ -17,8 +17,8 @@ const Services = () => {
       <div className="service-page-cards" id='development'>
         <div className="services-nav-button">
           <a href="#development" className='active-button'>Web Development</a>
-          <a href="#Marketing">Marketing & Maintenance</a>
-          <a href="#Design">Design</a>
+          <a href="#Marketing">Marketing</a>
+          <a href="#Design">Design & Dev</a>
         </div>
         {developmentServices.map((service, index) =>  {
           return(
@@ -53,8 +53,8 @@ const Services = () => {
       <div className="service-page-cards" id='Marketing'>
         <div className="services-nav-button">
           <a href="#development">Web Development</a>
-          <a href="#Marketing" className='active-button'>Marketing & Maintenance</a>
-          <a href="#Design">Design</a>
+          <a href="#Marketing" className='active-button'>Marketing</a>
+          <a href="#Design">Design & Dev</a>
         </div>
         {marketingMaintenanceServices.map((service, index) =>  {
           return(
@@ -84,8 +84,8 @@ const Services = () => {
       <div className="service-page-cards" id='Design'>
         <div className="services-nav-button">
           <a href="#development">Web Development</a>
-          <a href="#Marketing">Marketing & Maintenance</a>
-          <a href="#Design"  className='active-button'>Design</a>
+          <a href="#Marketing">Marketing</a>
+          <a href="#Design"  className='active-button'>Design & Dev</a>
         </div>
         {designServices.map((service, index) =>  {
           return(

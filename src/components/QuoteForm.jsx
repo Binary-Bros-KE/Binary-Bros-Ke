@@ -1,7 +1,7 @@
 
 import '../custom-css/quote.css'
 
-import Quote from "../Assets/contact/quote-image.jpg";
+import Quote from "../Assets/contact/quote-image.png";
 import shape from "../Assets/contact/shape.png";
 
 const QuoteForm = () => {

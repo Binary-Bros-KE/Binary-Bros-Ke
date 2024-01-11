@@ -1,11 +1,12 @@
-import '../custom-css/home.css';QuoteForm
-import showcase from "../Assets/home/web-development.png";
+import "../custom-css/home.css";
+import showcase from "../Assets/services/servics-page/web_development_banner.svg";
 import discount from "../Assets/home/discount.png";
 import about from "../Assets/about/banner.png";
 import card from "../Assets/services/triangle.png";
 import mobile from "../Assets/mobile&wordpress/banner-mob-app.png";
 import wordpress from "../Assets/mobile&wordpress/wordpress.png";
-import QuoteForm from '../components/QuoteForm';
+import QuoteForm from "../components/QuoteForm";
+import { coreServices } from "../constants/services"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
@@ -17,11 +18,11 @@ import WhyCards from "../components/WhyCards";
 const Home = () => {
   return (
     <motion.div
-     className="home-container"
-     intial={{opacity: 0}}
-     animate={{opacity: 1}}
-     exit={{opacity: 0}}
-     >
+      className="home-container"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {/*========================== HERO CONTAINER ==================================*/}
       <section className="hero" id="hero">
         <div className="showcase">
@@ -34,9 +35,9 @@ const Home = () => {
             </div>
             <div className="main-text">
               <h1>
-                Professional
-                <br /> Software
-                <br /> Developers
+                #1 Software
+                <br /> Developers in Kenya <br/>
+                And East Africa
               </h1>
               <p className="tagline">
                 Crafting Innovative Solutions to Help Brands, Businesses, and
@@ -51,7 +52,7 @@ const Home = () => {
               </p>
             </div>
             <div className="buttons">
-              <a href="#">Hire Us</a>
+              <a href="/contact">Hire Us</a>
               <a href="#about">About Us</a>
             </div>
           </div>
@@ -89,15 +90,15 @@ const Home = () => {
             </h1>
             <p>
               {" "}
-              Binary Bros is a results-driven and impact-focused technology company,
-               dedicated to providing cutting-edge solutions that propel businesses
-                into the digital forefront. As a dynamic firm, we specialize in delivering
-                 innovative services tailored to enhance your digital presence,
-                  captivate audiences, and foster substantial growth.
-                   Our team of skilled professionals harnesses the latest technologies
-                    and strategic methodologies to ensure that startups,
-                     established enterprises, and industry leaders achieve
-                      unparalleled success in meeting their technological aspirations.
+              Binary Bros is a results-driven and impact-focused technology
+              company, dedicated to providing cutting-edge solutions that propel
+              businesses into the digital forefront. As a dynamic firm, we
+              specialize in delivering innovative services tailored to enhance
+              your digital presence, captivate audiences, and foster substantial
+              growth. Our team of skilled professionals harnesses the latest
+              technologies and strategic methodologies to ensure that startups,
+              established enterprises, and industry leaders achieve unparalleled
+              success in meeting their technological aspirations.
             </p>
             <div className="about-button">
               <a href="#">
@@ -114,7 +115,7 @@ const Home = () => {
 
       {/*======================= WHY CHOOSE US ====================================*/}
       <section className="why" id="why">
-          <WhyCards/>
+        <WhyCards />
       </section>
 
       {/*=================================================== CORE SERVICES ==============================*/}
@@ -124,70 +125,28 @@ const Home = () => {
           <h1>Core Services</h1>
         </div>
         <div className="service-cards">
-          <div className="service-card">
-            <div className="service-logo">
-              <i className="fa fa-search"></i>
-            </div>
-            <div className="service-ifo">
-              <h1>S.E.O</h1>
-              <p>
-                Enhance your online visibility with our SEO expertise. Our
-                strategic approach ensures your brand stands out, driving
-                increased traffic and engagement. Unlock the full potential of
-                your digital presence with Binary Bros.
-              </p>
-            </div>
-            <div className="service-buttons">
-              <i className="fa fa-plus"></i>
-              <a href="#">Read More</a>
-            </div>
-            <div className="image">
-              <img src={card} />
-            </div>
-          </div>
-          <div className="service-card active-card">
-            <div className="service-logo">
-              <i className="fa fa-laptop-code"></i>
-            </div>
-            <div className="service-ifo">
-              <h1>Web Design / Dev</h1>
-              <p>
-                Immerse your brand in a captivating online experience with our
-                Web Design and Development services. We transform ideas into
-                visually stunning and functionally seamless websites, ensuring a
-                strong online foundation for your business success.
-              </p>
-            </div>
-            <div className="service-buttons">
-              <i className="fa fa-plus"></i>
-              <a href="#">Read More</a>
-            </div>
-            <div className="image">
-              <img src={card} />
-            </div>
-          </div>
-          <div className="service-card">
-            <div className="service-logo">
-              <i className="fa fa-bullhorn"></i>
-            </div>
-            <div className="service-ifo">
-              <h1>Digital Marketing</h1>
-              <p>
-                Elevate your brand's reach and impact through our Digital
-                Marketing solutions. From targeted campaigns to comprehensive
-                strategies, we empower your business to thrive in the digital
-                landscape. Maximize your online potential with Binary Bros at
-                the forefront of digital marketing innovation.
-              </p>
-            </div>
-            <div className="service-buttons">
-              <i className="fa fa-plus"></i>
-              <a href="#">Read More</a>
-            </div>
-            <div className="image">
-              <img src={card} />
-            </div>
-          </div>
+          {coreServices.map((service, index) => {
+            return (
+              <div className="service-card" key={index}>
+                <div className="service-logo">
+                  <i className={service.icon}></i>
+                </div>
+                <div className="service-ifo">
+                  <h1>{service.name}</h1>
+                  <p>
+                    {service.description}
+                  </p>
+                </div>
+                <div className="service-buttons">
+                  <i className="fa fa-plus"></i>
+                  <a href="#">Read More</a>
+                </div>
+                <div className="image">
+                  <img src={card} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -256,7 +215,7 @@ const Home = () => {
             </div>
             <div className="wordpress-buttons">
               <a href="#">
-                <i className="fas fa-bolt"></i> Get Service
+                <i className="fab fa-wordpress"></i> Get Service
               </a>
               <a href="#">
                 <i className="fas fa-external-link-alt"></i> Discover More
@@ -274,7 +233,6 @@ const Home = () => {
         <Counter />
       </section>
 
-
       {/*================================ TESTIMONIALS  =======================================*/}
       <section className="testimonials">
         <Testimonials />
@@ -286,10 +244,6 @@ const Home = () => {
           <QuoteForm />
         </div>
       </section>
-
-
-
-
     </motion.div>
   );
 };
