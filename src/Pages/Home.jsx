@@ -1,73 +1,28 @@
-import showcase from "../Assets/home/web-development.png";
+import "../custom-css/home.css";
+import showcase from "../Assets/services/servics-page/web_development_banner.svg";
 import discount from "../Assets/home/discount.png";
 import about from "../Assets/about/banner.png";
 import card from "../Assets/services/triangle.png";
 import mobile from "../Assets/mobile&wordpress/banner-mob-app.png";
 import wordpress from "../Assets/mobile&wordpress/wordpress.png";
-import quote from "../Assets/testimonial/quote.png";
-import john from "../Assets/testimonial/John-Doe.jpg";
-import jane from "../Assets/testimonial/Jane-Doe.jpg";
-import { TypeAnimation } from "react-type-animation";
-import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
-import Slider from "react-slick";
-import ContactOne from "../components/ContactOne";
+import QuoteForm from "../components/QuoteForm";
+import { coreServices } from "../constants/services"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
-import Notification from "../components/Notification";
-import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+import TypingAnimation from "../components/TypingAnimation";
+import Counter from "../components/Counter";
+import Testimonials from "../components/Testimonials";
+import WhyCards from "../components/WhyCards";
 
 const Home = () => {
-  const [counterOn, setCounterOn] = useState(false);
-
-  // Custom component for previous arrow
-  const CustomPrevArrow = (props) => (
-    <button {...props} className="custom-prev-arrow">
-      {<i className="fas fa-chevron-left"></i>}
-    </button>
-  );
-
-  // Custom component for next arrow
-  const CustomNextArrow = (props) => (
-    <button {...props} className="custom-next-arrow">
-      {<i className="fas fa-chevron-right"></i>}
-    </button>
-  );
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-    customPaging: (i) => <div className="custom-dot">{}</div>,
-    slidesToShow: 3, // Default value
-  
-    // Responsive settings
-    responsive: [
-      {
-        breakpoint: 640, // Screen width less than 640px
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 768, // Screen width less than 768px
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
-  };
-  
-
   return (
-    <div className="home-container">
+    <motion.div
+      className="home-container"
+      intial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {/*========================== HERO CONTAINER ==================================*/}
       <section className="hero sm:container-section" id="hero">
         <div className="showcase">
@@ -80,9 +35,9 @@ const Home = () => {
             </div>
             <div className="main-text">
               <h1>
-                Professional
-                <br /> Software
-                <br /> Developers
+                #1 Software
+                <br /> Developers in Kenya <br/>
+                And East Africa
               </h1>
               <p className="tagline">
                 Crafting Innovative Solutions to Help Brands, Businesses, and
@@ -92,33 +47,12 @@ const Home = () => {
               <p className="typing">
                 Solutions in:{" "}
                 <span>
-                  <TypeAnimation
-                    sequence={[
-                      // Same substring at the start will only be typed out once, initially
-                      "Web Design",
-                      1000, 
-                      "Web Development",
-                      1000,
-                      "SEO",
-                      1000,
-                      "Mobile Apps",
-                      1000,
-                      "Digital Marketing",
-                      1000,
-                      "WordPress",
-                      1000,
-                      "UI/UX Design",
-                      1000,
-                    ]}
-                    wrapper="span"
-                    speed={50}
-                    repeat={Infinity}
-                  />
+                  <TypingAnimation />
                 </span>
               </p>
             </div>
             <div className="buttons">
-              <a href="#">Hire Us</a>
+              <a href="/contact">Hire Us</a>
               <a href="#about">About Us</a>
             </div>
           </div>
@@ -156,11 +90,15 @@ const Home = () => {
             </h1>
             <p>
               {" "}
-              We are seasoned software developers delivering optimal business
-              solutions and SEO expertise. Specializing in propelling brands to
-              new heights, we craft innovative solutions for a robust online
-              presence. Choose us for unparalleled professionalism, driving
-              growth in the dynamic digital landscape.
+              Binary Bros is a results-driven and impact-focused technology
+              company, dedicated to providing cutting-edge solutions that propel
+              businesses into the digital forefront. As a dynamic firm, we
+              specialize in delivering innovative services tailored to enhance
+              your digital presence, captivate audiences, and foster substantial
+              growth. Our team of skilled professionals harnesses the latest
+              technologies and strategic methodologies to ensure that startups,
+              established enterprises, and industry leaders achieve unparalleled
+              success in meeting their technological aspirations.
             </p>
             <div className="about-button">
               <a href="#">
@@ -177,49 +115,7 @@ const Home = () => {
 
       {/*======================= WHY CHOOSE US ====================================*/}
       <section className="why" id="why">
-        <div className="cards">
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-users"></i> Client-Centric Approach
-            </div>
-            <p>
-              {" "}
-              From the initial consultation to the final delivery, we work
-              closely with our clients, understanding their goals, addressing
-              concerns, and adapting our strategies to align with their vision.{" "}
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-lightbulb"></i> Innovative Problem-Solving
-            </div>
-            <p>
-              We thrive on challenges, approaching each project with a creative
-              mindset to find unique solutions that push the boundaries of
-              what's possible.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-cogs"></i> Diverse Technologies
-            </div>
-            <p>
-              From front-end development using the latest frameworks to robust
-              back-end solutions, our team is well-versed in the tools and
-              languages that drive innovation in the digital realm.
-            </p>
-          </div>
-          <div className="card">
-            <div className="card-title">
-              <i className="fa fa-clock"></i> 24/7 Support
-            </div>
-            <p>
-              Our dedicated support team is always at your service, ready to
-              address inquiries, provide assistance, and ensure the smooth
-              operation of your digital assets.{" "}
-            </p>
-          </div>
-        </div>
+        <WhyCards />
       </section>
 
       {/*=================================================== CORE SERVICES ==============================*/}
@@ -229,70 +125,28 @@ const Home = () => {
           <h1>Core Services</h1>
         </div>
         <div className="service-cards">
-          <div className="service-card">
-            <div className="service-logo">
-              <i className="fa fa-search"></i>
-            </div>
-            <div className="service-ifo">
-              <h1>S.E.O</h1>
-              <p>
-                Enhance your online visibility with our SEO expertise. Our
-                strategic approach ensures your brand stands out, driving
-                increased traffic and engagement. Unlock the full potential of
-                your digital presence with Binary Bros.
-              </p>
-            </div>
-            <div className="service-buttons">
-              <i className="fa fa-plus"></i>
-              <a href="#">Read More</a>
-            </div>
-            <div className="image">
-              <img src={card} />
-            </div>
-          </div>
-          <div className="service-card active-card">
-            <div className="service-logo">
-              <i className="fa fa-laptop-code"></i>
-            </div>
-            <div className="service-ifo">
-              <h1>Web Design / Dev</h1>
-              <p>
-                Immerse your brand in a captivating online experience with our
-                Web Design and Development services. We transform ideas into
-                visually stunning and functionally seamless websites, ensuring a
-                strong online foundation for your business success.
-              </p>
-            </div>
-            <div className="service-buttons">
-              <i className="fa fa-plus"></i>
-              <a href="#">Read More</a>
-            </div>
-            <div className="image">
-              <img src={card} />
-            </div>
-          </div>
-          <div className="service-card">
-            <div className="service-logo">
-              <i className="fa fa-bullhorn"></i>
-            </div>
-            <div className="service-ifo">
-              <h1>Digital Marketing</h1>
-              <p>
-                Elevate your brand's reach and impact through our Digital
-                Marketing solutions. From targeted campaigns to comprehensive
-                strategies, we empower your business to thrive in the digital
-                landscape. Maximize your online potential with Binary Bros at
-                the forefront of digital marketing innovation.
-              </p>
-            </div>
-            <div className="service-buttons">
-              <i className="fa fa-plus"></i>
-              <a href="#">Read More</a>
-            </div>
-            <div className="image">
-              <img src={card} />
-            </div>
-          </div>
+          {coreServices.map((service, index) => {
+            return (
+              <div className="service-card" key={index}>
+                <div className="service-logo">
+                  <i className={service.icon}></i>
+                </div>
+                <div className="service-ifo">
+                  <h1>{service.name}</h1>
+                  <p>
+                    {service.description}
+                  </p>
+                </div>
+                <div className="service-buttons">
+                  <i className="fa fa-plus"></i>
+                  <a href="#">Read More</a>
+                </div>
+                <div className="image">
+                  <img src={card} />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -361,7 +215,7 @@ const Home = () => {
             </div>
             <div className="wordpress-buttons">
               <a href="#">
-                <i className="fas fa-bolt"></i> Get Service
+                <i className="fab fa-wordpress"></i> Get Service
               </a>
               <a href="#">
                 <i className="fas fa-external-link-alt"></i> Discover More
@@ -375,241 +229,22 @@ const Home = () => {
       </section>
 
       {/*====================================== COUNTER SECTION =====================================*/}
-      <ScrollTrigger
-        onEnter={() => setCounterOn(true)}
-        onExit={() => setCounterOn(false)}
-      >
-        <section className="counter" id="counter">
-          <div className="counter-header">
-            <h3>Our Impact</h3>
-            <h1>Key Metrics</h1>
-          </div>
-          <div className="counter-cards">
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-code"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={235} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Projetcs Completed</h1>
-              </div>
-            </div>
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-users"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={230} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Satisfied Clients</h1>
-              </div>
-            </div>
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-globe"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={25} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Global Presence</h1>
-              </div>
-            </div>
-
-            <div className="counter-card">
-              <div className="card-icon">
-                <div className="card-icon-holder">
-                  <i className="fa fa-cogs"></i>
-                </div>
-              </div>
-              <div className="card-info">
-                
-                <div className="counter-number">
-                  {counterOn && (
-                    <CountUp start={0} end={10} duration={2} delay={0} />
-                  )}{" "}
-                  +
-                </div>
-                <h1>Technologies Mastered</h1>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollTrigger>
+      <section className="counter" id="counter">
+        <Counter />
+      </section>
 
       {/*================================ TESTIMONIALS  =======================================*/}
       <section className="testimonials">
-        <div className="testimonial-header">
-          <h3>Testimonials</h3>
-          <h1>What Our Clients Say!</h1>
-        </div>
-
-
-        <div className="text-holder">
-          <Slider {...settings}>
-            <div className="testimonial-card">
-              <div className="testimonial-text">
-                <p>
-                  "Working with Binary Bros was an absolute pleasure. They
-                  delivered a cutting-edge solution that exceeded our
-                  expectations. The team's attention to detail and commitment to
-                  quality are truly commendable."
-                </p>
-              </div>
-              <div className="testimonial-icon">
-                <img src={quote} alt="quotation mark" />
-              </div>
-              <div className="testimonial-client">
-                <div className="client-image">
-                  <img src={john} alt="John Doe" />
-                </div>
-                <div className="client-info">
-                  <h1>John Doe</h1>
-                  <p>Software Engineer</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-text">
-                <p>
-                  "Binary Bros' expertise and professionalism are unparalleled.
-                  They transformed our vision into reality, delivering a
-                  seamless and user-friendly solution. I highly recommend their
-                  services."
-                </p>
-              </div>
-              <div className="testimonial-icon">
-                <img src={quote} alt="quotation mark" />
-              </div>
-              <div className="testimonial-client">
-                <div className="client-image">
-                  <img src={jane} alt="Jane Doe" />
-                </div>
-                <div className="client-info">
-                  <h1>Jane Doe</h1>
-                  <p>Business Owner</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-text">
-                <p>
-                  "Binary Bros' commitment to excellence is evident in every aspect of their work. Their innovative solutions and prompt communication make them a reliable partner for any software development needs."
-                </p>
-              </div>
-              <div className="testimonial-icon">
-                <img src={quote} alt="quotation mark" />
-              </div>
-              <div className="testimonial-client">
-                <div className="client-image">
-                  <img src={jane} alt="Jane Doe" />
-                </div>
-                <div className="client-info">
-                  <h1>Jane Doe</h1>
-                  <p>Business Owner</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-text">
-                <p>
-                  "Working with Binary Bros was an absolute pleasure. They delivered a cutting-edge solution that exceeded our expectations. The team's attention to detail and commitment to quality are truly commendable."
-                </p>
-              </div>
-              <div className="testimonial-icon">
-                <img src={quote} alt="quotation mark" />
-              </div>
-              <div className="testimonial-client">
-                <div className="client-image">
-                  <img src={jane} alt="Jane Doe" />
-                </div>
-                <div className="client-info">
-                  <h1>Jane Doe</h1>
-                  <p>Business Owner</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-text">
-                <p>
-                  "Binary Bros' expertise and professionalism are unparalleled. They transformed our vision into reality, delivering a seamless and user-friendly solution. I highly recommend their services."
-                </p>
-              </div>
-              <div className="testimonial-icon">
-                <img src={quote} alt="quotation mark" />
-              </div>
-              <div className="testimonial-client">
-                <div className="client-image">
-                  <img src={jane} alt="Jane Doe" />
-                </div>
-                <div className="client-info">
-                  <h1>Jane Doe</h1>
-                  <p>Business Owner</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card">
-              <div className="testimonial-text">
-                <p>
-                  "We are extremely satisfied with the services provided by Binary Bros. Their technical proficiency and dedication to our project ensured its success. It's rare to find a team that truly cares about client satisfaction."
-                </p>
-              </div>
-              <div className="testimonial-icon">
-                <img src={quote} alt="quotation mark" />
-              </div>
-              <div className="testimonial-client">
-                <div className="client-image">
-                  <img src={john} alt="John Doe" />
-                </div>
-                <div className="client-info">
-                  <h1>John Doe</h1>
-                  <p>IT Consultant</p>
-                </div>
-              </div>
-            </div>
-          </Slider>
-        </div>
+        <Testimonials />
       </section>
 
       {/*==================================== CONTACT ============================================*/}
       <section className="contact" id="contact">
-        {/* <div className="contact-header">
-          <h3>Stay in Touch.!</h3>
-          <h1>Contact Us</h1>
-        </div> */}
         <div className="contact">
-          <ContactOne />
+          <QuoteForm />
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

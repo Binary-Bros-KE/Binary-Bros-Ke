@@ -1,4 +1,5 @@
 import React from "react";
+import '../custom-css/contactOne.css'
 import email from "../Assets/contact/email.png";
 import location from "../Assets/contact/location.png";
 import phone from "../Assets/contact/phone.png";
@@ -26,6 +27,10 @@ const ContactOne = () => {
 
   return (
     <section className="contact">
+          <div className="contact-header">
+              <h3>Fill in your details.!</h3>
+              <h1>Get an Instant Quote Now.!</h1>
+        </div>
       <div>
         <div class="container">
           <span class="big-circle"></span>
@@ -93,12 +98,27 @@ const ContactOne = () => {
                   <label for="">Phone</label>
                   <span>Phone</span>
                 </div>
+                <div class="input-container select-container">
+                    <select name="service" class="input">
+                      <option value="Select Service">Select Service</option>
+                      <option value="Web Development">Web Development</option>
+                      <option value="Web Design">Web Design</option>
+                      <option value="Mobile Apps">Mobile Apps</option>
+                      <option value="S.E.O">S.E.O</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Wordpress Dev">Wordpress Dev</option>
+                      <option value="Web Hosting">Web Hosting</option>
+                    </select>
+                    {/* <label for="phone">Phone</label> */}
+                    {/* <span>Phone</span> */}
+                  </div>
+
                 <div class="input-container textarea">
                   <textarea name="message" class="input"></textarea>
                   <label for="">Message</label>
                   <span>Message</span>
                 </div>
-                <input type="submit" value="Send" class="btn" />
+                <input type="submit" value="Get Quote" class="btn" />
               </form>
             </div>
           </div>

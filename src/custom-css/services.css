@@ -1,0 +1,246 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --primary-color: #0084C8;
+    --secondary-color: #4D4BB8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    /* --body-font: "IBM Plex Sans", sans-serif; */
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 4.5rem;
+      --h1-font-size: 3rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* font-family: var(--body-font); */
+    font-size: var(--normal-font-size);
+    background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+    color: var(--text-color);
+    transition: background-color .4s;
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--black-color);
+    font-weight: var(--font-bold);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  
+  .service-page-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4rem;
+    gap: 2rem;
+  }
+
+
+  .service-page-card {
+    background-color: lightblue;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    transition: all 1s ease-in-out;
+  }
+
+  .service-page-image {
+    margin-bottom: 1rem;
+  }
+
+
+
+  .service-page-card .service-title h1{
+    color: var(--black-color);
+    font-size: 20px;
+  }
+
+  .service-page-card .service-page-buttons {
+    display: flex;
+    column-gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .service-page-card .service-page-buttons a {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+  }
+  .service-page-card .service-page-buttons a i {
+    transform: rotate(-45deg);
+    transition: all .4s ease-in-out;
+  }
+  .service-page-card .service-page-buttons a:hover i {
+    transform: rotate(0);
+  }
+
+
+  .services-nav-button {
+    grid-column: 1 / span 3;
+    background-color: transparent;
+    border: 2px solid rgba(128, 128, 128, .2);
+    width: max-content;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    column-gap: 2rem;
+  }
+
+  .services-nav-button a {
+    background-color: transparent;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: all .4s ease-in-out;
+  }
+  
+  .services-nav-button .active-button {
+    background-color: var(--black-color);
+    padding: .5rem 1rem;
+    color: var(--white-color);
+    border-radius: 10px;
+  }
+
+  .services-nav-button a:hover {
+    background-color: var(--black-color);
+    padding: .5rem 1rem;
+    color: var(--white-color);
+    border-radius: 10px;
+  }
+
+
+  .counter-section {
+    padding: .5rem 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  }
+
+  .counter-section .counter .counter-header h1{
+    color: var(--white-color);
+  }
+  .counter-section .counter .counter-header h3{
+    color: var(--black-color);
+  }
+  .counter-section .counter .counter-cards h1 {
+    color: var(--black-color);
+    font-size: 20px;
+  }
+  .counter-section .counter .counter-cards .counter-number {
+    color: white;
+  }
+
+  .counter-section .counter-header h3{
+    font-size: 20px;
+    color: var(--text-color);
+    color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+  }
+  .counter-section .counter-header h1{
+    font-size: 62px;
+    line-height: 60px;
+    color: var(--black-color);
+    color: var(--white-color);
+  }
+
+ .counter-section .card-title,
+ .counter-section .card p {
+  color: var(--white-color);
+ }
+
+ .counter-section .card {
+  border: 2px solid var(--white-color);
+ }
+
+
+ @media screen and (min-width: 280px) and (max-width: 640px) {
+  .service-page-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .services-nav-button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .counter-section .counter .counter-header h1,
+  .counter-section .counter-header h1{
+    font-size: 35px;
+  }
+ }
+
+ @media only screen and (min-width: 640px) and (max-width: 1023px) {
+  .service-page-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+    .services-nav-button {
+      grid-column: 1 / span 2;
+    }
+ }

@@ -11,7 +11,7 @@ const Footer = () => {
                 <img src={logo} alt="binary_bros_logo" />
             </div>
             <div className="footer-paragagraph">
-                <p>Empowering businesses with innovative software solutions. Connect with us to elevate your digital presence and achieve success. Let's build the future together!</p>
+                <p>  Rooted in a commitment to excellence and driven by results, Binary Bros stands as a pillar of technological advancement, ready to empower and elevate businesses in the ever-evolving digital landscape.</p>
             </div>
             <div className="footer-socials">
                 <i className="fab fa-facebook"></i>
@@ -24,11 +24,13 @@ const Footer = () => {
         <div className="quick-links">
             <h1>Useful Links</h1>
             <ul>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Services</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Pricing</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Portfolio</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Blog</a></li>
-                <li><a href="#"><i className="fas fa-chevron-right"></i>Contact</a></li>
+                <li><a href="/"><i className="fas fa-chevron-right"></i>Home</a></li>
+                <li><a href="/services"><i className="fas fa-chevron-right"></i>Services</a></li>
+                <li><a href="/pricing"><i className="fas fa-chevron-right"></i>Pricing</a></li>
+                <li><a href="/portfolio"><i className="fas fa-chevron-right"></i>Portfolio</a></li>
+                <li><a href="/blog"><i className="fas fa-chevron-right"></i>Blog</a></li>
+                <li><a href="/SEO"><i className="fas fa-chevron-right"></i>SEO</a></li>
+                <li><a href="/contact"><i className="fas fa-chevron-right"></i>Contact</a></li>
             </ul>
         </div>
 
