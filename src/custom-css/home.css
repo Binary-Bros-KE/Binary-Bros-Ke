@@ -369,7 +369,7 @@ a {
   border-right: 4px solid var(--primary-color);
 }
 .about-us img{
-  height: 500px;
+  /* height: 500px; */
   border-radius: 10px;
 }
 .about-boxes{
@@ -793,16 +793,15 @@ a {
   flex-direction: column;
   color: var(--white-color);
   background-image: url(../Assets/footer/background.png);
-  /* background-position: center; */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .quick-info {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr 2fr;
-  gap: 2rem;
-  margin-top: 6rem;
+  grid-template-columns: 2fr 2fr 2fr 1.5fr;
+  gap: 1rem;
+  margin-top: 4rem;
 }
 .logo-recap{
   display: flex;
@@ -820,12 +819,16 @@ a {
 }
 .quick-links{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 1rem;
+  /* column-gap: 1.5rem; */
   row-gap: 1rem;
   margin-top: 2rem;
 }
 .quick-links h1{
   font-size: 20px;
+  margin-bottom: 1rem;
+  color: var(--white-color);
 }
 .quick-links ul {
   display: flex;
@@ -1253,6 +1256,11 @@ a {
     row-gap: 3rem;
   }
 
+   /*======================================== SLIDER ==================================*/
+   /* .slick-slide > div {
+    margin: 0 10px;
+   } */
+
   /*=========================================== FOOTER =======================*/
   .footer{
     padding-top: 4rem;
@@ -1261,7 +1269,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* place-items: center; */
   }
 
   /*================================== TESTIONIAL ===============================*/

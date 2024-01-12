@@ -24,7 +24,7 @@ const testimonials = () => {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,

@@ -1,5 +1,5 @@
 import "../custom-css/home.css";
-import showcase from "../Assets/services/servics-page/web_development_banner.svg";
+import showcase from "../Assets/web_development_banner.svg";
 import discount from "../Assets/home/discount.png";
 import about from "../Assets/about/banner.png";
 import card from "../Assets/services/triangle.png";
