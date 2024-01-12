@@ -34,7 +34,7 @@ const InverseButton = styled.button`
 
 const Pricing = () => {
   return (
-    <div>
+    <div id="pricing">
       <div className="text-lg pricing-container">
 
       {/*====== Banner Container ========*/}

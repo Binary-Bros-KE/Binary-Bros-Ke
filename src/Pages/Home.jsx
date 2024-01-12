@@ -69,7 +69,7 @@ const Home = () => {
   return (
     <div className="home-container">
       {/*========================== HERO CONTAINER ==================================*/}
-      <section className="hero" id="hero">
+      <section className="hero sm:container-section" id="hero">
         <div className="showcase">
           <div className="home-info">
             <div className="discount">
