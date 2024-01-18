@@ -1,0 +1,481 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-color: #0084C8;
+  --secondary-color: #4D4BB8;
+  --black-color: #0e232eff;
+  --black-color-light: hsl(0, 0%, 40%);
+  --white-color: hsl(0, 0%, 95%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 64%);
+  --body-color: hsl(0, 0%, 87%);
+  --container-color: hsl(0, 0%, 83%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Nunito', sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* Mobile Phones (Small Screens) */
+
+@media only screen and (max-width: 768px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+        z-index: 1;
+    }
+
+    /*========================== NAVBAR ==============================*/
+    
+    .nav-socials {
+        display: none;
+        flex-direction: column;
+        padding: .125rem 2rem;
+    }
+    .primary-info:first-child{
+        display: none;
+    }
+
+    /*========================= HOME ================================*/
+    .home-container{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      z-index: -999;
+    }
+    .hero{
+      position: relative;
+      z-index: -999;
+    }
+    .showcase{
+      display: flex;
+      flex-direction: column;
+    }
+    .home-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      place-items: center;
+    }
+    .discount p{
+      font-size: 19px;
+      display: flex;
+      justify-content: center;
+      place-items: center;
+    }
+    .main-text h1{
+      font-size: 50px;
+      line-height: 60px;
+    }
+    .main-text .tagline{
+      font-size: 15px;
+      color: var(--text-color);
+    }
+    .main-text .typing {
+      font-size: 20px;
+    }
+    .buttons{
+      width: 100%;
+      /* background-color: red; */
+      display: flex;
+      justify-content: space-between;
+      /* padding: .125rem 1rem; */
+    }
+    .cards{
+      width: 100%;
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .card {
+      max-width: 320px;
+    }
+    
+
+    /*=================================== ABOUT ======================================*/
+    .about-us{
+      display: flex;
+      flex-direction: column;
+    }
+    .about-info {
+      order: -1; 
+    }
+    .about-info h1{
+      font-size: 50px;
+      line-height: 50px;
+    }
+    .about-image img{
+      height: auto;
+      width: 100%;
+    }
+    .about-info .about-button {
+      display: flex;
+      flex-direction: column;
+    }
+    .about-info .about-button a{
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    /*================================ SERVICES =========================================*/
+    .services .service-header h1 {
+      font-size: 50px;
+    }
+    .service-cards{
+      flex-direction: column;
+      row-gap: 1rem;
+      padding: 0;
+    }
+    .service-card{
+      height: fit-content;
+      min-width: 350px;
+    }
+    .service-buttons{
+      display: flex;
+      column-gap: 1rem;
+    }
+    .service-buttons a{
+      opacity: 1;
+    }
+
+
+    /*======================================= MOBILE AND WORDPRESSS  ==========================*/
+    .mobile,
+    .wordpress{
+      display: flex;
+      flex-direction: column;
+      padding: 0 .5rem;
+      width: 100%;
+    }
+    .mobile-wordpress {
+      /* padding: 0 2rem; */
+    }
+    .mobile .mobile-info h1,
+    .wordpress .wordpress-info h1{
+      font-size: 20px;
+      min-width: 100%;
+      display: inline-block;
+      /* color: red; */
+      /* background-color: #0084C8; */
+    }
+    .mobile .mobile-info .quality h2{
+      font-size: 15px;
+    }
+    .wordpress-info h1{
+      transform: translateX(-2rem);
+    }
+    .mobile .mobile-image img,
+    .wordpress .wordpress-image img {
+      height: auto;
+    }
+    .mobile-info{
+      order: -1;
+    }
+    .mobile-info .mobile-buttons,
+    .wordpress-info .wordpress-buttons {
+      display: flex;
+      width: 100%;
+    }
+    .mobile .mobile-info .mobile-buttons a{
+      font-size: 14px;
+      display: inline-block;
+      padding: .125rem .5rem;
+    }
+    .wordpress .wordpress-info .wordpress-buttons a{
+      font-size: 14px;
+      display: inline-block;
+      padding: .125rem .2rem;
+    }
+
+
+    /*======================================== COUNTER ==================================*/
+    .counter .counter-header h1 {
+      font-size: 50px;
+    }
+    .counter-cards {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+
+    /*=========================================== FOOTER =======================*/
+    .footer{
+      padding-top: 4rem;
+    }
+    .quick-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* place-items: center; */
+    }
+
+    /*================================== TESTIONIAL ===============================*/
+    .testimonials .testimonial-header h1{
+      font-size: 40px;
+      line-height: 40px;
+    }
+    .testimonials .testimonial-card {
+      height: fit-content;
+      min-height: 380px;
+    }
+    .notification {
+      transform: translateY(800%) translateX(20px) rotate(90deg);
+      opacity: .4;
+    }
+    .notification:hover {
+      opacity: 1;
+    }
+}
+
+/* Tablets (Medium Screens) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/*========================== NAVBAR ==============================*/
+
+.platforms i{
+  color: var(--white-color);
+  border: 2px solid var(--white-color)
+}
+
+/*========================= HOME ================================*/
+.home-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.showcase{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 4rem;
+}
+.home-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+.discount p{
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.main-text h1{
+  font-size: 60px;
+  line-height: 60px;
+}
+.main-text br{
+  display: none;
+}
+.main-text .tagline{
+  font-size: 15px;
+  color: var(--text-color);
+}
+.main-text .typing {
+  font-size: 20px;
+}
+.buttons{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  /* padding: .125rem 1rem; */
+}
+.cards{
+  width: 100%;
+  margin: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.card {
+  max-width: 320px;
+}
+
+
+/*=================================== ABOUT ======================================*/
+.about-us{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.about-info {
+  grid-column: 1 / span 2;
+  order: -1; 
+}
+.about-image img{
+  height: auto;
+  width: 100%;
+}
+.about-info .about-button {
+  display: flex;
+  /* flex-direction: column; */
+}
+.about-info .about-button a{
+  display: inline-block;
+  font-size: 16px;
+}
+
+/*================================ SERVICES =========================================*/
+.services .service-header h1 {
+  font-size: 50px;
+}
+.service-cards{
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 0;
+}
+.service-card{
+  height: fit-content;
+  min-width: 350px;
+}
+.service-buttons{
+  display: flex;
+  column-gap: 1rem;
+}
+.service-buttons a{
+  opacity: 1;
+}
+
+
+/*======================================= MOBILE AND WORDPRESSS  ==========================*/
+.mobile,
+.wordpress{
+  display: flex;
+  flex-direction: column;
+  padding: 0 .5rem;
+}
+.wordpress-info h1{
+  transform: translateX(-2rem);
+}
+.mobile .mobile-image img,
+.wordpress .wordpress-image img {
+  height: auto;
+}
+.mobile-info{
+  order: -1;
+}
+.mobile-info .mobile-buttons,
+.wordpress-info .wordpress-buttons {
+  display: flex;
+  width: 100%;
+}
+.mobile .mobile-info .mobile-buttons a{
+  font-size: 16px;
+  display: inline-block;
+  padding: .125rem 1rem;
+}
+.wordpress .wordpress-info .wordpress-buttons a{
+  font-size: 17px;
+  display: inline-block;
+  padding: .125rem .5rem;
+}
+
+
+/*======================================== COUNTER ==================================*/
+.counter .counter-header h1 {
+  font-size: 50px;
+}
+.counter-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.quick-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* place-items: center; */
+}
+.logo-recap{
+  grid-column: 1 / span 2;
+}
+.newsletter {
+  grid-column: 1 / span 2;
+}
+.newsletter .footer-input {
+  display: flex;
+  justify-content: start;
+  column-gap: 2rem;
+}
+.newsletter .footer-input a {
+  height: 3rem;
+  border-radius: 0;
+}
+.footer {
+  margin-top: 2rem;
+}
+}

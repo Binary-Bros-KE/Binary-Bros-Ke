@@ -24,7 +24,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       {/*========================== HERO CONTAINER ==================================*/}
-      <section className="hero" id="hero">
+      <section className="hero sm:container-section" id="hero">
         <div className="showcase">
           <div className="home-info">
             <div className="discount">
@@ -36,8 +36,8 @@ const Home = () => {
             <div className="main-text">
               <h1>
                 #1 Software
-                <br /> Developers in Kenya <br/>
-                And East Africa
+                <br /> Developers and<br/>
+                Digital Marketers
               </h1>
               <p className="tagline">
                 Crafting Innovative Solutions to Help Brands, Businesses, and

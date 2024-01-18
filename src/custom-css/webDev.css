@@ -101,7 +101,7 @@
     background-color: blue;
     grid-column: 1 / span 2;
     min-height: 300px;
-    background-image: url(../Assets/SEO/five.jpg);
+    background-image: url(../Assets/web-development/banner.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -129,10 +129,11 @@
     z-index: 999;
   }
 
-  .seo-home-image{
+  .seo-home-image {
     display: flex;
     justify-content: center;
     place-items: center;
+    flex-direction: column;
   }
 
   .banner-text .banner-text-header h1{
@@ -282,10 +283,31 @@
     gap: 2rem;
   }
 
-  .stratergy-text {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+  .stratergy-text-web {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stratergy-text-web p {
+    font-size: 17px;
+    margin: 0;
+  }
+
+  .stratergy-text-web ul {
+    margin-left: 2rem;
+  }
+
+  .stratergy-text-web ul li {
+    font-size: 20px;
+    margin: 0.25rem;
+    color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+  }
+  .stratergy-text-web ul li i {
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    padding: 5px;
+    border-radius: 50%;
   }
 
   .stratergy-singel {
@@ -332,7 +354,7 @@
   }
 
   .work-head h1 {
-    font-size: 40px;
+    font-size: 37px;
   }
   .work-head h1 span {
     color: var(--primary-color);
@@ -382,6 +404,7 @@
   .work-image{
     transform: translateX(4rem);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     place-items: center;
   }
@@ -625,7 +648,7 @@
     place-items: center;
   }
 
-  .stratergy-text {
+  .stratergy-text-web {
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -741,7 +764,7 @@
     place-items: center;
   } */
 
-  .stratergy-text {
+  .stratergy-text-web {
     display: flex;
     flex-direction: column;
     place-items: center;

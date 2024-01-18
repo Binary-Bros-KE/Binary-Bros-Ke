@@ -202,7 +202,7 @@ const SEO = () => {
             <a href="#">Contact<i className="fas fa-chevron-right"></i></a>
             <a href="#">Services<i className="fas fa-chevron-right"></i></a>
             <a href="#">Portfolio<i className="fas fa-chevron-right"></i></a>
-            <a href="#">Free Quote<i className="fas fa-chevron-right"></i></a>
+            <a href="#">Our Pricing<i className="fas fa-chevron-right"></i></a>
           </div>
 
           <div className="help-contacts">
