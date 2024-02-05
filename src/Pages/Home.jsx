@@ -1,6 +1,11 @@
 import "../custom-css/home.css";
-import showcase from "../Assets/web_development_banner.svg";
+import showcase from "../Assets/hero-banner.png";
+import graph from '../Assets/hero-span-graph.svg';
 import discount from "../Assets/home/discount.png";
+import client1 from "../Assets/testimonial/testimonial-1.jpg";
+import client2 from "../Assets/testimonial/testimonial-3.jpg";
+import client3 from "../Assets/testimonial/testimonial-4.jpg";
+import client4 from "../Assets/testimonial/testimonial-5.jpg";
 import about from "../Assets/about/banner.png";
 import card from "../Assets/services/triangle.png";
 import mobile from "../Assets/mobile&wordpress/banner-mob-app.png";
@@ -51,13 +56,63 @@ const Home = () => {
                 </span>
               </p>
             </div>
-            <div className="buttons">
-              <a href="/contact">Hire Us</a>
-              <a href="#about">About Us</a>
+
+
+
+            <div className="hero-clients">
+              <h6>Trusted by Our Clients</h6>
+              <div className="hero-client-wrapper">
+                  <div className="client-item">
+                    <img src={client1} alt="clients" />
+                  </div>
+                  <div className="client-item">
+                    <img src={client2} alt="clients" />
+                  </div>
+                  <div className="client-item">
+                    <img src={client3} alt="clients" />
+                  </div>
+                  <div className="client-item">
+                    <img src={client4} alt="clients" />
+                  </div>
+                  <div className="client-item">
+                    10K+ 
+                  </div>
+              </div>
             </div>
+
+
           </div>
           <div className="home-image">
+
+
+            <div className="hero-image-span">
+              <div className="hero-image-span-title">
+                <h3>Statistics</h3>
+                <h1>Businesses Reached</h1>
+              </div>
+              <div className="hero-image-span-metrices">
+                <p>165+</p>
+                <i className="fas fa-poll"></i>
+                <h6>79.2%</h6>
+              </div>
+              <div className="hero-image-span-image">
+                <img src={graph} alt="statisctics" />
+              </div>
+            </div>
+
+
             <img src={showcase} alt="web-development" />
+
+            <div className="hero-image-span-2">
+              <div className="hero-image-title-2">
+                <h1>$7,625</h1>
+                <h2>Total Revenue</h2>
+              </div>
+              <div className="hero-image-span-info-2">
+                <h3>+12.5%</h3>
+                <i className="fas fa-chart-line"></i>
+              </div>
+            </div>
           </div>
         </div>
       </section>
