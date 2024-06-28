@@ -1,9 +1,9 @@
 import './index.css';
-import Navbar from './components/Navbar';
-import Notification from "./components/Notification";
-import ScrollToTop from "./components/ScrollToTop";
-import Footer from './components/Footer';
-import AnimatedRoutes from './components/AnimatedRoutes';
+import Navbar from './components/navbar/Navbar';
+import Notification from "./components/sideNotification/Notification";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
+import Footer from './components/footer/Footer';
+import AnimatedRoutes from './components/animatedRoutes/AnimatedRoutes';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {

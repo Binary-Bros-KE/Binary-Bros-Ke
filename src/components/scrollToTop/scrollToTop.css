@@ -1,0 +1,63 @@
+
+
+/*===================================== SCROLL TO TOP FORMATING ==========================*/
+
+.ScrollToTop {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    right: 2rem;
+    bottom: -4rem;
+    padding: 10px;
+    padding: 2px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    place-items: center;
+    z-index: 100;
+    cursor: pointer;
+    opacity: .7;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .ScrollToTop:hover{
+    opacity: 1;
+  }
+  
+  .ScrollToTop.visible {
+    bottom: 2rem;
+  }
+  
+  /* For WebKit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: lightblue; /* Set the color of the scrollbar track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(
+      --primary-color
+    ); /* Set the color of the scrollbar thumb */
+    border-radius: 0px; /* Set the border radius of the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(
+      --secondary-color
+    ); /* Set the color of the scrollbar thumb on hover */
+  }
+  
+  /* Mobile Phones (Small Screens) */
+  
+  @media only screen and (max-width: 640px) {
+    body {
+      width: 100%;
+      overflow-x: hidden;
+      z-index: 1;
+    }
+}

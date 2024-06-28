@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import '../../custom-css/SEO.css'
-import seoTypes from "../../Assets/SEO/seo-types.png";
-import seobanner from "../../Assets/SEO/seo-banner.png";
+import seoTypes from "../../../public/SEO/seo-types.png";
+import seobanner from "../../../public/SEO/seo-banner.png";
 import { SEOReasonsRight, SEOReasonsLeft, Stratergy, Tags } from "../../constants/SEO.js";
-import SeoCardList2 from '../../components/SeoCardList2';
+import SeoCardList2 from '../../components/pricingCards/seo/SeoCardList2.jsx';
 import { useState, useEffect } from "react";
+import QuoteForm from "../../components/quoteForm/QuoteForm.jsx";
 
 const SEO = () => {
 
@@ -41,7 +42,7 @@ const SEO = () => {
             <div className="banner-links">
                 <a href="#">Home</a>/
                 <a href="#">Services</a>/
-                <a href="#">Serch Engine Optimization-SEO</a>
+                <a href="#">Search Engine Optimization-SEO</a>
             </div>
           </div>
         </div>
@@ -192,6 +193,8 @@ const SEO = () => {
 
         </div>
       </div>
+
+
    </div>
 
         <div className={`seo-home-right ${isSticky ? 'sticky' : ''}`}>
@@ -251,7 +254,16 @@ const SEO = () => {
         
         </div>
         
+
+        
       </div>
+
+                  {/*==================================== CONTACT ============================================*/}
+                  <section className="contact" id="contact">
+        <div className="contact">
+          <QuoteForm />
+        </div>
+      </section>
     </motion.section>
   )
 }

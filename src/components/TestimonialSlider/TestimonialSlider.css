@@ -1,0 +1,141 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --primary-color: #0084c8;
+    --secondary-color: #4d4bb8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: #fff;
+    --container-color: hsl(0, 0%, 83%);
+}
+
+.testimonial-slider{
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    position: relative;
+    padding-bottom: 6rem;
+}
+.testimonialSlider{
+    position: relative;
+}
+
+.testimonial-shape{
+    position: absolute;
+    right: 10rem;
+    top: -1rem;
+}
+
+.testimonial-header{
+    width: 100%;
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+  
+  .testimonial-header h1{
+    font-size: 50px;
+    color: white;
+  }
+  .testimonial-header h3{
+    color: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    .testimonial-header h1{
+        font-size: 30px;
+      }
+      .testimonial-shape{
+        right: 5rem;
+    }
+  }
+
+.testimonial-card-container {
+    background-color: white;
+    padding: 0.5rem 1rem 1rem 1rem;
+    margin: 0 1rem;
+}
+
+.testimonial-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.testimonial-card-header-image img{
+    height: 5rem;
+    opacity: .7;
+}
+
+.testimonial-card-header-stars {
+    display: flex;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.testimonial-card-body {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-card-footer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-card-footer img{
+    width: 3rem;
+}
+
+.testimonial-card-footer-details p {
+    color: var(--text-color-light);
+}
+
+.slick-dots {
+    text-align: left;
+    bottom: -50px;
+    margin-left: .8rem;
+}
+
+.slick-dots li button::before{
+    content: '';
+}
+
+.slick-dots li button {
+    width: 10px;
+    height: 5px;
+    background: white;
+    transition: all .4s ease-in-out;
+}
+
+.slick-dots li.slick-active button {
+    width: 20px;
+    background-color: var(--black-color);
+}
+
+.slick-dots li{
+    margin: .2rem;
+}
+
+.testimonial-slider-buttons {
+    position: absolute;
+    right: 2rem;
+    bottom: -3rem;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.testimonial-slider-buttons button{
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 20px;
+    width: 30px;
+}

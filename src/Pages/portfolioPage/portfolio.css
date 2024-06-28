@@ -1,0 +1,183 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-color: #0084C8;
+  --primary-hover: #025a86;
+  --secondary-color: #4D4BB8;
+  --black-color: #0e232eff;
+  --black-color-light: hsl(0, 0%, 40%);
+  --white-color: hsl(0, 0%, 95%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 64%);
+  --body-color: hsl(0, 0%, 87%);
+  --container-color: hsl(0, 0%, 83%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "IBM Plex Sans", sans-serif;
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--black-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.portfolio-section{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.portfolio-cards-wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.portfolio-card{
+  max-width: 360px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.portfolio-card-image{
+  overflow: hidden;
+}
+.portfolio-card-image img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: all .4s ease-in-out;
+}
+
+.portfolio-card-title{
+  padding: .5rem 1rem;
+}
+
+.portfolio-card-title h1{
+  font-size: 20px;
+}
+
+.portfolio-card-title h3{
+  text-transform: capitalize;
+  position: relative;
+  transform: translateX(25px);
+  color: #4D4BB8;
+}
+
+.portfolio-card-title h3::before{
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 20px;
+  height: 4px;
+  background: linear-gradient(
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  transform: translateX(-25px);
+}
+
+.portfolio-card-description{
+  padding: .5rem 1rem;
+}
+
+.portfolio-card-buttons{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  padding: .5rem 1rem;
+}
+
+.portfolio-card:hover .portfolio-card-image img{
+  scale: 1.05;
+}
+
+@media screen and (max-width: 480px){
+  .portfolio-section{
+    padding: 1rem 0;
+  }
+  .portfolio-cards-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1rem;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width:481px) and (max-width: 1112px){
+  .portfolio-section{
+    padding: 0;
+  }
+  .portfolio-cards-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    gap: 2rem;
+  }
+}

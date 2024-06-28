@@ -1,0 +1,58 @@
+
+/*============================ NOTIFICATION FORMATING =======================*/
+
+.notification {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateY(800%) translateX(40px) rotate(90deg);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    opacity: 0.5;
+    white-space: nowrap;
+    z-index: 999;
+  }
+  .notification:hover {
+    opacity: 1;
+  }
+  .notication-div {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    max-width: 200px;
+    min-height: 200px;
+    transform: translateY(150%) translateX(100%);
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 10px;
+    opacity: 0;
+    border-radius: 10px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+  }
+  .notication-div span {
+    color: aqua;
+    font-weight: var(--font-semi-bold);
+  }
+  
+  .notication-div.visible-div {
+    opacity: 1;
+    transform: translateY(150%) translateX(-45%);
+  }
+  .notication-div p {
+    font-size: 20px;
+  }
+  .notication-div .box {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    right: -1rem;
+    transform: rotate(-45deg);
+    border-radius: 0;
+    background-color: var(--black-color);
+  }

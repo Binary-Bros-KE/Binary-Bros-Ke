@@ -1,0 +1,220 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --primary-color: #0084c8;
+    --secondary-color: #4d4bb8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: #fff;
+    --container-color: hsl(0, 0%, 83%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    /* --body-font: "IBM Plex Sans", sans-serif; */
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 4.5rem;
+      --h1-font-size: 3rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.813rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* font-family: var(--body-font); */
+    font-size: var(--normal-font-size);
+    /* background: linear-gradient(to top, #e0f2f1, #ffffff); */
+    background-color: #fff;
+    color: var(--text-color);
+    transition: background-color 0.4s;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--black-color);
+    font-weight: var(--font-bold);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  
+
+
+  /*============================== Marketing Pricing Cards =================*/
+  .marketing-packages-wrapper {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    column-gap: 1rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
+  }
+
+  .marketing-package-item {
+    background-color: #fff;
+    outline: 2px solid rgba(128, 128, 128, .5);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .marketing-package-item:nth-child(2) {
+    background-color: var(--black-color);
+    color: #fff;
+  }
+  .marketing-package-item .package-head-info{
+    margin: 1rem 0;
+  }
+
+  .marketing-package-item .package-head-info h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .marketing-package-item .package-head-info h1 {
+    font-size: 25px;
+    font-weight: 900;
+    display: flex;
+    place-items: center;
+  }
+
+  .marketing-package-item .package-head-info h1 span {
+    color: var(--secondary-color);
+    font-size: 14px;
+  }
+
+  .marketing-package-item .package-head-info p {
+    margin: .125rem 0;
+    color: var(--black-color);
+  }
+
+  .marketing-package-item .package-main-info h1 {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .marketing-package-item .package-main-info ul li {
+    display: flex;
+    column-gap: .5rem;
+    place-items: center;
+    margin-bottom: .25rem;
+  }
+
+  .marketing-package-item .package-main-info ul li i {
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .package-footer {
+    background-color: inherit;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+  }
+
+  .package-footer a {
+    background-color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: var(--white-color);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .package-footer a:nth-child(2) {
+    background-color: #fff;
+    color: var(--black-color);
+    outline: 2px solid rgb(128, 128, 128, 0.5);
+  }
+
+  .marketing-package-item:nth-child(2) {
+    background-color: var(--black-color);
+    color: #fff;
+  }
+
+  .marketing-package-item:nth-child(2) .package-head-info h1,
+  .marketing-package-item:nth-child(2) .package-head-info p {
+    color: #fff;
+  }
+
+  .marketing-package-item:nth-child(2) .package-head-info h2 {
+    color: var(--secondary-color);
+  }
+  .marketing-package-item:nth-child(2) .package-footer a:nth-child(1) {
+    background-color: var(--secondary-color);
+    outline: none;
+  }
+  .marketing-package-item:nth-child(2) .package-footer a:nth-child(2) {
+    outline: none;
+  }
+
+  @media only screen and (max-width: 640px) {
+    .marketing-packages-wrapper {
+      flex-direction: column;
+      row-gap: 2rem;
+      padding: 0 .25rem;
+      margin: 2rem;
+    }
+  }
+
+
+
+
+
+
+

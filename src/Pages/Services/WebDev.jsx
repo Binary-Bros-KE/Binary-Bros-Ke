@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import '../../custom-css/webDev.css'
-import seoTypes from "../../Assets/SEO/seo-types.png";
-import showcase from "../../Assets/home/web-development.png";
-import web from '../../Assets/web-development/web.png'
-import seobanner from "../../Assets/SEO/seo-banner.png";
+import showcase from "../../../public/home/web-development.png";
+import web from '../../../public/web-development/web.png'
 import { webReasonsLeft, webReasonsRight, Tags } from "../../constants/webDev.js";
-import CardList from '../../components/CardList';
+import CardList from '../../components/pricingCards/webDev/CardList.jsx';
 import { useState, useEffect } from "react";
 
 const WebDev = () => {

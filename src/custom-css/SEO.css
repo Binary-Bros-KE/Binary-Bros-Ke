@@ -213,9 +213,9 @@
     transform: translateX(-30px);
   }
 
-  /* .seo-home-info .seo-paragraph p {
-    font-size: 17px;
-  } */
+  .seo-home-info .seo-paragraph p {
+    margin-top: .5rem;
+  }
 
   .seo-home-info .seo-home-buttons {
     display: flex;

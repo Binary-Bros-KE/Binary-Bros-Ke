@@ -1,0 +1,400 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --primary-color: #0084C8;
+  --primary-hover: #025a86;
+  --secondary-color: #4D4BB8;
+  --black-color: #0e232eff;
+  --the-gray-color: #8c9aaf;
+  --black-color-light: hsl(0, 0%, 40%);
+  --white-color: hsl(0, 0%, 95%);
+  --title-color: hsl(0, 0%, 0%);
+  --text-color: hsl(0, 0%, 35%);
+  --text-color-light: hsl(0, 0%, 64%);
+  --body-color: hsl(0, 0%, 87%);
+  --container-color: hsl(0, 0%, 83%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  /* --body-font: "IBM Plex Sans", sans-serif; */
+  --biggest-font-size: 2.5rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* font-family: var(--body-font); */
+  font-size: var(--normal-font-size);
+  background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+  color: var(--text-color);
+  transition: background-color .4s;
+}
+
+h1, h2, h3, h4 {
+  color: var(--black-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.quote-contact {
+  width: 100%;
+  padding: 1rem;
+}
+
+.quote-container {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.quote-left {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.quote-left-head h2 {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color);
+}
+
+.quote-left-head h1 {
+  font-size: var(--h1-font-size);
+  color: var(--black-color);
+}
+.quote-left-head h1 span {
+  font-size: var(--h1-font-size);
+  color: var(--primary-color);
+}
+
+.quote-left-head h3 {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
+
+.quote-left-head h3 a,
+.quote-left-head h3 span {
+  color: var(--primary-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.quote-form form {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-input {
+  position: relative;
+  justify-content: space-between;
+  place-items: center;
+  background-color: var(--white-color);
+  min-height: 60px;
+}
+
+.form-input:nth-child(3),
+.form-input:nth-child(4) {
+  grid-column: 1 / span 2;
+}
+
+.form-input:nth-child(4) {
+  min-height: 150px;
+}
+
+.quote-form-input {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 0 0 0px hsla(var(--primary-color), 92%, 54%, 0.169);
+  outline: transparent;
+  border: 1px solid var(--black-color-light);
+  font-family: inherit;
+  color: var(--black-color);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--normal-font-size);
+  transition: all .4s ease-in-out;
+}
+
+.quote-form-input::placeholder{
+  font-weight: var(--font-semi-bold);
+  transition: all .4s ease-in-out;
+}
+
+
+.quote-form-input:focus{
+  border: 1px solid var(--primary-color);
+}
+
+.quote-form-input:focus::placeholder {
+  opacity: 0;
+}
+
+.quote-label {
+  position: absolute;
+  top: 50%;
+  left: calc(1.35rem + 2px);
+  transform: translateY(-50%);
+  opacity: 0;
+  color: var(--the-gray-color);
+  pointer-events: none;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
+  transition: all .4s ease-in-out;
+}
+
+.icon {
+  position: absolute;
+  right: calc(1.35rem + 2px);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: var(--h3-font-size);
+}
+
+.quote-form-input:focus.icon{
+  color: var(--primary-color);
+}
+
+.textarea .quote-form-input ~ .quote-label {
+  top: 2.5rem;
+  transform: none;
+}
+
+.textarea .quote-form-input ~ .icon {
+  top: 1.3rem;
+  transform: none;
+}
+
+.textarea .quote-form-input::placeholder {
+  transform: translateY(-150%);
+}
+
+.textarea input {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.quote-form-input:focus + .quote-label {
+  opacity: 1;
+  color: var(--primary-color);
+  /* top: 1rem; */
+  transform: translateX(.2rem) translateY(-140%);
+}
+
+.quote-form-input:focus + .icon {
+  color: red;
+}
+
+
+
+.quote-form .form-buttons {
+  display: flex;
+  column-gap: 2rem;
+  margin-top: 2rem;
+  grid-column: span 2;
+  cursor: pointer;
+}
+
+.quote-form .form-buttons .upload {
+  background-color: var(--white-color);
+  font-size: var(--h3-font-size);
+  color: var(--black-color-light);
+  cursor: pointer;
+  position: relative;
+  transform: translateY(-.25rem);
+}
+
+.quote-form .form-buttons .upload:hover {
+  background-color: var(--the-gray-color);
+  color: var(--black-color);
+}
+
+.quote-form .form-buttons .upload span {
+  display: flex;
+  column-gap: .1rem;
+  place-items: center;
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+
+.quote-form .form-buttons .upload input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+
+
+
+
+.quote-right {
+  /* background-color: aqua; */
+  padding: 1rem;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+.quote-right-image {
+  position: relative;
+  padding: 2rem;
+}
+
+.quote-right-image img {
+  max-height: 500px;
+  z-index: 1;
+}
+
+.quote-right-image .image-shadow {
+  background-color: var(--white-color);
+  height: 110%;
+  width: 60%;
+  border-top: 4px solid var(--primary-color);
+  border-bottom: 4px solid var(--primary-color);
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  z-index: -999;
+}
+
+.quote-right-image .shape-shadow {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: -2rem;
+  z-index: -999;
+  opacity: .3;
+}
+
+.quote-socials ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  transform: translateX(.5rem);
+  }
+
+ .quote-socials ul li {
+  background-color: var(--primary-color);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  font-size: 20px;
+  color: var(--white-color);
+  opacity: .8;
+  transition: background-color .4s ease, opacity .4s;
+ }
+
+ .quote-socials ul li:hover {
+  opacity: 1;
+  background-color: var(--secondary-color);
+ }
+
+
+
+ @media only screen and (max-width: 640px) {
+  .quote-container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .quote-left {
+    padding: 0;
+  }
+
+  .quote-left form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-input {
+    grid-column: span 2;
+  }
+
+  .quote-form .form-buttons .upload,
+  .quote-form .form-buttons .submitt-button {
+    font-size: 14px;
+  }
+
+  .quote-right-image {
+    margin-top: 2rem;
+  }
+  
+ }
+
+ @media only screen and (min-width: 640px) and (max-width: 1150px) {
+  .quote-container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+ }

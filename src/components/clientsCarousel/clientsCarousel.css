@@ -1,0 +1,31 @@
+
+  /*======================== CLIENTS-CAROUSEL COMPONENT ==============================*/
+  .clients {
+    background-color: var(--primary-color);
+    padding: 2rem;
+  }
+
+  .clients-header  h3,
+  .recentBlogs-header h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: var(--font-semi-bold);
+  }
+  .clients-header  h1,
+  .recentBlogs-header h1{
+    font-size: 62px;
+    line-height: 60px;
+    color: white;
+  }
+  
+
+  @media only screen and (max-width: 768px) {
+    .clients {
+      padding: .25rem;
+    }
+    .clients-header  h1,
+    .recentBlogs-header h1 {
+      font-size: 32px;
+      line-height: 20px;
+    }
+  }

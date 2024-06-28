@@ -1,0 +1,9 @@
+.navButton{
+    background: linear-gradient(135deg, var(--second-color), var(--first-color));
+    color: white;
+    padding: .25rem .5rem;
+    border-radius: 15px;
+}
+.navButton:hover {
+    background: linear-gradient(-45deg, var(--second-color), var(--first-color));
+}

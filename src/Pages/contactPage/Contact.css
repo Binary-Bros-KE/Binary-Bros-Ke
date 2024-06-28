@@ -1,0 +1,39 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --primary-color: #0084C8;
+    --secondary-color: #4D4BB8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+
+}
+
+.Choose-Us-Cards{
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.why-cards-header h3{
+    color: white;
+}
+
+.why-cards-header h1{
+    color: white;
+}
+
+.card {
+    border: 2px solid white;
+}
+
+.card-title {
+    color: white;
+}
