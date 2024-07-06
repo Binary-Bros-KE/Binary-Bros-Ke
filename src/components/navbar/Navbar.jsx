@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar">
+      <div className={nav ? "navbar nav-height-test" : "navbar"}>
         <div className="nav-socials">
           <div className="primary-info">
             <p className="responsive-display">
@@ -38,7 +38,7 @@ const Navbar = () => {
 
         <div className={nav ? "nav nav-height" : "nav"}>
           <div className="nav__data">
-            <Link className="nav__logo" to="/"> <img src={Logo} alt="" /> </Link>
+            <a className="nav__logo" to="/"> <img src={Logo} alt="" /> </a>
             <div className="nav__toggle" id="nav-toggle" onClick={() => setNav(!nav)}>
               <i className={nav ? "fa fa-window-close" : "fa fa-bars"}></i>
             </div>
@@ -48,9 +48,9 @@ const Navbar = () => {
           <div className={nav ? "nav__menu show-menu" : "nav__menu"} id="nav-menu">
             <ul className="nav__list">
               <li>
-                <Link to="/" className="nav__link">
+                <a href="/" className="nav__link">
                   Home
-                </Link>
+                </a>
               </li>
 
               {/*================== DROPDOWN 1 ===============*/}
@@ -91,40 +91,40 @@ const Navbar = () => {
                       </span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link" to={'/websitedevelopment'}>
+                          <a className="dropdown__link" href="/websitedevelopment">
                             <div className="dropdown__link__icon"></div> Website
                             Design & Development
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Mobile
                             Applications
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             E-commerce Solutions
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             Management Systems
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             Wordpress and CMS Solutions
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             Software Testing and Quality Assuarance
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -138,40 +138,40 @@ const Navbar = () => {
                       </span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/seo">
                             <div className="dropdown__link__icon"></div> SEO
                             Audits and Consultations
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/seo">
                             <div className="dropdown__link__icon"></div> On Page
                             SEO
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/seo">
                             <div className="dropdown__link__icon"></div> Off
                             Page SEO
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/seo">
                             <div className="dropdown__link__icon"></div>{" "}
                             Technical and Local SEO
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/seo">
                             <div className="dropdown__link__icon"></div> Website
                             Speed Optimization
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/seo">
                             <div className="dropdown__link__icon"></div> Website
                             Maintenance
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -183,40 +183,40 @@ const Navbar = () => {
                       <span className="dropdown__title">Digital Marketing</span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link" href="/socialmediamarketing">
                             <div className="dropdown__link__icon"></div> Social
-                            Media Campaigns
-                          </Link>
+                            Media Marketing
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             Google/Social Media ads
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Pay Per
                             Click (PPC Management)
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Event /
                             Influencer Marketing
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Audits
                             and Consultations
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Graphic
                             Design
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -230,40 +230,40 @@ const Navbar = () => {
                       </span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Cloud
                             Infrastructure Services
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> AI and
                             Machine Learning Implementation
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             Internet of Things(IoT) Development
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Data
                             Analysis and Visualization
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Agile
                             Project Management
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> DevOps
                             Consulting and Implementation
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -272,9 +272,9 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link to="/portfolio" className="nav__link">
+                <a href="/portfolio" className="nav__link">
                   Portfolio
-                </Link>
+                </a>
               </li>
 
               {/*================== DROPDOWN 2 ===============*/}
@@ -310,7 +310,7 @@ const Navbar = () => {
                       <img src={starter_package} alt="" />
                       <div className="image_info_div">
                         <i className="fa fa-link"></i>
-                        <Link to='/contact' className="package__link">Get Free Quote <i className="fas fa-long-arrow-alt-right"></i></Link>
+                        <a to='/contact' className="package__link">Get Free Quote <i className="fas fa-long-arrow-alt-right"></i></a>
                       </div>
                     </div>
 
@@ -318,7 +318,7 @@ const Navbar = () => {
                       <img src={premium_package} alt="" />
                       <div className="image_info_div">
                         <i className="fa fa-link"></i>
-                        <Link to='/contact' className="package__link">Get Free Quote <i className="fas fa-long-arrow-alt-right"></i></Link>
+                        <a to='/contact' className="package__link">Get Free Quote <i className="fas fa-long-arrow-alt-right"></i></a>
                       </div>
                     </div>
 
@@ -339,34 +339,34 @@ const Navbar = () => {
                       </span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link" to={'/pricing'}>
+                          <a className="dropdown__link" href="/pricing">
                             <div className="dropdown__link__icon"></div> Website
                             Design Services
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link" to={'/pricing'}>
+                          <a className="dropdown__link" href="/pricing">
                             <div className="dropdown__link__icon"></div> Mobile
                             Applications
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link" to={'/pricing'}>
+                          <a className="dropdown__link" href="/pricing">
                             <div className="dropdown__link__icon"></div> Digital
                             Marketing
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link" to={'/pricing'}>
+                          <a className="dropdown__link" href="/pricing">
                             <div className="dropdown__link__icon"></div> Search
                             Engine Optimzation
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link" to={'/pricing'}>
+                          <a className="dropdown__link" href="/pricing">
                             <div className="dropdown__link__icon"></div>{" "}
                             Programming and Automation
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -413,27 +413,27 @@ const Navbar = () => {
                       <span className="dropdown__title">About BB ke</span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> About
                             Us
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Our
                             Team
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Support
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Contact
                             Us
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -445,27 +445,27 @@ const Navbar = () => {
                       <span className="dropdown__title">Company</span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Terms
                             and Conditions
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Payment
                             Methods
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Policy
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Cookies
                             and Settings
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -477,27 +477,27 @@ const Navbar = () => {
                       <span className="dropdown__title">Contact</span>
                       <ul className="dropdown__list">
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> Web
                             Form
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             binarybroske@gmail.com
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div>{" "}
                             Whatsapp
-                          </Link>
+                          </a>
                         </li>
                         <li>
-                          <Link className="dropdown__link">
+                          <a className="dropdown__link">
                             <div className="dropdown__link__icon"></div> +254 791 880 412
-                          </Link>
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -506,14 +506,14 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link to="/blog" className="nav__link">
+                <a href="/blog" className="nav__link">
                   <span>Blog</span>
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/contact" className="nav__link">
+                <a href="/contact" className="nav__link">
                   <span>Contact</span>
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

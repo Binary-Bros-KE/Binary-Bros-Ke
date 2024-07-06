@@ -1,0 +1,123 @@
+.work {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.work-head {
+  grid-column: 1 / span 2;
+}
+.work-head h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  position: relative;
+  width: max-content;
+}
+.work-head h3::before {
+  content: "";
+  height: 4px;
+  width: 20px;
+  background: linear-gradient(
+    -45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  position: absolute;
+  left: 0;
+  top: 45%;
+  transform: translateX(-30px);
+}
+
+.work-head h1 {
+  font-size: 50px;
+}
+.work-head h1 span {
+  color: var(--primary-color);
+}
+.work-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.work-content {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  background: linear-gradient(
+    -45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  padding: 1rem 2rem;
+  color: var(--white-color);
+  transition: all 0.8s ease-in-out;
+}
+.work-content:hover {
+  background: linear-gradient(var(--secondary-color), var(--primary-color));
+}
+.work-content:nth-child(2) {
+  transform: translateX(4rem);
+}
+.work-icon {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.work-icon i {
+  font-size: 60px;
+  color: var(--white-color);
+}
+.work-text {
+  display: flex;
+  flex-direction: column;
+}
+.work-text h1 {
+  transform: translateX(25px);
+  font-size: 20px;
+  row-gap: 1rem;
+  font-weight: 1200;
+  color: var(--black-color);
+}
+.work-image {
+  transform: translateX(4rem);
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .work {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    place-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .work-head h3 {
+    transform: translateX(1rem);
+  }
+
+  .work-head h1 {
+    font-size: 40px;
+    margin-top: 0.5rem;
+  }
+  .work-content .work-icon i {
+    font-size: 30px;
+  }
+  .work-content .work-text h1 {
+    font-size: 20px;
+  }
+
+  .work-content:nth-child(2) {
+    transform: translateX(0);
+  }
+
+  .work-image {
+    width: 100%;
+    margin: 0;
+    min-width: 100%;
+    transform: translateX(-0.01rem);
+  }
+}

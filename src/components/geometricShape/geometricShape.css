@@ -5,7 +5,6 @@
     width: 40px;
     transform: rotateZ(15deg);
     position: relative;
-    z-index: 100;
 }
 
 .geometricShape::before{

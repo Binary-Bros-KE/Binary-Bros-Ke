@@ -4,6 +4,7 @@ import WhyCards from "../../components/chooseUsCards/WhyCards";
 import { motion } from "framer-motion";
 import Contact from "../../components/mainContactForm/ContactForm"
 import Button from "../../components/genericButton/genButton";
+import QuotePage from "../../components/quote/quoteForm";
 
 const Services = () => {
   return (
@@ -104,7 +105,7 @@ const Services = () => {
       </section>
 
       <section className="contact-section">
-        <Contact />
+        <QuotePage />
       </section>
     </motion.section>
   );

@@ -3,6 +3,7 @@ import WhyCards from "../../components/chooseUsCards/WhyCards";
 import ContactForm from "../../components/mainContactForm/ContactForm";
 import QuoteForm from "../../components/quoteForm/QuoteForm";
 import './Contact.css'
+import QuotePage from "../../components/quote/quoteForm";
 
 const Contact = () => {
   return (
@@ -20,7 +21,7 @@ const Contact = () => {
       </section>
 
       <section className="contact-form-section" id="quote">
-        <QuoteForm />
+        <QuotePage />
       </section>
     </motion.div>
   );

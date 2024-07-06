@@ -1,0 +1,464 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --primary-color: #0084C8;
+    --secondary-color: #4D4BB8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    /* --body-font: "IBM Plex Sans", sans-serif; */
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 4.5rem;
+      --h1-font-size: 3rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* font-family: var(--body-font); */
+    font-size: var(--normal-font-size);
+    background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+    color: var(--text-color);
+    transition: background-color .4s;
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--black-color);
+    font-weight: var(--font-bold);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+
+
+/*================================= SEO FORMATING ==================================================*/
+  .SEO {
+    background-color: transparent;
+  }  
+
+  .seo-home {
+    display: grid;
+    margin-top: -.3rem;
+    grid-template-columns: 3fr 1fr;
+    border-bottom: 2px solid rgba(128, 128, 128, .2);
+  }
+
+  .seo-home-banner {
+    grid-column: 1 / span 2;
+    min-height: 300px;
+    background-image: url(../../../../public/SEO/five.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+  }
+
+  .geometric-shape{
+    position: absolute;
+    bottom: -1.5rem;
+    right: -5%;
+  }
+
+  .seo-home-banner::before {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    z-index: 1;
+  }
+  .banner-text {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 1rem;
+    padding-left: 4rem;
+    position: absolute;
+    z-index: 999;
+  }
+
+  .banner-text .banner-text-header h1{
+    font-size: 60px;
+    color: var(--white-color);
+    z-index: 9;
+  }
+  .banner-text .banner-links{
+    display: flex;
+    column-gap: 1rem;
+    font-size: 15px;
+    color: var(--white-color);
+  }
+
+
+  /*============================ SEO HOME FORMATTING ==============================*/
+  .seo-home-left {
+    padding: 4rem 1rem 2rem 4rem;
+  }
+
+
+  /*=================================== REASONS CONTAINER FORMATTING ===========================*/
+  .reasons-header h3{
+    font-size: 18px;
+    color: var(--primary-color);
+    position: relative;
+    width: max-content;
+  }
+  .reasons-header h3::before{
+    content: '';
+    height: 4px;
+    width: 20px;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateX(-30px);
+  }
+
+  .reasons-content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .left-div,
+  .right-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+
+
+
+
+  .seo-home-right {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    height: max-content;
+    border-left: 2px solid rgba(128, 128, 128, .2);
+  }
+
+  .seo-home-right.sticky {
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+  }
+
+  .page-links {
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+  .page-links h1{
+    font-size: 20px;
+  }
+  .page-links a {
+    border: 2px solid rgba(128, 128, 128, .2);
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-links a:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  .help-contacts {
+    background-color: var(--black-color);
+    padding: 4rem 1rem;
+  }
+
+  .help-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+  }
+  .help-text h1 {
+    font-size: 40px;
+    color: var(--white-color);
+  }
+  .help-text h3 {
+    color: aqua;
+    position: relative;
+  }
+  .help-text h3::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    background-color: aqua;
+    left: 2.5rem;
+    top: 45%;
+  }
+  .help-text h3::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 20px;
+    background-color: aqua;
+    right: 2.5rem;
+    top: 45%;
+  }
+
+  .seo-contact-info{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .seo-contact-info .phone {
+    font-size: 40px;
+    font-weight: var(--font-semi-bold);
+    color: var(--white-color);
+  }
+  .seo-contact-info .email {
+    font-size: 20px;
+    color: aqua;
+    margin-bottom: 1rem;
+  }
+
+  .seo-contact-info .contact-paragraph p {
+    font-size: 20px;
+    color: var(--white-color) ;
+  }
+  .help-contacts .quote-button {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+.help-contacts .quote-button a{
+  background-color: bisque;
+  padding: 0 0 0 1rem;
+  display: flex;
+  column-gap: 1rem;
+  place-items: center;
+  color: var(--black-color);
+}
+
+.help-contacts .quote-button a i {
+  background-color: aqua;
+  padding: 10px;
+}
+
+
+.tags {
+  padding: 2rem 1rem;
+}
+.tags h1 {
+  color: var(--black-color);
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+.tags .tags-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.tags .tags-content ul li {
+  background-color: lightblue;
+  padding: .125rem .5rem;
+  color: var(--black-color);
+}
+
+.seo-about-us {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+.seo-about-us h1 {
+  font-size: var(--h3-font-size);
+}
+
+.seo-about-us a {
+  padding: .5rem 1rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  background-color: var(--primary-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--white-color);
+}
+.seo-about-us a i {
+  transform: rotate(90deg);
+}
+
+.seo-about-us a:hover {
+  background-color: rgb(8, 69, 90);
+}
+
+
+
+
+
+
+
+
+/*================================ RESPONSIVE ===========================*/
+@media only screen and (max-width: 480px) {
+  .seo-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .banner-text {
+    padding-left: 1rem;
+  }
+
+  .banner-text .banner-text-header h1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 50px;
+  }
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    row-gap: 2rem;
+  }
+
+
+  .seo-home-right{
+    padding: 0 1rem;
+    margin: 1rem 0;
+  }
+
+  .seo-home-left {
+    padding: 1rem;
+  }
+}
+
+
+
+
+
+
+
+/*================================ RESPONSIVE ===========================*/
+@media only screen and (min-width: 480px) and (max-width: 1150px) {
+  .seo-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .seo-home-left {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 2rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .banner-text {
+    padding-left: 1rem;
+  }
+
+  .banner-text .banner-text-header h1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 50px;
+  }
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    row-gap: 2rem;
+  }
+
+  .seo-paragraph h2 {
+    font-size: 20px;
+  }
+
+  .seo-home-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .seo-pricing {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+}

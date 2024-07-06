@@ -1,0 +1,49 @@
+ .seo-reasons{
+    margin-top: 4rem;
+  }
+
+  .seo-reasons h2 {
+    font-size: 40px;
+  }
+
+  .seo-reasons h2 span {
+    color: var(--primary-color);
+  }
+
+  .seo-reasons h1 {
+    font-size: 20px;
+    margin-bottom: .25rem;
+  }
+  .seo-reasons h1 i {
+    background: linear-gradient(var(--secondary-color), var(--primary-color));
+    color: var(--white-color);
+    border-radius: 50%;
+  }
+  .seo-reasons p {
+    margin-left: 2rem;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 480px) {
+   /*=================================== REASONS CONTAINER FORMATTING ===========================*/
+   .reasons-header h3{
+    transform: translateX(1rem);
+  }
+
+  .reasons-header h2{
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .reasons-content {
+    display: flex;
+    flex-direction: column;
+    place-items: center ;
+  }
+  }
+
+  @media only screen and (min-width: 640px) and (max-width: 1150px) {
+  .reasons-header h2{
+    font-size: 30px;
+  }
+  }

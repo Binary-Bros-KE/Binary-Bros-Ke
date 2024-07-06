@@ -3,7 +3,7 @@ import quote from "../../../public/testimonial/quote.png";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 const ClientSliderComponent = (props) => {
-  const { name, position, image, stars, discription } = props.item;
+  const { name, position, image, stars, description } = props.item;
 
   // Function to render stars based on the 'stars' variable
   const renderStars = (stars) => {
@@ -33,7 +33,7 @@ const ClientSliderComponent = (props) => {
       </div>
 
       <div className="testimonial-card-body">
-        {discription}
+        {description}
       </div>
 
       <div className="testimonial-card-footer">

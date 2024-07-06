@@ -553,7 +553,7 @@ a {
 
 /* Mobile Phones (Small Screens) */
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 480px) {
   body {
     width: 100vw;
     overflow-x: hidden;
@@ -822,7 +822,7 @@ a {
 }
 
 /* Tablets (Medium Screens) */
-@media only screen and (min-width: 760px) and (max-width: 1023px) {
+@media only screen and (min-width: 480px) and (max-width: 1023px) {
   body {
     width: 100%;
     overflow-x: hidden;
@@ -838,6 +838,7 @@ a {
     overflow: hidden;
     padding: 0 0.5rem;
   }
+  
   .platforms i {
     color: var(--white-color);
     border: 2px solid var(--white-color);

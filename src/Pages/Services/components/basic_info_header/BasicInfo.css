@@ -1,0 +1,192 @@
+/*=============== GOOGLE FONTS ===============*/
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --primary-color: #0084C8;
+    --secondary-color: #4D4BB8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    /* --body-font: "IBM Plex Sans", sans-serif; */
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 4.5rem;
+      --h1-font-size: 3rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* font-family: var(--body-font); */
+    font-size: var(--normal-font-size);
+    background-color: linear-gradient(to bottom, #e0f2f1, #ffffff);
+    color: var(--text-color);
+    transition: background-color .4s;
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--black-color);
+    font-weight: var(--font-bold);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  
+.basic_info_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .basic-home-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .basic-home-info .head-text h1{
+    font-size: 20px;
+    color: var(--primary-color);
+    position: relative;
+    width: max-content;
+  }
+  .basic-home-info .head-text h1::before{
+    content: '';
+    height: 4px;
+    width: 20px;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateX(-30px);
+  }
+
+  .basic-home-info .first-text h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .basic-home-info .first-text h1 span {
+    color: var(--primary-color);
+  }
+
+  .basic-home-info .basic-info-paragraph h2{
+    font-size: 20px;
+    color: var(--primary-color);
+    position: relative;
+  }
+  .basic-home-info .basic-info-paragraph h2::before{
+    content: '';
+    height: 4px;
+    width: 20px;
+    font-size: 20px;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateX(-30px);
+  }
+
+  .basic-home-info .basic-info-paragraph p {
+    margin-top: .5rem;
+    text-align: justify;
+  }
+
+  .basic-home-info .basic-info-paragraph p span{
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+
+  .basic-home-info .basic-info-buttons {
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  .basic-info-image{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    .basic_info_container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        width: 100%;
+      }
+    
+      .basic-home-info .head-text h1{
+        transform: translate(1.5rem);
+      }
+    
+      .basic-home-info .first-text h1 {
+        transform: translateX(1rem);
+      }
+    
+      .basic-home-info .basic-info-paragraph{
+        transform: translate(.6rem);
+      }
+    
+      .basic-home-info .basic-info-paragraph p{
+        transform: translateX(-1rem);
+        padding: 0 1rem;
+      }
+
+      .basic-home-info .basic-info-paragraph h2{
+        transform: translateX(1rem);
+      }
+    
+      .basic-home-info .basic-info-buttons{
+        column-gap: .5rem;
+      }
+  }

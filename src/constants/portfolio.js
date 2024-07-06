@@ -5,15 +5,15 @@ import arobisca from '../../public/portfolio/arobisca-training.png';
 import elik from '../../public/portfolio/elik-farm.png';
 import ezz from '../../public/portfolio/ezz-clean-solutions.png';
 import obareds from '../../public/portfolio/obareds-cleaning.png';
-import project from '../../public/portfolio/project-2.jpg';
+import project from '../../public/portfolio/civilApp.jpg';
 import arobisca_app from '../../public/portfolio/arobisca_app.png';
 
 export const webDesignProjects = [
     {
-        "img" : arobiscagroup,
-        "name" : "React App",
-        "Title" : "Arobisca Training Cente",
-        "description" : "Arobisca Training is an institute specializing in training coffee baristas and coffee art. A website, designed with a green-brown theme to align with their logo and uniforms, is currently under construction and will be hosted online upon completion.",
+        "img" : ezz,
+        "name" : "website",
+        "Title" : "Ezz-Clean Solutions",
+        "description" : "Ezz-Clean Cleaning Solution specializes in both residential and commercial cleaning services. As a developer, I assisted my client in creating professional and SEO-friendly content for their website.",
         "status" : "Completed",
         "percentage" : "100%"
     },
@@ -25,18 +25,19 @@ export const webDesignProjects = [
         "status" : "Completed",
         "percentage" : "100%"
     },
-    {
-        "img" : ezz,
-        "name" : "website",
-        "Title" : "Ezz-Clean Solutions",
-        "description" : "Ezz-Clean Cleaning Solution specializes in both residential and commercial cleaning services. As a developer, I assisted my client in creating professional and SEO-friendly content for their website.",
-        "status" : "Completed",
-        "percentage" : "100%"
-    },
+
     {
         "img" : control_panel,
         "name" : "control panel",
         "Title" : "E-Commerce Control Panel",
+        "description" : "Arobisca Training is an institute specializing in training coffee baristas and coffee art. A website, designed with a green-brown theme to align with their logo and uniforms, is currently under construction and will be hosted online upon completion.",
+        "status" : "Completed",
+        "percentage" : "100%"
+    },
+    {
+        "img" : arobiscagroup,
+        "name" : "React App",
+        "Title" : "Arobisca Training Cente",
         "description" : "Arobisca Training is an institute specializing in training coffee baristas and coffee art. A website, designed with a green-brown theme to align with their logo and uniforms, is currently under construction and will be hosted online upon completion.",
         "status" : "Completed",
         "percentage" : "100%"

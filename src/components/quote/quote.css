@@ -17,6 +17,10 @@
 
 .quote-page-header {
   padding: 1rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
 }
 
 .quote-page-header h1 {
@@ -31,19 +35,28 @@
 .quote-page-header h3 {
   text-transform: capitalize;
   position: relative;
-  transform: translateX(30px);
   color: var(--primary-color);
+  width: max-content;
 }
 
 .quote-page-header h3::before {
   content: "";
   position: absolute;
-  top: 40%;
-  left: 0;
-  width: 20px;
-  height: 4px;
+  top: 45%;
+  left: 105%;
+  width: 40%;
+  height: 2px;
   background: linear-gradient(var(--primary-color), var(--secondary-color));
-  transform: translateX(-25px);
+}
+
+.quote-page-header h3::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 105%;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
 }
 
 .quote-page-header p {
@@ -224,6 +237,7 @@
 
 .quote-footer-description {
     padding: 2rem;
+    text-align: center;
 }
 
 

@@ -47,7 +47,7 @@ const Home = () => {
             <div className="discount">
               <p>
                 <img src={discount} alt="discount" />
-                <span>&nbsp;20% Discount</span>&nbsp;on your first Project.
+                <span>&nbsp;35% Discount</span>&nbsp;on your first Project.
               </p>
             </div>
             <div className="main-text">
@@ -158,7 +158,7 @@ const Home = () => {
             <h3>About us</h3>
             <h1>
               Best Business
-              <br /> Software Solutions
+              <br /> Digital Solutions
             </h1>
             <p>
               {" "}

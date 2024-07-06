@@ -9,10 +9,10 @@ const Button = ({ to, text, showArrow, width }) => {
   }
   return (
     <div className="button-container" style={style}>
-      <Link to={to} className="button">
+      <a href={to} className="button">
         <span>{text}</span>
         {showArrow && <i className="fas fa-long-arrow-alt-right"></i>}
-      </Link>
+      </a>
     </div>
   );
 };
