@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const WebMantanance = () => {
   return (
     <div>
-      <h1>Web Mantanance</h1>
+      <ComingSoon serviceName={"Website Mantanance"}/>
     </div>
   )
 }

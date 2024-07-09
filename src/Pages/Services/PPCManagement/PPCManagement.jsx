@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const PPCManagement = () => {
   return (
     <div>
-      <h1>PPCManagement</h1>
+      <ComingSoon serviceName={"Pay Per Click Management (PPC)"}/>
     </div>
   )
 }

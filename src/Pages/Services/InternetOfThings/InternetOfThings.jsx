@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const InternetOfThings = () => {
   return (
     <div>
-      <h1>Internet Of Things (IoT)</h1>
+      <ComingSoon serviceName={"Internet Of Things(IoT)"}/>
     </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const Wordpress = () => {
   return (
     <div>
-      <h1>Wordpress</h1>
+      <ComingSoon serviceName={"Wordpress"}/>
     </div>
   )
 }

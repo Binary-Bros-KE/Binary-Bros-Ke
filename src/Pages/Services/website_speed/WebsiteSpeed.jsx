@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const WebsiteSpeed = () => {
   return (
     <div>
-      <h1>Website Speed</h1>
+      <ComingSoon serviceName={"Website Speed"}/>
     </div>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const AgileProjects = () => {
   return (
     <div>
-      <h1>Agile Projects</h1>
+      <ComingSoon serviceName={"AgileProjects"}/>
     </div>
   )
 }

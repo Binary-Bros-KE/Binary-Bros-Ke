@@ -159,7 +159,9 @@
 
 .contact-info-form form {
   width: 75%;
+  padding: 2rem;
 }
+
 
 /*======================= Request Detais form formatting =========================*/
 .request-detais-form-container{
@@ -213,6 +215,7 @@
 
 .request-detais-form form {
     width: 75%;
+    padding: 2rem;
   }
 
   .quote-page .form-section label {
@@ -258,6 +261,19 @@
 
 .row-inputs label {
   width: 100%;
+}
+
+.error{
+  color: red;
+  background-color: rgba(255, 69, 0, .2);
+  padding: .5rem 1rem;
+}
+
+.success {
+  color: green;
+  background-color: rgba(0, 128, 0, .2);
+  font-size: 20px;
+  padding: .5rem 1rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -313,6 +329,7 @@
 .contact-info-form form,
 .request-detais-form form {
   width: 100%;
+  padding: .8rem;
 }
 .row-inputs {
   flex-direction: column;
@@ -322,4 +339,5 @@
   padding: 1rem;
   text-align: justify;
 }
+
 }

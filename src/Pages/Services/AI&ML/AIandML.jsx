@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const AIandML = () => {
   return (
     <div>
-      <h1>Artificial Intelligence and Machine Learning</h1>
+      <ComingSoon serviceName={"AI and Machine Learning"} />
     </div>
   )
 }

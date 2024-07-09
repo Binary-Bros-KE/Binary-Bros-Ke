@@ -1,7 +1,6 @@
 //-------- Imports
 import "./navbar.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 //------------- Images
 import Logo from "../../../public/header_logo_blue.svg";
@@ -9,6 +8,7 @@ import starter_package from "../../../public/banners/starter_package.png";
 import premium_package from "../../../public/banners/premium_package.png";
 import bannner2 from "../../../public/banners/banner_2.png";
 import Button from "../genericButton/genButton";
+import CustomLinkAchor from "../customLinkAchor/CustomLinkAchor";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -21,18 +21,22 @@ const Navbar = () => {
       <div className={nav ? "navbar nav-height-test" : "navbar"}>
         <div className="nav-socials">
           <div className="primary-info">
+          <a href="mailto:binarybroske@gmail.com?subject=Hi,%20Service%20Inquiry">
             <p className="responsive-display">
               <i className="fa fa-envelope"></i> binarybroske@gmail.com
             </p>
+            </a>
+            <a href="whatsapp://send?phone=+254791880412&text=Hi,%20Binary%20Bros%20Team,%20Please%20send%20me%20a%20quote%20for...">
             <p>
               <i className="fab fa-whatsapp"></i>&nbsp;+254 791 880 412
             </p>
+            </a>
           </div>
           <div className="platforms">
-            <i className="fab fa-facebook cursor-pointer"></i>
-            <i className="fab fa-twitter cursor-pointer"></i>
-            <i className="fab fa-github cursor-pointer responsive-display"></i>
-            <i className="fab fa-instagram cursor-pointer"></i>
+            <a href="whatsapp://send?phone=+254791880412&text=Hi,%20Binary%20Bros%20Team,%20Please%20send%20me%20a%20quote%20for..."><i className="fab fa-whatsapp cursor-pointer responsive-display"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61553668976790" target="_blank"><i className="fab fa-facebook cursor-pointer"></i></a>
+            <a href="https://x.com/Binarybros_KE" target="_blank"><i className="fab fa-twitter cursor-pointer"></i></a>
+            <a href="https://www.instagram.com/binary_bros.ke/" target="_blank"><i className="fab fa-instagram cursor-pointer"></i></a>
           </div>
         </div>
 
@@ -97,31 +101,31 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/mobileapps">
                             <div className="dropdown__link__icon"></div> Mobile
                             Applications
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/ecommerce">
                             <div className="dropdown__link__icon"></div>{" "}
                             E-commerce Solutions
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/managementsystems">
                             <div className="dropdown__link__icon"></div>{" "}
                             Management Systems
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/wordpress">
                             <div className="dropdown__link__icon"></div>{" "}
                             Wordpress and CMS Solutions
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/softwaretesting">
                             <div className="dropdown__link__icon"></div>{" "}
                             Software Testing and Quality Assuarance
                           </a>
@@ -162,13 +166,13 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link" href="/seo">
+                          <a className="dropdown__link" href="/websitespeed">
                             <div className="dropdown__link__icon"></div> Website
                             Speed Optimization
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link" href="/seo">
+                          <a className="dropdown__link" href="/webmantanance">
                             <div className="dropdown__link__icon"></div> Website
                             Maintenance
                           </a>
@@ -189,31 +193,31 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/googleads">
                             <div className="dropdown__link__icon"></div>{" "}
                             Google/Social Media ads
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/ppcmanagements">
                             <div className="dropdown__link__icon"></div> Pay Per
                             Click (PPC Management)
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/eventmarketing">
                             <div className="dropdown__link__icon"></div> Event /
                             Influencer Marketing
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/marketingconsultations">
                             <div className="dropdown__link__icon"></div> Audits
                             and Consultations
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/graphicdesign">
                             <div className="dropdown__link__icon"></div> Graphic
                             Design
                           </a>
@@ -230,37 +234,37 @@ const Navbar = () => {
                       </span>
                       <ul className="dropdown__list">
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/cloudservices">
                             <div className="dropdown__link__icon"></div> Cloud
                             Infrastructure Services
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/AIandML">
                             <div className="dropdown__link__icon"></div> AI and
                             Machine Learning Implementation
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/InternetOfThings">
                             <div className="dropdown__link__icon"></div>{" "}
                             Internet of Things(IoT) Development
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/dataAnalysis">
                             <div className="dropdown__link__icon"></div> Data
                             Analysis and Visualization
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/agileprojects">
                             <div className="dropdown__link__icon"></div> Agile
                             Project Management
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/devOps">
                             <div className="dropdown__link__icon"></div> DevOps
                             Consulting and Implementation
                           </a>
@@ -309,16 +313,26 @@ const Navbar = () => {
                     <div className="dropdown__group__with__image">
                       <img src={starter_package} alt="" />
                       <div className="image_info_div">
+                        <div className="image_info_button">
                         <i className="fa fa-link"></i>
-                        <a to='/contact' className="package__link">Get Free Quote <i className="fas fa-long-arrow-alt-right"></i></a>
+                        <CustomLinkAchor element={'Get Free Quote'} packageName={"Launchpad Package"} service={'Binary Bros Special Packages'}/>
+                        </div>
+                        <div className="image_info_button">
+                          <a href="/pricing#BBPackages">More info</a>
+                        </div>
                       </div>
                     </div>
 
                     <div className="dropdown__group__with__image">
                       <img src={premium_package} alt="" />
                       <div className="image_info_div">
+                        <div className="image_info_button">
                         <i className="fa fa-link"></i>
-                        <a to='/contact' className="package__link">Get Free Quote <i className="fas fa-long-arrow-alt-right"></i></a>
+                        <CustomLinkAchor element={'Get Free Quote'} packageName={"Growth Booster Package"} service={'Binary Bros Special Packages'}/>
+                        </div>
+                        <div className="image_info_button">
+                          <a href="/pricing#BBPackages">More info</a>
+                        </div>
                       </div>
                     </div>
 
@@ -345,27 +359,27 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link" href="/pricing">
+                          <a className="dropdown__link" href="/pricing#MobileApplications">
                             <div className="dropdown__link__icon"></div> Mobile
                             Applications
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link" href="/pricing">
-                            <div className="dropdown__link__icon"></div> Digital
+                          <a className="dropdown__link" href="/pricing#SocialMediaMarketing">
+                            <div className="dropdown__link__icon"></div> Social Media
                             Marketing
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link" href="/pricing">
+                          <a className="dropdown__link" href="/pricing#SeoPricing">
                             <div className="dropdown__link__icon"></div> Search
                             Engine Optimzation
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link" href="/pricing">
+                          <a className="dropdown__link" href="/pricing#BBPackages">
                             <div className="dropdown__link__icon"></div>{" "}
-                            Programming and Automation
+                            BB KE All in One Packages
                           </a>
                         </li>
                       </ul>
@@ -413,24 +427,24 @@ const Navbar = () => {
                       <span className="dropdown__title">About BB ke</span>
                       <ul className="dropdown__list">
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/">
                             <div className="dropdown__link__icon"></div> About
                             Us
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="https://full-stack-web-developer-evans.netlify.app/" target="_blank">
                             <div className="dropdown__link__icon"></div> Our
                             Team
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/contact">
                             <div className="dropdown__link__icon"></div> Support
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/contact">
                             <div className="dropdown__link__icon"></div> Contact
                             Us
                           </a>
@@ -451,7 +465,7 @@ const Navbar = () => {
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/pricing">
                             <div className="dropdown__link__icon"></div> Payment
                             Methods
                           </a>
@@ -477,25 +491,25 @@ const Navbar = () => {
                       <span className="dropdown__title">Contact</span>
                       <ul className="dropdown__list">
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="/contact">
                             <div className="dropdown__link__icon"></div> Web
                             Form
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="mailto:binarybroske@gmail.com?subject=Hi,%20Service%20Inquiry">
                             <div className="dropdown__link__icon"></div>{" "}
                             binarybroske@gmail.com
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="whatsapp://send?phone=+254791880412&text=Hi,%20Binary%20Bros%20Team,%20Please%20send%20me%20a%20quote%20for...">
                             <div className="dropdown__link__icon"></div>{" "}
                             Whatsapp
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown__link">
+                          <a className="dropdown__link" href="whatsapp://send?phone=+254791880412&text=Hi,%20Binary%20Bros%20Team,%20Please%20send%20me%20a%20quote%20for...">
                             <div className="dropdown__link__icon"></div> +254 791 880 412
                           </a>
                         </li>

@@ -5,12 +5,12 @@ import Rectangle02 from '../../../public/Rectangle-3.svg'
 const socialMediaMarketingCardData = [
     {
       title: 'Starter',
-      price: 'Ksh 20,000',
+      price: 'Ksh 10,000',
       period: 'monthly',
       Image: Rectangle00,
       description: 'Basic social media marketing package for small businesses looking to establish an online presence.',
       items: [
-        'Google + Facebook + Instagram + X (Twitter)',
+        'Website + Facebook + Instagram + X (Twitter)',
         'Account Setup and Optimization for Up to 3 Platforms',
         'Content Calendar Creation',
         '10 Custom Social Media Posts per Month',
@@ -30,7 +30,7 @@ const socialMediaMarketingCardData = [
     },
     {
       title: 'Professional',
-      price: 'Ksh 40,000',
+      price: 'Ksh 25,000',
       period: 'monthly',
       Image: Rectangle01,
       description: 'Comprehensive social media marketing package for businesses aiming to increase engagement and reach.',
@@ -57,7 +57,7 @@ const socialMediaMarketingCardData = [
     },
     {
       title: 'Enterprise',
-      price: 'Ksh 80,000',
+      price: 'Ksh 60,000',
       period: 'monthly',
       Image: Rectangle02,
       description: 'Premium social media marketing package for large enterprises seeking extensive brand visibility and engagement.',

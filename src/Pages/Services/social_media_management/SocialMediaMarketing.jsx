@@ -1,12 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
-// import "./SocialMediaMarketing.css";
+import "./SocialMediaMarketing.css";
 
 import seoTypes from "../../../../public/marketing/marketing-reality.png";
 import BBbanner from "../../../../public/marketing/BB-banner.jpg";
 import { MarketingHelpLeft, MarketingHelpRight, Tags, socialMediaFAQ} from "../../../constants/Marketing.js";
 import { useState, useEffect } from "react";
-import QuoteForm from "../../../components/quoteForm/QuoteForm.jsx";
 import WebDevelopmentPricingSection from "../../../components/pricingCards/webistedevelopment/WebDevelopmentPricingSection.jsx";
+import QuotePage from "../../../components/quote/quoteForm.jsx";
+import BasicInfo from "../components/basic_info_header/BasicInfo.jsx";
 
 const SocialMediaMarketing = () => {
   //Frequently Asked Questions
@@ -60,7 +61,20 @@ const SocialMediaMarketing = () => {
 
 
       {/*================== Main left contenet ====================*/}
-        <div className="seo-home-left">
+      
+      <div className="seo-home-left">
+      <BasicInfo 
+          subTitle1={"Binary Bros Marketing Services"}
+          mainTitle={"<span>Expose Your Brand</span> To The World Through Social Media Marketing"}
+          subTitle2={"Why You Need A Website"}
+          description={"In today's digital age, a website is more than an online presence; it's a <span> powerful tool for establishing credibility, reaching a broader audience, and staying competitive.</span> A well-designed website provides a centralized platform for showcasing your products, services, or ideas. It enhances your brand's visibility, builds trust with potential customers, and opens up new opportunities. Whether you're a business, professional, or creative individual, having a website is crucial for staying relevant and accessible in the modern online landscape."}
+          button1={"Get A Website"}
+          button1To={"#quote"}
+          button2={"Our Portfolio"}
+          button2To={"/portfolio"}
+          basicInfoImage={seoTypes}
+          />
+
           <div className="left-container">
             <div className="seo-home-info">
               <div className="head-text">
@@ -68,8 +82,7 @@ const SocialMediaMarketing = () => {
               </div>
               <div className="first-text">
                 <h1>
-                  <span>Expose Your Brand</span> To The World Through Social
-                  Media Marketing
+                <span>Expose Your Brand</span> To The World Through Social Media Marketing
                 </h1>
               </div>
               <div className="seo-paragraph">
@@ -343,7 +356,7 @@ const SocialMediaMarketing = () => {
       {/*==================================== CONTACT ============================================*/}
       <section className="contact" id="contact">
         <div className="contact">
-          <QuoteForm />
+          <QuotePage />
         </div>
       </section>
     </motion.section>

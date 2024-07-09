@@ -1,9 +1,10 @@
 import React from 'react'
+import ComingSoon from '../../../components/coming_soon/ComingSoon'
 
 const CloudServices = () => {
   return (
     <div>
-      <h1>Cloud Services</h1>
+      <ComingSoon serviceName={"Cloud Services"} />
     </div>
   )
 }

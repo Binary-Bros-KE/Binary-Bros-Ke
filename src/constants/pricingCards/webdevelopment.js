@@ -11,7 +11,7 @@ export const webDevCardData = [
       description: 'Ideal for startups and small businesses aiming to establish a solid online presence.',
       consist: 'Consists of',
       items: [
-      'Up to 20 Custom Designed Pages',
+      'Up to 10 Custom Designed Pages',
       'Unlimited Bandwidth for Seamless Traffic Handling',
       'Free Domain Name Registration for One Year',
       'Client-Provided Website Content Integration',

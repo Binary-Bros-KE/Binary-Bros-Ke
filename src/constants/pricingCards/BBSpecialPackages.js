@@ -1,7 +1,7 @@
 const bbKeSpecialPackagesCardData = [
     {
       title: 'Launchpad',
-      price: 'Ksh 75,000',
+      price: 'Ksh 45,000',
       period: 'project',
       description: 'Perfect for startups and small businesses looking to make their mark online.',
       items: [
@@ -24,7 +24,7 @@ const bbKeSpecialPackagesCardData = [
     },
     {
       title: 'Growth Booster',
-      price: 'Ksh 150,000',
+      price: 'Ksh 95,000',
       period: 'project',
       description: 'Ideal for growing businesses looking to expand their digital footprint.',
       items: [
@@ -47,7 +47,7 @@ const bbKeSpecialPackagesCardData = [
     },
     {
       title: 'Market Dominator',
-      price: 'Ksh 300,000',
+      price: 'Ksh 150,000',
       period: 'project',
       description: 'Comprehensive package for established businesses looking to dominate the market.',
       items: [

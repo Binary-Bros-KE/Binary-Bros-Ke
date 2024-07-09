@@ -1,6 +1,5 @@
 import React from 'react';
 import './PricingCards.css';
-import Button from '../../components/genericButton/genButton';
 import PricingCardButton from '../pricingCardButton/PricingCardButton';
 
 const PricingCards = ({ Title, description, pricingCards, showHeader = true }) => {

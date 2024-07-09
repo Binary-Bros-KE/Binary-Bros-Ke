@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import WhyCards from "../../components/chooseUsCards/WhyCards";
 import ContactForm from "../../components/mainContactForm/ContactForm";
-import QuoteForm from "../../components/quoteForm/QuoteForm";
 import './Contact.css'
 import QuotePage from "../../components/quote/quoteForm";
 
