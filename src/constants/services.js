@@ -74,13 +74,31 @@ export const developmentServices = [
   },
   {
     image: commerce,
-    title: "E-commerce Website Design",
+    title: "Mobile Applications",
     description:
       "Immerse your brand in a captivating online experience with our Web Design and Development services. We transform ideas into visually stunning and functionally seamless websites, ensuring a strong online foundation for your business success.",
   },
   {
     image: wordpress,
-    title: "Wordpress Development",
+    title: "E-commerce Solutions",
+    description:
+      "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
+  },
+  {
+    image: wordpress,
+    title: "Management Systems",
+    description:
+      "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
+  },
+  {
+    image: wordpress,
+    title: "Wordpress And CMS",
+    description:
+      "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
+  },
+  {
+    image: wordpress,
+    title: "Software Testing and Quality Assurance",
     description:
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
   },
@@ -89,7 +107,7 @@ export const developmentServices = [
 export const marketingMaintenanceServices = [
   {
     image: SEO,
-    title: "SEO",
+    title: "Search Engine Optmization (SEO)",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },

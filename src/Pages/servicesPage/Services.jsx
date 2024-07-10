@@ -18,10 +18,11 @@ const Services = () => {
       <div className="service-page-cards" id="development">
         <div className="services-nav-button">
           <a href="#development" className="active-button">
-            Web Development
+            Development
           </a>
-          <a href="#Marketing">Marketing</a>
-          <a href="#Design">Design & Dev</a>
+          <a href="#Marketing">SEO</a>
+          <a href="#Design">Marketing</a>
+          <a href="#Programming">Programming</a>
         </div>
         {developmentServices.map((service, index) => {
           return (
