@@ -314,7 +314,7 @@ const Navbar = () => {
                       <div className="image_info_div">
                         <div className="image_info_button">
                         <i className="fa fa-link"></i>
-                        <CustomLinkAchor element={'Get Free Quote'} packageName={"Launchpad Package"} service={'Binary Bros Special Packages'}/>
+                        <CustomLinkAchor element={'Get Free Quote'} packageName={"Launchpad Package"} service={'Binary Bros Special Packages'} price={'45,000'}/>
                         </div>
                         <div className="image_info_button">
                           <a href="/pricing#BBPackages">More info</a>
@@ -327,7 +327,7 @@ const Navbar = () => {
                       <div className="image_info_div">
                         <div className="image_info_button">
                         <i className="fa fa-link"></i>
-                        <CustomLinkAchor element={'Get Free Quote'} packageName={"Growth Booster Package"} service={'Binary Bros Special Packages'}/>
+                        <CustomLinkAchor element={'Get Free Quote'} packageName={"Growth Booster Package"} service={'Binary Bros Special Packages'} price={'95,000'}/>
                         </div>
                         <div className="image_info_button">
                           <a href="/pricing#BBPackages">More info</a>

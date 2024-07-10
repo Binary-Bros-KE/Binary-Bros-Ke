@@ -218,9 +218,7 @@ a {
       padding: 0 .5rem;
       width: 100%;
     }
-    .mobile-wordpress {
-      /* padding: 0 2rem; */
-    }
+  
     .mobile .mobile-info h1,
     .wordpress .wordpress-info h1{
       font-size: 20px;

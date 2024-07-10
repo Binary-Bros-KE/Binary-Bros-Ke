@@ -300,7 +300,7 @@ a {
   height: 100%;
   display: flex;
   justify-content: center;
-  place-items: end;
+  place-items: flex-end;
   gap: 1rem;
   font-size: 20px;
   color: white;

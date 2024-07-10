@@ -173,7 +173,7 @@ const Home = () => {
               success in meeting their technological aspirations.
             </p>
             <div className="about-button">
-              <Button text={'Read More'} to={'/'} showArrow={true} width={'150px'}/>
+              <Button text={'Read More'} to={'/services'} showArrow={true} width={'150px'}/>
               <Button text={'Get a Professional Website Today'} to={'/'} showArrow={true} width={'330px'}/>
             </div>
           </div>
