@@ -226,11 +226,17 @@ const QuotePage = () => {
                 <label>
                   Select Service:
                   <select name="service" value={formData.service} onChange={handleChange}>
-                    <option value="">{queryParams.get('service') ? queryParams.get('service') : 'Select Service</option'} </option>
+                    <option value="">{queryParams.get('service') ? queryParams.get('service') : 'Select Service'} </option>
                     <option value="Web Development">Web Development</option>
-                    <option value="SEO">SEO</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Programming and Automation">Programming and Automation</option>
+                    <option value="Mobile Applications">Mobile Applications</option>
+                    <option value="SEO">Search Engine Optimization(SEO)</option>
+                    <option value="Digital Marketing">Social Media Marketing</option>
+                    <option value="E-commerce Solutions">E-commerce Solutions</option>
+                    <option value="Management Systems">Management Systems</option>
+                    <option value="Google/Social Media Ads">Google/Social Media Ads</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Cloud Services(AWS/Azure)">Cloud Services(AWS/Azure)</option>
+                    <option value="Other">Other</option>
                   </select>
                   {formErrors.service && <span className="error">{formErrors.service}</span>}
                 </label>

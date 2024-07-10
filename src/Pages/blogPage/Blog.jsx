@@ -1,6 +1,6 @@
-import { blogPosts } from "../../constants/BlogPosts"
 import './Blog.css'
 import Button from '../../components/genericButton/genButton'
+import { blogPosts } from "../../constants/BlogPosts"
 
 const Blog = () => {
   return (

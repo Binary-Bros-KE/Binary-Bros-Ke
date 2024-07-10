@@ -235,8 +235,7 @@ const Navbar = () => {
                       <ul className="dropdown__list">
                         <li>
                           <a className="dropdown__link" href="/cloudservices">
-                            <div className="dropdown__link__icon"></div> Cloud
-                            Infrastructure Services
+                            <div className="dropdown__link__icon"></div> Cloud Services (AWS/Azure)
                           </a>
                         </li>
                         <li>
