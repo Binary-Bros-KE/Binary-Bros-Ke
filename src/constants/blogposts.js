@@ -6,7 +6,7 @@ import youtube from '../../public/Blog/youtube.jpg';
 import social from '../../public/Blog/social.jpg';
 import binaryBros from '../../public/home/banner.png';
 
-export const blogPosts = [
+export const blogposts = [
 
     {
       "image" : seo,

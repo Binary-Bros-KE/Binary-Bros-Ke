@@ -1,12 +1,12 @@
 import './Blog.css'
 import Button from '../../components/genericButton/genButton'
-import { blogPosts } from "../../constants/BlogPosts"
+import { blogposts } from "../../constants/blogposts"
 
 const Blog = () => {
   return (
     <section className="blog">
       <div className="blog-cards-wrapper">
-        {blogPosts.map((blog, index) => {
+        {blogposts.map((blog, index) => {
           return(
             <div className="blog-card-singel" key={index}>
 
