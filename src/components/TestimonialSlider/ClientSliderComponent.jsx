@@ -1,5 +1,5 @@
 import React from 'react';
-import quote from "../../../public/testimonial/quote.png";
+import quote from "/testimonial/quote.png";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 const ClientSliderComponent = (props) => {

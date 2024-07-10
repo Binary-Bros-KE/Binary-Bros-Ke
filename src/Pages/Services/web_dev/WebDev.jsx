@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import './webDev.css'
-import prof1 from '../../../../public/web-development/prof1.png'
+import prof1 from '/web-development/prof1.png'
 import { webReasonsLeft, webReasonsRight, Tags } from "../../../constants/webDev.js";
 import { useState, useEffect } from "react";
 import WebDevelopmentPricingSection from "../../../components/pricingCards/webistedevelopment/WebDevelopmentPricingSection.jsx";

@@ -1,11 +1,11 @@
-import showcase from "../../public/home/web-development.png";
-import commerce from "../../public/services/servics-page/e-commerce.png";
-import SEO from "../../public/services/servics-page/seo.png";
-import wordpress from "../../public/wordpress/wordpress.png";
-import marketing from "../../public/services/servics-page/marketing.png";
-import optimization from "../../public/services/servics-page/optimization.png";
-import mantanance from "../../public/services/servics-page/mantanance.png";
-import mobile from "../../public/services/servics-page/mobile.png";
+import showcase from "/home/web-development.png";
+import commerce from "/services/servics-page/e-commerce.png";
+import SEO from "/services/servics-page/seo.png";
+import wordpress from "/wordpress/wordpress.png";
+import marketing from "/services/servics-page/marketing.png";
+import optimization from "/services/servics-page/optimization.png";
+import mantanance from "/services/servics-page/mantanance.png";
+import mobile from "/services/servics-page/mobile.png";
 
 export const coreServices = [
   {

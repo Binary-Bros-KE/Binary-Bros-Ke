@@ -1,6 +1,8 @@
 import "./footer.css";
-import logo from '../../../public/logo-black.png';
-import blog from '../../../public/footer/blog.jpg';
+import logo from '/logo-black.png';
+import seo from '/Blog/seo.jpg';
+import social from '/Blog/social.jpg';
+import mobile from '/Blog/mobile.png';
 import Button from "../genericButton/genButton";
 import GeometricShape from "../geometricShape/geometricShape";
 
@@ -28,34 +30,34 @@ const Footer = () => {
         <div className="quick-links">
                     <h1>Services</h1>
                     <ul>
-                        <li><a href="/"><div className="service__icon"></div> Custom Sofware Development</a></li>
+                        <li><a href="/services"><div className="service__icon"></div> Custom Sofware Development</a></li>
                         <li><a href="/services"><div className="service__icon"></div> Search Engine Optimization(SEO)</a></li>
-                        <li><a href="/pricing"><div className="service__icon"></div> Digital Marketing</a></li>
-                        <li><a href="/portfolio"><div className="service__icon"></div> Programming and Automation</a></li>
+                        <li><a href="/services"><div className="service__icon"></div> Digital Marketing</a></li>
+                        <li><a href="/services"><div className="service__icon"></div> Programming and Automation</a></li>
                     </ul>
         </div>
 
         <div className="footer-blog">
             <h1>Latest News</h1>
             <div className="footer-blog-element">
-                <img src={blog} alt="blog-1" />
+                <img src={seo} alt="blog-1" />
                 <div className="footer-blog-date">
-                    <h2>12th Dec 2023</h2>
-                    <h3>Unlocking the Potential of AI in Business</h3>
+                    <h2>10th Jul 2024</h2>
+                    <h3>How to Optimize Your Website for Search Engines</h3>
                 </div>
             </div>
             <div className="footer-blog-element">
-                <img src={blog} alt="blog-2" />
+                <img src={social} alt="blog-2" />
                 <div className="footer-blog-date">
-                    <h2>12th Dec 2023</h2>
-                    <h3>The Impact of Responsive Design on User Experience</h3>
+                    <h2>12th April 2024</h2>
+                    <h3>Harnessing the Power of Social Media Marketing</h3>
                 </div>
             </div>
             <div className="footer-blog-element">
-                <img src={blog} alt="blog-3" />
+                <img src={mobile} alt="blog-3" />
                 <div className="footer-blog-date">
-                    <h2>12th Dec 2023</h2>
-                    <h3>Exploring the Future of Web Development</h3>
+                    <h2>04th Jun 2024</h2>
+                    <h3>Unlocking the Potential of Cross-Platform Mobile Apps</h3>
                 </div>
             </div>
         </div>
@@ -65,7 +67,7 @@ const Footer = () => {
             <p>Stay updated with the latest trends, insights, and news in the digital world. Subscribe to our newsletter for valuable information delivered to your inbox.</p>
             <div className="footer-input">
                <input type="text" placeholder='Your Email Address'/>
-               <Button text={"Subscribe"}/>
+               <Button text={"Subscribe"} showArrow={true}/>
             </div>
         </div>
     </div>

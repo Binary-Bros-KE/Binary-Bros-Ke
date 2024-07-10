@@ -1,8 +1,8 @@
-import testimonial1 from "../../public/testimonial/testimonial-1.jpg";
-import testimonial2 from "../../public/testimonial/testimonial-2.jpg";
-import testimonial3 from "../../public/testimonial/testimonial-3.jpg";
-import testimonial4 from "../../public/testimonial/testimonial-4.jpg";
-import testimonial5 from "../../public/testimonial/testimonial-5.jpg";
+import testimonial1 from "/testimonial/testimonial-1.jpg";
+import testimonial2 from "/testimonial/testimonial-2.jpg";
+import testimonial3 from "/testimonial/testimonial-3.jpg";
+import testimonial4 from "/testimonial/testimonial-4.jpg";
+import testimonial5 from "/testimonial/testimonial-5.jpg";
 
 export const clients = [
     {

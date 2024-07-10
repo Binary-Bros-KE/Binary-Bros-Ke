@@ -64,7 +64,7 @@ a {
 .nav-socials {
   display: flex;
   width: 100%;
-  background-image: url(../../../public/nav-background.png);
+  background-image: url(/nav-background.png);
   background-repeat: no-repeat;
   justify-content: space-between;
   place-items: center;

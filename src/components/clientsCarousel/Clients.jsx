@@ -6,16 +6,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 //----------- Image imports
-import client1 from '../../../public/clients/cactus.svg'
-import client2 from '../../../public/clients/chain.svg'
-import client4 from '../../../public/clients/hitech.svg'
-import client5 from '../../../public/clients/pinpoint.svg'
-import client3 from '../../../public/clients/flash.svg'
-import client6 from '../../../public/clients/proline.svg'
-import client7 from '../../../public/clients/rise.svg'
-import client9 from '../../../public/clients/vision.svg'
-import client8 from '../../../public/clients/terra.svg'
-import client10 from '../../../public/clients/volume.svg'
+import client1 from '/clients/arobisca.png'
+import client2 from '/clients/vicshiy.png'
+import client4 from '/clients/ezzclean.png'
+import client5 from '/clients/hoodluxe.png'
+import client3 from '/clients/obareds.png'
+import client6 from '/clients/risabu.png'
+import client7 from '/clients/elikfarm.png'
+import client8 from '/clients/binarybros.png'
 
 const Clients = () => {
 
@@ -64,8 +62,6 @@ const Clients = () => {
             <img src={client6} alt="cactus" />
             <img src={client7} alt="cactus" />
             <img src={client8} alt="cactus" />
-            <img src={client9} alt="cactus" />
-            <img src={client10} alt="cactus" />
         </Slider>
     </section>
   )

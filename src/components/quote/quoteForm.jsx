@@ -251,7 +251,7 @@ const QuotePage = () => {
                   {formErrors.packageName && <span className="error">{formErrors.packageName}</span>}
                 </label>
                 <label>
-                  Estimated Budget (Optional):
+                  Estimated Budget in KES (Optional):
                   <input type="text" name="budget" value={formData.budget} onChange={handleChange} placeholder="What Is Your Estimated Monthly Budget For The Project?" />
                 </label>
                 <label>

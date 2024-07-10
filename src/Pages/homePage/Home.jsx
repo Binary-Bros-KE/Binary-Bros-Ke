@@ -4,17 +4,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 //import images
-import showcase from "../../../public/home/hero-banner.png";
-import graph from '../../../public/home/hero-span-graph.svg';
-import discount from "../../../public/home/discount.svg";
-import client1 from "../../../public/testimonial/testimonial-1.jpg";
-import client2 from "../../../public/testimonial/testimonial-3.jpg";
-import client3 from "../../../public/testimonial/testimonial-4.jpg";
-import client4 from "../../../public/testimonial/testimonial-5.jpg";
-import about from "../../../public/home/banner.png";
-import card from "../../../public/home/triangle.png";
-import mobile from "../../../public/mobile/banner-mob-app.png";
-import wordpress from "../../../public/wordpress/wordpress.png";
+import showcase from "/home/hero-banner.png";
+import graph from '/home/hero-span-graph.svg';
+import discount from "/home/Discount.png";
+import client1 from "/testimonial/testimonial-1.jpg";
+import client2 from "/testimonial/testimonial-3.jpg";
+import client3 from "/testimonial/testimonial-4.jpg";
+import client4 from "/testimonial/testimonial-5.jpg";
+import about from "/home/banner.png";
+import card from "/home/triangle.png";
+import mobile from "/mobile/banner-mob-app.png";
+import wordpress from "/wordpress/wordpress.png";
 
 //import Components
 import QuoteForm from "../../components/mainContactForm/ContactForm";

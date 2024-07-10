@@ -62,11 +62,6 @@ export const socialMediaFAQ = [
 ];
 
 
-
-  
-  
-
-
 export const Tags = [
     "SEO",
     "SERPs",

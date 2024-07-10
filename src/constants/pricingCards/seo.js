@@ -1,6 +1,6 @@
-import Rectangle00 from '../../../public/Rectangle-1.svg'
-import Rectangle01 from '../../../public/Rectangle-2.svg'
-import Rectangle02 from '../../../public/Rectangle-3.svg'
+import Rectangle00 from '/Rectangle-1.svg'
+import Rectangle01 from '/Rectangle-2.svg'
+import Rectangle02 from '/Rectangle-3.svg'
 
 
 const SeoCardData = [

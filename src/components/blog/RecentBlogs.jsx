@@ -1,5 +1,5 @@
 import "./blog.css";
-import { recentPosts } from '../../constants/BlogPosts'
+import { recentPosts } from '../../constants/blogPosts'
 import Button from '../genericButton/genButton';
 
 const RecentBlogs = () => {

@@ -173,7 +173,7 @@
 
 .request-detais-form{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     border: 1px solid #0056b3;
     width: 97%;
     position: relative;

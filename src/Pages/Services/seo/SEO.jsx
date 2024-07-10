@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import './SEO.css'
-import seoTypes from "../../../../public/SEO/seo-types.png";
-import seobanner from "../../../../public/SEO/seo-banner.png";
+import seoTypes from "/SEO/seo-types.png";
+import seobanner from "/SEO/seo-banner.png";
 import { SEOReasonsRight, SEOReasonsLeft, Stratergy, Tags } from "../../../constants/SEO.js";
 import { useState, useEffect } from "react";
 import GeometricShape from "../../../components/geometricShape/geometricShape.jsx";

@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "./SocialMediaMarketing.css";
 
-import seoTypes from "../../../../public/marketing/marketing-reality.png";
-import BBbanner from "../../../../public/marketing/BB-banner.jpg";
+import seoTypes from "/marketing/marketing-reality.png";
+import BBbanner from "/marketing/BB-banner.jpg";
 import { MarketingHelpLeft, MarketingHelpRight, Tags, socialMediaFAQ} from "../../../constants/Marketing.js";
 import { useState, useEffect } from "react";
 import WebDevelopmentPricingSection from "../../../components/pricingCards/webistedevelopment/WebDevelopmentPricingSection.jsx";

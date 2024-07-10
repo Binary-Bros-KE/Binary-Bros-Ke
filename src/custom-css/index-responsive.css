@@ -468,7 +468,7 @@ a {
 }
 .newsletter .footer-input {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   column-gap: 2rem;
 }
 .newsletter .footer-input a {

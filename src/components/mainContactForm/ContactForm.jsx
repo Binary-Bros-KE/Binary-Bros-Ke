@@ -1,7 +1,7 @@
 
 import './contactForm.css';
-import Quote from "../../../public/contact/quote-image.png";
-import shape from "../../../public/contact/shape.png";
+import Quote from "/contact/quote-image.png";
+import shape from "/contact/shape.png";
 import Button from "../../components/genericButton/genButton";
 const ContactForm = () => {
 

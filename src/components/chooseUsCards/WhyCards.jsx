@@ -1,4 +1,4 @@
-import "./WhyCards.css";
+import "./whyCards.css";
 import React from 'react'
 
 const WhyCards = () => {

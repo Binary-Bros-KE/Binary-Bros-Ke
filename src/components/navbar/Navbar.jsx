@@ -3,10 +3,10 @@ import "./navbar.css";
 import { useState } from "react";
 
 //------------- Images
-import Logo from "../../../public/header_logo_blue.svg";
-import starter_package from "../../../public/banners/starter_package.png";
-import premium_package from "../../../public/banners/premium_package.png";
-import bannner2 from "../../../public/banners/banner_2.png";
+import Logo from "/header_logo_blue.svg";
+import starter_package from "/banners/starter_package.png";
+import premium_package from "/banners/premium_package.png";
+import bannner2 from "/banners/banner_2.png";
 import Button from "../genericButton/genButton";
 import CustomLinkAchor from "../customLinkAchor/CustomLinkAchor";
 

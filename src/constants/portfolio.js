@@ -1,12 +1,12 @@
-import control_panel from '../../public/portfolio/control_panel.png';
-import stonehill from '../../public/portfolio/stonehill.png';
-import arobiscagroup from '../../public/portfolio/arobiscagroup.png';
-import arobisca from '../../public/portfolio/arobisca-training.png';
-import elik from '../../public/portfolio/elik-farm.png';
-import ezz from '../../public/portfolio/ezz-clean-solutions.png';
-import obareds from '../../public/portfolio/obareds-cleaning.png';
-import project from '../../public/portfolio/civilApp.jpg';
-import arobisca_app from '../../public/portfolio/arobisca_app.png';
+import control_panel from '/portfolio/control_panel.png';
+import stonehill from '/portfolio/stonehill.png';
+import arobiscagroup from '/portfolio/arobiscagroup.png';
+import arobisca from '/portfolio/arobisca-training.png';
+import elik from '/portfolio/elik-farm.png';
+import ezz from '/portfolio/ezz-clean-solutions.png';
+import obareds from '/portfolio/obareds-cleaning.png';
+import project from '/portfolio/civilApp.jpg';
+import arobisca_app from '/portfolio/arobisca_app.png';
 
 export const webDesignProjects = [
     {

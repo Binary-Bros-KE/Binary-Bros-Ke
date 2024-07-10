@@ -1,12 +1,12 @@
-import image from '../../public/Blog/blog-pic.jpg';
-import seo from '../../public/Blog/seo.jpg';
-import mobile from '../../public/Blog/mobile.png';
-import commerce from '../../public/Blog/e-commerce.png';
-import youtube from '../../public/Blog/youtube.jpg';
-import social from '../../public/Blog/social.jpg';
-import binaryBros from '../../public/home/banner.png';
+import image from '/Blog/blog-pic.jpg';
+import seo from '/Blog/seo.jpg';
+import mobile from '/Blog/mobile.png';
+import commerce from '/Blog/e-commerce.png';
+import youtube from '/Blog/youtube.jpg';
+import social from '/Blog/social.jpg';
+import binaryBros from '/home/banner.png';
 
-export const blogposts = [
+export const blogPosts = [
 
     {
       "image" : seo,
@@ -68,10 +68,10 @@ export const blogposts = [
       "description": 'Learn effective strategies to improve your website\'s visibility on search engines and drive organic traffic to your online presence.',
     },
     {
-      "category": "About Binary Bros",
-      "image" : binaryBros,
+      "category": "Digital Marketing",
+      "image" : social,
       "date": '21st Dec, 2009',
-      "title": 'Spotlight on Binary Bros: Innovations and Achievements',
+      "title": 'Harnessing the Power of Social Media Marketing',
       "description": 'Discover the latest innovations, success stories, and achievements from Binary Bros, your trusted partner in digital solutions.',
     },
     {
