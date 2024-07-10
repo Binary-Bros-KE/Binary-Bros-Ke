@@ -1,4 +1,4 @@
-import { developmentServices, marketingMaintenanceServices, designServices,} from "../../constants/services";
+import { developmentServices, SEOservices, Marketingservices, Programming,} from "../../constants/services";
 import "./services.css";
 import WhyCards from "../../components/chooseUsCards/WhyCards";
 import { motion } from "framer-motion";
@@ -17,12 +17,10 @@ const Services = () => {
     >
       <div className="service-page-cards" id="development">
         <div className="services-nav-button">
-          <a href="#development" className="active-button">
-            Development
-          </a>
-          <a href="#Marketing">SEO</a>
+          <a href="#development" className="active-button">Development</a>
+          <a href="#seo">SEO</a>
           <a href="#Design">Marketing</a>
-          <a href="#Programming">Programming</a>
+          <a href="#Programming">IT Solutions</a>
         </div>
         {developmentServices.map((service, index) => {
           return (
@@ -47,8 +45,15 @@ const Services = () => {
         })}
       </div>
 
-      <div className="service-page-cards" id="Marketing">
-        {marketingMaintenanceServices.map((service, index) => {
+      <div className="services-nav-button">
+          <a href="#development">Development</a>
+          <a href="#seo"  className="active-button">SEO</a>
+          <a href="#Design">Marketing</a>
+          <a href="#Programming">IT Solutions</a>
+        </div>
+
+      <div className="service-page-cards" id="seo">
+        {SEOservices.map((service, index) => {
           return (
             <div className="service-page-card" key={index}>
               <div className="service-page-image">
@@ -73,8 +78,15 @@ const Services = () => {
         })}
       </div>
 
+      <div className="services-nav-button">
+          <a href="#development">Development</a>
+          <a href="#seo">SEO</a>
+          <a href="#Design"   className="active-button">Marketing</a>
+          <a href="#Programming">IT Solutions</a>
+        </div>
+
       <div className="service-page-cards" id="Design">
-        {designServices.map((service, index) => {
+        {Marketingservices.map((service, index) => {
           return (
             <div className="service-page-card" key={index}>
               <div className="service-page-image">
@@ -97,8 +109,39 @@ const Services = () => {
             </div>
           );
         })}
+      </div>
 
-        
+      <div className="services-nav-button">
+          <a href="#development">Development</a>
+          <a href="#seo">SEO</a>
+          <a href="#Design">Marketing</a>
+          <a href="#Programming" className="active-button">IT Solutions</a>
+        </div>
+
+      <div className="service-page-cards" id="Programming">
+        {Programming.map((service, index) => {
+          return (
+            <div className="service-page-card" key={index}>
+              <div className="service-page-image">
+                <img src={service.image} alt={service.title} />
+              </div>
+              <div>
+              <div className="service-title">
+                <h1>{service.title}</h1>
+              </div>
+              <div className="service-description">
+                <p>{service.description}</p>
+              </div>
+              </div>
+              <div className="service-page-buttons">
+              <div className="service-page-buttons">
+                <Button text={"Get Quote"} width={'150px'} showArrow={true}/>
+                <Button text={"Read More"} width={'150px'} showArrow={true}/>
+              </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
       <section className="counter-section">

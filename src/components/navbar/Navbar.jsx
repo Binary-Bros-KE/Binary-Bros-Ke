@@ -230,7 +230,7 @@ const Navbar = () => {
                         <i className="fa fa-code"></i>
                       </div>
                       <span className="dropdown__title">
-                        Programming and Automation
+                      IT Solutions
                       </span>
                       <ul className="dropdown__list">
                         <li>

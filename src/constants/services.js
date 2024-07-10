@@ -104,7 +104,7 @@ export const developmentServices = [
   },
 ];
 
-export const marketingMaintenanceServices = [
+export const SEOservices = [
   {
     image: SEO,
     title: "Search Engine Optmization (SEO)",
@@ -113,34 +113,91 @@ export const marketingMaintenanceServices = [
   },
   {
     image: marketing,
-    title: "Social Media Marketing",
+    title: "Webiste Speed Optimization",
     description:
       "Immerse your brand in a captivating online experience with our Web Design and Development services. We transform ideas into visually stunning and functionally seamless websites, ensuring a strong online foundation for your business success.",
   },
   {
     image: optimization,
-    title: "Website Optimization",
+    title: "Website Maintenance",
     description:
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
   },
 ];
 
-export const designServices = [
+export const Marketingservices = [
   {
     image: mantanance,
-    title: "Website Maintenance",
+    title: "Social Media Marketing",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
   {
     image: mobile,
-    title: "Mobile Apps",
+    title: "Google/Social Media Ads",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "Pay Per Click (PPC Management)",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "Event/Influencer Marketing",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "Marketing Audits and Consultations",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
   {
     image: showcase,
     title: "Graphic Design",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+];
+
+export const Programming = [
+  {
+    image: mantanance,
+    title: "Cloud Services(AWS/Azure)",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: mobile,
+    title: "AI and Machine Learning Implementation",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "Internet of Things(IoT) development",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "Data Analysis and Visualization",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "Agile Project Management",
+    description:
+      "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
+  },
+  {
+    image: showcase,
+    title: "DevOps Consulting and Implementation",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
