@@ -4,6 +4,7 @@ import Button from "../genericButton/genButton";
 import GeometricShape from "../geometricShape/geometricShape";
 import { useLocation } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const QuotePage = () => {
   const location = useLocation();
@@ -16,17 +17,20 @@ const QuotePage = () => {
     phone: '',
     company: '',
     service: queryParams.get('service') || '',
-    package: queryParams.get('package') || '',
+    packageName: queryParams.get('package') || '',
     description: '',
-    budget: '',
+    budget: queryParams.get('price') || '',
   });
 
   const [messageSent, setMessageSent] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [displayError, setDisplayError] = useState('');
+  const [loading, setLoading] = useState(false);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setDisplayError(''); 
   };
 
   const validateForm = (isFinalStep = false) => {
@@ -36,8 +40,8 @@ const QuotePage = () => {
     if (!formData.phone) errors.phone = "Phone number is required.";
     if (isFinalStep && !formData.service) errors.service = "Service is required.";
     if (isFinalStep && !formData.description) errors.description = "Description is required.";
-    if (isFinalStep && formData.package === '') {
-      errors.package = "Please select a valid package.";
+    if (isFinalStep && formData.packageName === '') {
+      errors.packageName = "Please select a valid package.";
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -58,26 +62,38 @@ const QuotePage = () => {
       setDisplayError('Please correct the errors in the form before submitting.');
       return;
     }
-
+  
+    setLoading(true);  // Set loading to true when starting the API call
+  
     // EmailJS parameters
     const serviceID = 'service_b4fgmrr';
     const templateID = 'template_k1hs0xo';
     const userID = '4D1bxGA9qoTgEfDUo';
-
+  
     emailjs.send(serviceID, templateID, formData, userID)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        setLoading(false);  // Set loading to false when API call is successful
+        setDisplayError(''); // Reset the error message
         setMessageSent(true);
       }, (error) => {
         console.log('FAILED...', error);
+        setLoading(false);  // Set loading to false when API call fails
       });
   };
+  
 
   useEffect(() => {
     if (queryParams.get('package')) {
       setFormData(prevState => ({
         ...prevState,
-        package: queryParams.get('package')
+        packageName: queryParams.get('package')
+      }));
+    }
+    if (queryParams.get('service')) {
+      setFormData(prevState => ({
+        ...prevState,
+        service: queryParams.get('service')
       }));
     }
   }, [queryParams]);
@@ -209,28 +225,27 @@ const QuotePage = () => {
               <div className="form-section">
                 <label>
                   Select Service:
-                  <select name="service" value={formData.service} onChange={handleChange} required>
-                    <option value="" disabled>Select a service</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="seo">SEO</option>
-                    <option value="digital-marketing">Digital Marketing</option>
-                    <option value="programming">Programming</option>
-                    <option value="automation">Automation</option>
+                  <select name="service" value={formData.service} onChange={handleChange}>
+                    <option value="">{queryParams.get('service') ? queryParams.get('service') : 'Select Service</option'} </option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="SEO">SEO</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Programming and Automation">Programming and Automation</option>
                   </select>
                   {formErrors.service && <span className="error">{formErrors.service}</span>}
                 </label>
                 <label>
-                  Project Package (Optional):
-                  <select name="package" value={formData.package} onChange={handleChange}>
-                    <option value="" disabled>Select Package</option>
-                    <option value="basic">Basic</option>
-                    <option value="standard">Standard</option>
-                    <option value="premium">Premium</option>
+                  Select Package:
+                  <select name="packageName" value={formData.packageName} onChange={handleChange}>
+                    <option value="">{queryParams.get('package') ? queryParams.get('package') : 'Select Package'}</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Premium">Premium</option>
                   </select>
-                  {formErrors.package && <span className="error">{formErrors.package}</span>}
+                  {formErrors.packageName && <span className="error">{formErrors.packageName}</span>}
                 </label>
                 <label>
-                  Budget (Optional):
+                  Estimated Budget (Optional):
                   <input type="text" name="budget" value={formData.budget} onChange={handleChange} placeholder="What Is Your Estimated Monthly Budget For The Project?" />
                 </label>
                 <label>
@@ -239,10 +254,12 @@ const QuotePage = () => {
                   {formErrors.description && <span className="error">{formErrors.description}</span>}
                 </label>
               </div>
-              <Button text={"Submit"} width={"200px"} showArrow={true} onClick={handleSubmit} />
-              <div className="form-error-container">
+              <div>
+                {loading ? <CircularProgress /> : <Button text={"Submit"} width={"200px"} showArrow={true} onClick={handleSubmit} />}
+              </div>
+              <div>
               {displayError && <span className="error">{displayError}</span>}
-              {messageSent && <span className="success">Your message has been sent successfully!</span>}
+              {messageSent && <p className='success'>Message sent successfully. We will get back to you soon.</p>}
               </div>
             </form>
           </div>

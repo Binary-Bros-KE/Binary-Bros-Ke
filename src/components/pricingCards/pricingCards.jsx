@@ -40,6 +40,7 @@ const PricingCards = ({ Title, description, pricingCards, showHeader = true }) =
               to={"/quote"}
               service={Title}
               packageName={card.title}
+              price={card.price}
             />
           </div>
         ))}
