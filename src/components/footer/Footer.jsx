@@ -23,7 +23,7 @@ const Footer = () => {
                 <p>  Rooted in a commitment to excellence and driven by results, Binary Bros stands as a pillar of technological advancement, ready to empower and elevate businesses in the ever-evolving digital landscape.</p>
             </div>
             <div className="footer-socials">
-                Follow us on: <span>Facebook /</span><span>Twitter /</span><span>Instagram</span>
+                Follow us on: <span><a href="https://www.facebook.com/profile.php?id=61553668976790" target="_blank"> Facebook /</a></span><span> <a href="https://x.com/Binarybros_KE" target="_blank"> Twitter /</a></span><span> <a href="https://www.instagram.com/binary_bros.ke/" target="_blank"> Instagram</a></span>
             </div>
         </div>
 

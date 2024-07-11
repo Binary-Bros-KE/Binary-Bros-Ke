@@ -25,7 +25,12 @@ const ClientSliderComponent = (props) => {
     <div className="testimonial-card-container">
       <div className="testimonial-card-header">
         <span className='testimonial-card-header-stars'>
+          <div className="stars-count">
           {renderStars(stars)}
+          </div>
+          <div className="stars-text">
+          {`(${stars} stars)`}
+          </div>
         </span>
         <span className='testimonial-card-header-image'>
           <img src={quote} alt="" />

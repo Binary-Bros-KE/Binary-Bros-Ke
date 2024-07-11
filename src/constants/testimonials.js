@@ -1,57 +1,60 @@
-import testimonial1 from "/testimonial/testimonial-1.jpg";
-import testimonial2 from "/testimonial/testimonial-2.jpg";
-import testimonial3 from "/testimonial/testimonial-3.jpg";
-import testimonial4 from "/testimonial/testimonial-4.jpg";
-import testimonial5 from "/testimonial/testimonial-5.jpg";
+import testimonial1 from "/testimonial/arobisca.png";
+import testimonial2 from "/testimonial/ezzclean.png";
+import testimonial3 from "/testimonial/hoodluxe.png";
+import testimonial4 from "/testimonial/obareds.png";
+import testimonial5 from "/testimonial/risabu.png";
+import testimonial6 from "/testimonial/testimonial-4.png";
+import testimonial7 from "/testimonial/stonehill.png";
 
 export const clients = [
     {
-        name: "Wanjiku Mwangi",
-        position: "Small Business Owner",
+        name: "Arobisca",
+        position: "Arobisca Coffee Suppliers",
         image: testimonial1,
         stars: 5,
-        description: "Binary Bros transformed my business with their innovative solutions. Our online presence has never been stronger, and the customer support is top-notch. Highly recommend their services!",
+        description: "Binary Bros developed a professional e-commerce mobile application for us, revolutionizing the way we conduct business online. Their attention to detail and customer support are exceptional. Highly recommend their services!",
     },
     {
-        name: "James Omondi",
-        position: "Marketing Manager",
+        name: "EzzClean",
+        position: "Cleaning Services",
         image: testimonial2,
         stars: 4,
-        description: "Working with Binary Bros was a game-changer for our marketing strategies. Their expertise in SEO and digital marketing significantly boosted our website traffic and conversions.",
+        description: "Binary Bros has been instrumental in boosting our online presence through their expert SEO services. Our website traffic and conversions have seen a significant increase. Working with them has been a game-changer for our marketing strategies.",
     },
     {
-        name: "Aisha Ali",
-        position: "Entrepreneur",
+        name: "Edwin Achaka",
+        position: "HoodLuxe Designs Ltd",
         image: testimonial3,
         stars: 5,
-        description: "The team at Binary Bros is exceptional. They delivered a custom software solution that streamlined our operations and enhanced productivity. Their dedication to client satisfaction is unmatched.",
+        description: "The Binary Bros team delivered a comprehensive brand identity package including logo design, business cards, and letterheads. Their creativity and professionalism are unmatched, making our brand stand out.",
     },
     {
-        name: "Peter Njoroge",
-        position: "IT Consultant",
+        name: "Obareds Cleaning",
+        position: "Cleaning Services",
         image: testimonial4,
         stars: 4,
-        description: "Binary Bros provided us with an excellent web development service. Their attention to detail and understanding of our requirements resulted in a website that exceeded our expectations.",
+        description: "Binary Bros provided us with an excellent professional cleaning website. Their understanding of our needs and attention to detail resulted in a website that exceeded our expectations.",
     },
     {
-        name: "Grace Wambui",
-        position: "Freelance Designer",
+        name: "Risabu Investments",
+        position: "Print Shop",
         image: testimonial5,
         stars: 5,
-        description: "Collaborating with Binary Bros was a delightful experience. They understood my vision and delivered a stunning website that perfectly showcases my portfolio. I couldn’t be happier with the results.",
+        description: "Collaborating with Binary Bros was a delightful experience. They developed a professional e-commerce website that perfectly showcases our products and services. We couldn’t be happier with the results.",
     },
     {
-        name: "David Mutua",
-        position: "Startup Founder",
-        image: testimonial1,
+        name: "Stonehill Kenya Ltd",
+        position: "Industrial Solutions",
+        image: testimonial7,
         stars: 5,
-        description: "Binary Bros played a crucial role in the success of our startup. Their comprehensive digital marketing strategies and SEO services helped us gain visibility and attract our target audience effectively.",
+        description: "Binary Bros has played a crucial role in the success of our startup by managing our social media and website. Their comprehensive digital marketing strategies and SEO services have helped us gain visibility and attract our target audience effectively.",
     },
     {
         name: "Lucy Kamau",
-        position: "Restaurant Owner",
-        image: testimonial2,
+        position: "Professional Photographer",
+        image: testimonial6,
         stars: 4,
-        description: "Thanks to Binary Bros, our restaurant's online orders and reservations have significantly increased. Their user-friendly website design and excellent customer service made the entire process seamless.",
+        description: "Thanks to Binary Bros, I have a stunning portfolio website that showcases my work beautifully. Their user-friendly design and excellent customer service made the entire process seamless. My online orders and reservations have significantly increased.",
     },
 ];
+

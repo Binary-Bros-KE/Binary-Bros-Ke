@@ -209,10 +209,11 @@ a {
   transform: translateY(-50%);
   pointer-events: none;
   font-size: var(--h3-font-size);
+  transition: color .4s ease;
 }
 
-.quote-form-input:focus.icon{
-  color: var(--primary-color);
+.quote-form-input:focus ~ .icon {
+  color: var(--primary-color); /* Change to the desired color */
 }
 
 .textarea .quote-form-input ~ .quote-label {
@@ -223,26 +224,23 @@ a {
 .textarea .quote-form-input ~ .icon {
   top: 1.3rem;
   transform: none;
+  transition: color .4s ease;
 }
 
-.textarea .quote-form-input::placeholder {
-  transform: translateY(-150%);
-}
-
-.textarea input {
+.textarea textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 .quote-form-input:focus + .quote-label {
   opacity: 1;
   color: var(--primary-color);
-  /* top: 1rem; */
   transform: translateX(.2rem) translateY(-140%);
 }
 
-.quote-form-input:focus + .icon {
-  color: red;
+.textarea .quote-form-input:focus ~ .icon {
+  color: var(--primary-color); /* Change to the desired color */
 }
 
 
@@ -284,6 +282,10 @@ a {
   opacity: 0;
   top: 0;
   left: 0;
+}
+
+.form-error-container {
+  width: 100%;
 }
 
 

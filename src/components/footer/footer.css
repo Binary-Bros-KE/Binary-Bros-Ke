@@ -277,6 +277,8 @@
 .newsletter .footer-input input {
   height: 3rem;
   padding: 10px 20px;
+  outline: none;
+  color: var(--text-color);
 }
 .newsletter .footer-input input::placeholder {
   color: var(--text-color);

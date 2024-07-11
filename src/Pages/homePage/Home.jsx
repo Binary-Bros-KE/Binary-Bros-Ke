@@ -7,10 +7,10 @@ import "slick-carousel/slick/slick-theme.css";
 import showcase from "/home/hero-banner.png";
 import graph from '/home/hero-span-graph.svg';
 import discount from "/home/Discount.png";
-import client1 from "/testimonial/testimonial-1.jpg";
-import client2 from "/testimonial/testimonial-3.jpg";
-import client3 from "/testimonial/testimonial-4.jpg";
-import client4 from "/testimonial/testimonial-5.jpg";
+import client1 from "/testimonial/testimonial-1.png";
+import client2 from "/testimonial/testimonial-3.png";
+import client3 from "/testimonial/testimonial-4.png";
+import client4 from "/testimonial/testimonial-5.png";
 import about from "/home/banner.png";
 import card from "/home/triangle.png";
 import mobile from "/mobile/banner-mob-app.png";
@@ -141,18 +141,18 @@ const Home = () => {
             <img src={about} alt="about-image" />
           </div>
           <div className="about-boxes">
-            <div className="box">
+            <a className="box" href="/services">
               <i className="fas fa-paint-brush"></i>Design
-            </div>
-            <div className="box">
+            </a>
+            <a className="box" href="/services">
               <i className="fa fa-code"></i>Development
-            </div>
-            <div className="box">
+            </a>
+            <a className="box" href="/services">
               <i className="fas fa-rocket"></i>Deployment
-            </div>
-            <div className="box">
+            </a>
+            <a className="box" href="/services">
               <i className="fas fa-chart-line"></i>Optimization
-            </div>
+            </a>
           </div>
           <div className="about-info">
             <h3>About us</h3>
@@ -174,7 +174,7 @@ const Home = () => {
             </p>
             <div className="about-button">
               <Button text={'Read More'} to={'/services'} showArrow={true} width={'150px'}/>
-              <Button text={'Get a Professional Website Today'} to={'/'} showArrow={true} width={'330px'}/>
+              <Button text={'Get a Professional Website Today'} to={'/pricing'} showArrow={true} width={'330px'}/>
             </div>
           </div>
         </div>
@@ -206,7 +206,7 @@ const Home = () => {
                 </div>
                 <div className="service-buttons">
                   <i className="fa fa-plus"></i>
-                  <a href="#">Read More</a>
+                  <a href={service.page}>Read More</a>
                 </div>
                 <div className="image">
                   <img src={card} />
@@ -247,8 +247,8 @@ const Home = () => {
               </p>
             </div>
             <div className="mobile-buttons">
-              <Button text={'Get Service'} to={'/'} showArrow={true} width={'150px'}/>
-              <Button text={'Learn More'} to={'/'} showArrow={true} width={'150px'}/>
+              <Button text={'Get Service'} to={'/pricing#MobileApplications'} showArrow={true} width={'150px'}/>
+              <Button text={'Learn More'} to={'/mobileapps'} showArrow={true} width={'150px'}/>
             </div>
           </div>
         </div>
@@ -277,8 +277,8 @@ const Home = () => {
               </p>
             </div>
             <div className="wordpress-buttons">
-              <Button text={'Get Service'} to={'/'} showArrow={true} width={'150px'}/>
-              <Button text={'Learn More'} to={'/'} showArrow={true} width={'150px'}/>
+              <Button text={'Get Service'} to={'/pricing'} showArrow={true} width={'150px'}/>
+              <Button text={'Learn More'} to={'/wordpress'} showArrow={true} width={'150px'}/>
             </div>
           </div>
           <div className="wordpress-image">

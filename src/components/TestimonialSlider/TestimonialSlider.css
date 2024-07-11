@@ -80,6 +80,16 @@
     display: flex;
     color: var(--primary-color);
     font-size: 1.5rem;
+    place-items: center;
+    gap: .5rem;
+}
+
+.stars-count {
+    display: flex;
+}
+
+.stars-text {
+    font-size: 14px;
 }
 
 .testimonial-card-body {
