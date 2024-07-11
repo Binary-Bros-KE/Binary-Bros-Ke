@@ -129,7 +129,7 @@
   .services-nav-button {
     grid-column: 1 / span 3;
     background-color: transparent;
-    border: 2px solid rgba(128, 128, 128, .2);
+    border: 2px solid rgba(128, 128, 128, .5);
     width: max-content;
     padding: .5rem 1rem;
     display: flex;

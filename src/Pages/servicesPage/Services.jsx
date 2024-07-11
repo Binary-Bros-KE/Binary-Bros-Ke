@@ -2,7 +2,6 @@ import { developmentServices, SEOservices, Marketingservices, Programming,} from
 import "./services.css";
 import WhyCards from "../../components/chooseUsCards/WhyCards";
 import { motion } from "framer-motion";
-import Contact from "../../components/mainContactForm/ContactForm"
 import Button from "../../components/genericButton/genButton";
 import QuotePage from "../../components/quote/quoteForm";
 
@@ -45,14 +44,15 @@ const Services = () => {
         })}
       </div>
 
+
+      <div className="service-page-cards" id="seo">
+        
       <div className="services-nav-button">
           <a href="#development">Development</a>
           <a href="#seo"  className="active-button">SEO</a>
           <a href="#Design">Marketing</a>
           <a href="#Programming">IT Solutions</a>
         </div>
-
-      <div className="service-page-cards" id="seo">
         {SEOservices.map((service, index) => {
           return (
             <div className="service-page-card" key={index}>
@@ -78,14 +78,15 @@ const Services = () => {
         })}
       </div>
 
+
+      <div className="service-page-cards" id="Design">
+        
       <div className="services-nav-button">
           <a href="#development">Development</a>
           <a href="#seo">SEO</a>
           <a href="#Design"   className="active-button">Marketing</a>
           <a href="#Programming">IT Solutions</a>
         </div>
-
-      <div className="service-page-cards" id="Design">
         {Marketingservices.map((service, index) => {
           return (
             <div className="service-page-card" key={index}>
@@ -111,14 +112,15 @@ const Services = () => {
         })}
       </div>
 
+
+
+      <div className="service-page-cards" id="Programming">
       <div className="services-nav-button">
           <a href="#development">Development</a>
           <a href="#seo">SEO</a>
           <a href="#Design">Marketing</a>
           <a href="#Programming" className="active-button">IT Solutions</a>
         </div>
-
-      <div className="service-page-cards" id="Programming">
         {Programming.map((service, index) => {
           return (
             <div className="service-page-card" key={index}>

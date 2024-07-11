@@ -1,5 +1,6 @@
 import showcase from "/home/web-development.png";
 import commerce from "/services/servics-page/e-commerce.png";
+import systems from "/services/servics-page/systems.png";
 import SEO from "/services/servics-page/seo.png";
 import wordpress from "/wordpress/wordpress.png";
 import marketing from "/services/servics-page/marketing.png";
@@ -73,19 +74,19 @@ export const developmentServices = [
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
   {
-    image: commerce,
+    image: mobile,
     title: "Mobile Applications",
     description:
       "Immerse your brand in a captivating online experience with our Web Design and Development services. We transform ideas into visually stunning and functionally seamless websites, ensuring a strong online foundation for your business success.",
   },
   {
-    image: wordpress,
+    image: commerce,
     title: "E-commerce Solutions",
     description:
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
   },
   {
-    image: wordpress,
+    image: systems,
     title: "Management Systems",
     description:
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
