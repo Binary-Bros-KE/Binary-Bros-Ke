@@ -1,5 +1,7 @@
 import showcase from "/home/web-development.png";
 import commerce from "/services/servics-page/e-commerce.png";
+import testing from "/services/servics-page/testing.png";
+import web_dev from "/services/servics-page/web_dev.png";
 import systems from "/services/servics-page/systems.png";
 import SEO from "/services/servics-page/seo.png";
 import wordpress from "/wordpress/wordpress.png";
@@ -7,6 +9,8 @@ import marketing from "/services/servics-page/marketing.png";
 import optimization from "/services/servics-page/optimization.png";
 import mantanance from "/services/servics-page/mantanance.png";
 import mobile from "/services/servics-page/mobile.png";
+import ads from "/services/servics-page/ads.png";
+import ppc from "/services/servics-page/ppc.png";
 
 export const coreServices = [
   {
@@ -77,8 +81,8 @@ export const coreServices = [
 
 export const developmentServices = [
   {
-    image: showcase,
-    title: "Web Development",
+    image: web_dev,
+    title: "Web Design & Development",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
@@ -107,7 +111,7 @@ export const developmentServices = [
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
   },
   {
-    image: wordpress,
+    image: testing,
     title: "Software Testing and Quality Assurance",
     description:
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
@@ -122,13 +126,13 @@ export const SEOservices = [
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
   {
-    image: marketing,
+    image: optimization,
     title: "Webiste Speed Optimization",
     description:
       "Immerse your brand in a captivating online experience with our Web Design and Development services. We transform ideas into visually stunning and functionally seamless websites, ensuring a strong online foundation for your business success.",
   },
   {
-    image: optimization,
+    image: mantanance,
     title: "Website Maintenance",
     description:
       "Elevate your brand's reach and impact through our Digital Marketing solutions. From targeted campaigns to comprehensive strategies, we empower your business to thrive in the digital landscape. Maximize your online potential with Binary Bros at the forefront of digital marketing innovation.",
@@ -137,19 +141,19 @@ export const SEOservices = [
 
 export const Marketingservices = [
   {
-    image: mantanance,
+    image: marketing,
     title: "Social Media Marketing",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
   {
-    image: mobile,
+    image: ads,
     title: "Google/Social Media Ads",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",
   },
   {
-    image: showcase,
+    image: ppc,
     title: "Pay Per Click (PPC Management)",
     description:
       "Enhance your online visibility with our SEO expertise. Our strategic approach ensures your brand stands out, driving increased traffic and engagement. Unlock the full potential of your digital presence with Binary Bros.",

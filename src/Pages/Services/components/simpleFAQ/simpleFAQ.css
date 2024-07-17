@@ -1,0 +1,89 @@
+/*============== Frequently asked Questions Section =============*/
+.FAQs {
+    margin: 2rem 0;
+  }
+  .FAQs-header {
+    margin-bottom: 1rem;
+  }
+  .FAQs-FAQs {
+    padding-top: 2rem;
+  }
+  .FAQs-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    place-items: center;
+    margin: 1rem 0;
+  }
+  .FAQ-item {
+    background-color: whitesmoke;
+    min-height: 20px;
+    width: 100%;
+    border: 1px solid var(--second-color);
+  }
+  .FAQ-question {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: .5rem 1rem;
+  }
+  .FAQ-question i {
+    color: var(--second-color);
+  }
+  .FAQ-answer {
+    background-color: #ffffffad;
+    padding: .5rem 1rem;
+  } 
+
+
+  @media only screen and (max-width: 640px) {
+    /*============== Frequently asked Questions Section =============*/
+    .FAQs-header h2 {
+      font-size: 30px;
+    }
+  
+    .FAQs-content {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+  
+    .FAQs-text {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+  
+    .seo-pricing {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+    .FAQs-header h2 {
+      font-size: 30px;
+      margin-top: 2rem;
+    }
+}
+
+
+
+/*================================ RESPONSIVE ===========================*/
+@media only screen and (min-width: 640px) and (max-width: 1150px) {
+    .FAQs-header h2 {
+      font-size: 30px;
+    }
+  
+  
+    .FAQs-text {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+    }
+  
+    .FAQs-header h2 {
+      font-size: 30px;
+      margin-top: 2rem;
+    }
+  
+  }

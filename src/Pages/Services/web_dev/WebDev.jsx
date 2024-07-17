@@ -8,6 +8,8 @@ import BasicInfo from "../components/basic_info_header/BasicInfo.jsx";
 import GenericReasons from "../components/generic_reasons/GenericReasons.jsx";
 import GenericList from "../components/genList/GenericList.jsx";
 import WorkWithUs from "../components/work_with_us/WorkWithUs.jsx";
+import TypicalHeader from "../components/typicalHeader/typicalHeader.jsx";
+import QuotePage from "../../../components/quote/quoteForm.jsx";
 
 const WebDev = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -77,12 +79,11 @@ const WebDev = () => {
 
        <GenericList />
 
-        <div className="web-dev">
-            <div className="stratergy-header">
-              <h3>Affordabe Pricing</h3>
-               <h2>Our <span>Packages</span> and <span>Pricing</span></h2>
-            </div>
+        <div className="service-pricing-cards">
+        <TypicalHeader Title={"Our <span>Packages</span> and <span>Pricing</span>"} subTitle={"Affordable Pricing"}/>
+            <div className="service-pricing-cards-cards">
            <WebDevelopmentPricingSection showHeader={false}/>
+           </div>
         </div>
 
 
@@ -96,7 +97,7 @@ const WebDev = () => {
 
 
       </div>
-   </div>
+        </div>
 
         <div className={`seo-home-right ${isSticky ? 'sticky' : ''}`}>
           <div className="page-links">
@@ -156,6 +157,13 @@ const WebDev = () => {
         </div>
         
       </div>
+
+      {/*==================================== CONTACT ============================================*/}
+      <section className="contact" id="quote">
+        <div className="contact">
+          <QuotePage />
+        </div>
+      </section>
     </motion.section>
   )
 }

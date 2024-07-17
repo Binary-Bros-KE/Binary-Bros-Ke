@@ -1,12 +1,10 @@
+import TypicalHeader from '../typicalHeader/typicalHeader';
 import './GenericReasons.css'
 
 
 const GenericReasons = ({ subTitle, Title, reasonsLeft, reasonsRight }) => (
     <div className="seo-reasons">
-      <div className="reasons-header">
-        <h3>{subTitle}</h3>
-        <h2 dangerouslySetInnerHTML={{ __html: Title }}></h2>
-      </div>
+      <TypicalHeader Title={Title} subTitle={subTitle}/>
       <div className="reasons-content">
         <div className="left-div">
           {reasonsRight.map((reason, index) => (

@@ -1,0 +1,51 @@
+:root {
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: #0084C8;
+    --second-color: #4D4BB8;
+    --black-color: #0e232eff;
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+}
+
+
+.typicalSectionHeader h3{
+    font-size: 20px;
+    color: var(--second-color);
+    position: relative;
+    width: max-content;
+  }
+  .typicalSectionHeader h3::before{
+    content: '';
+    height: 4px;
+    width: 20px;
+    background: linear-gradient(-45deg, var(--second-color), var(--first-color));
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateX(-30px);
+  }
+
+  .typicalSectionHeader h1 {
+    font-size: 40px;
+  }
+  .typicalSectionHeader h1 span {
+    color: var(--first-color);
+  }
+
+  @media screen and (max-width: 760px) {
+    .typicalSectionHeader h3 {
+      transform: translateX(1rem);
+  }
+
+  .typicalSectionHeader h1{
+    font-size: 40px;
+    line-height: 50px;
+    margin: 0 .5rem;
+  }
+  }

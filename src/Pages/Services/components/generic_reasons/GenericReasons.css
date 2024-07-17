@@ -1,30 +1,54 @@
+   /*=================================== REASONS CONTAINER FORMATTING ===========================*/
+  .reasons-header h3{
+    font-size: 18px;
+    color: var(--primary-color);
+    position: relative;
+    width: max-content;
+  }
+  .reasons-header h3::before{
+    content: '';
+    height: 4px;
+    width: 20px;
+    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
+    position: absolute;
+    left: 0;
+    top: 45%;
+    transform: translateX(-30px);
+  }
+
+  .reasons-content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+ 
  .seo-reasons{
     margin-top: 4rem;
   }
 
-  .seo-reasons h2 {
+  .single-seo-reasons h2 {
     font-size: 40px;
   }
 
-  .seo-reasons h2 span {
+  .single-seo-reason h2 span {
     color: var(--primary-color);
   }
 
-  .seo-reasons h1 {
+  .single-seo-reason h1 {
     font-size: 20px;
     margin-bottom: .25rem;
   }
-  .seo-reasons h1 i {
+  .single-seo-reason h1 i {
     background: linear-gradient(var(--secondary-color), var(--primary-color));
     color: var(--white-color);
-    border-radius: 50%;
   }
   .seo-reasons p {
     margin-left: 2rem;
     font-size: 14px;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 760px) {
    /*=================================== REASONS CONTAINER FORMATTING ===========================*/
    .reasons-header h3{
     transform: translateX(1rem);
@@ -42,7 +66,7 @@
   }
   }
 
-  @media only screen and (min-width: 640px) and (max-width: 1150px) {
+  @media only screen and (min-width: 760px) and (max-width: 1150px) {
   .reasons-header h2{
     font-size: 30px;
   }

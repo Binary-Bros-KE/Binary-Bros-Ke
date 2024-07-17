@@ -11,6 +11,7 @@ import GenericReasons from "../components/generic_reasons/GenericReasons.jsx";
 import StrategyComponent from "../components/StrategyComponent/StrategyComponent.jsx";
 import WorkWithUs from "../components/work_with_us/WorkWithUs.jsx";
 import SeoPricingSection from "../../../components/pricingCards/seo/SeoPricingSection.jsx";
+import TypicalHeader from "../components/typicalHeader/typicalHeader.jsx";
 
 const SEO = () => {
 
@@ -56,7 +57,7 @@ const SEO = () => {
           </div>
         </div>
 
-    <div className="seo-home-left">
+        <div className="seo-home-left">
 
           <BasicInfo 
           subTitle1={"Binary Bros SEO Services"}
@@ -91,12 +92,11 @@ const SEO = () => {
           </div>
 
 
-        <div className="seo-pricing">
-            <div className="stratergy-header">
-              <h3>Affordable Pricing</h3>
-               <h2>Our <span>Packages</span> and <span>Pricing</span></h2>
-            </div>
+        <div className="service-pricing-cards">
+          <TypicalHeader Title={"Our <span>Packages</span> and <span>Pricing</span>"} subTitle={"Affordable Pricing"}/>
+            <div className="service-pricing-cards-cards">
             <SeoPricingSection showHeader={false}/>
+            </div>
         </div>
 
         <div className="work-with-BB-SEO">
@@ -107,7 +107,7 @@ const SEO = () => {
           />
         </div>
 
-   </div>
+        </div>
 
         <div className={`seo-home-right ${isSticky ? 'sticky' : ''}`}>
           <div className="page-links">

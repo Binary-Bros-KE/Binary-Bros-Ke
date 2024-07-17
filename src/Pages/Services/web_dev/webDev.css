@@ -189,27 +189,7 @@
     flex-direction: column;
     row-gap: 1rem;
   }
-  .seo-reasons{
-    margin-top: 4rem;
-  }
-
-  .seo-reasons h2 {
-    font-size: 40px;
-  }
-
-  .seo-reasons h2 span {
-    color: var(--primary-color);
-  }
-
-  .seo-reasons h1 {
-    font-size: 20px;
-    margin-bottom: .25rem;
-  }
- 
-  .seo-reasons p {
-    margin-left: 2rem;
-    font-size: 14px;
-  }
+  
 
   .stratergy-stratergy {
     padding-top: 2rem;

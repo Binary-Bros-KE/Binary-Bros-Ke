@@ -148,37 +148,25 @@
     color: var(--white-color);
   }
 
+  .service-pricing-cards-cards{
+    transform: translateY(-3rem);
+  }
+
+/*================================ RESPONSIVE ===========================*/
+@media only screen and (max-width: 640px) {
+  .service-pricing-cards-cards{
+    transform: translateY(-1rem);
+  }
+
+}
+
+
 
   /*============================ SEO HOME FORMATTING ==============================*/
   .seo-home-left {
     padding: 4rem 1rem 2rem 4rem;
   }
 
-
-  /*=================================== REASONS CONTAINER FORMATTING ===========================*/
-  .reasons-header h3{
-    font-size: 18px;
-    color: var(--primary-color);
-    position: relative;
-    width: max-content;
-  }
-  .reasons-header h3::before{
-    content: '';
-    height: 4px;
-    width: 20px;
-    background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color));
-    position: absolute;
-    left: 0;
-    top: 45%;
-    transform: translateX(-30px);
-  }
-
-  .reasons-content {
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
 
   .left-div,
   .right-div {

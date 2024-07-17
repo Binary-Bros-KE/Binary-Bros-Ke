@@ -1,0 +1,108 @@
+.market-insight-section{
+  margin: 2rem 0;
+}
+
+
+.chart-section {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .chart-description {
+    font-size: 17px;
+    flex: 1;
+    padding: 0;
+  }
+  
+  .chart-description h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .chart-description p {
+    margin-bottom: 20px;
+  }
+  
+  .chart-description ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chart-description li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .whatsapp {
+    background-color: #FF6384;
+  }
+  
+  .facebook {
+    background-color: #36A2EB;
+  }
+  
+  .instagram {
+    background-color: #FFCE56;
+  }
+  
+  .twitter {
+    background-color: #66ff00;
+  }
+  
+  .tiktok {
+    background-color: #4BC0C0;
+  }
+  
+  .youtube {
+    background-color: #9966FF;
+  }
+  
+  .chart-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chart-container canvas {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .chart-section {
+      flex-direction: column;
+      margin: .5rem 0;
+    }
+
+    .chart-description p {
+    padding-left: 1rem;
+    text-align: justify;
+    }
+
+    .chart-description ul {
+      margin-left: 1rem;
+    }
+
+    .chart-container canvas{
+      display: flex;
+    }
+
+    element.style{
+      height: 500px;
+    }
+  }

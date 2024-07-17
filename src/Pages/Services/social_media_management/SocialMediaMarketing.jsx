@@ -1,21 +1,22 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "./SocialMediaMarketing.css";
 
-import seoTypes from "/marketing/marketing-reality.png";
-import BBbanner from "/marketing/BB-banner.jpg";
-import { MarketingHelpLeft, MarketingHelpRight, Tags, socialMediaFAQ} from "../../../constants/Marketing.js";
+import socials3D from "/marketing/socials-3d.png";
+import { SocialMediaMarketingLeft, SocialMediaMarketingRight, Tags, socialMediaFAQ} from "../../../constants/SocialMediaMarketing.js";
 import { useState, useEffect } from "react";
 import WebDevelopmentPricingSection from "../../../components/pricingCards/webistedevelopment/WebDevelopmentPricingSection.jsx";
 import QuotePage from "../../../components/quote/quoteForm.jsx";
 import BasicInfo from "../components/basic_info_header/BasicInfo.jsx";
+import SocialMediaUsage from "../components/piChartComponent/socialMediaUsage.jsx";
+import GenericReasons from "../components/generic_reasons/GenericReasons.jsx";
+import SocialMediaPlatforms from "../components/socialPatforms/SocialPatforms.jsx";
+import SimpleFAQ from "../components/simpleFAQ/SimpleFAQ.jsx";
+import TypicalHeader from "../components/typicalHeader/typicalHeader.jsx";
+import SocialMediaMarketingSection from "../../../components/pricingCards/socialmediamarketing/SocialMediaMarketingSection.jsx";
+import ChooseUsCards from "../components/chooseUsCards/ChooseUsCards.jsx";
 
 const SocialMediaMarketing = () => {
-  //Frequently Asked Questions
-  const [activeQuestion, setActiveQuestion] = useState(null);
 
-  const toggleQuestion = (index) => {
-    setActiveQuestion(activeQuestion === index ? null : index);
-  };
 
   
   // Sticky Right Section
@@ -63,217 +64,48 @@ const SocialMediaMarketing = () => {
       {/*================== Main left contenet ====================*/}
       
       <div className="seo-home-left">
-      <BasicInfo 
-          subTitle1={"Binary Bros Marketing Services"}
+        {/*================ Basic Info introduction ===============*/}
+          <BasicInfo 
+            subTitle1={"Binary Bros Marketing Services"}
           mainTitle={"<span>Expose Your Brand</span> To The World Through Social Media Marketing"}
-          subTitle2={"Why You Need A Website"}
-          description={"In today's digital age, a website is more than an online presence; it's a <span> powerful tool for establishing credibility, reaching a broader audience, and staying competitive.</span> A well-designed website provides a centralized platform for showcasing your products, services, or ideas. It enhances your brand's visibility, builds trust with potential customers, and opens up new opportunities. Whether you're a business, professional, or creative individual, having a website is crucial for staying relevant and accessible in the modern online landscape."}
-          button1={"Get A Website"}
+          subTitle2={"What is Social Media Marketing?"}
+          description={"Social media marketing involves using platforms like Facebook, Instagram, and LinkedIn to promote your business and connect with your audience. It works by creating and sharing content tailored to your target demographic, engaging with followers, and running targeted advertising campaigns. This approach can help you <span>increase brand awareness</span>, <span>drive website traffic</span>, and <span>boost sales</span>. Effective social media marketing helps establish your brand’s online presence, fosters customer loyalty, and provides valuable insights into your audience’s preferences and behaviors."}
+          button1={"Request Quote"}
           button1To={"#quote"}
           button2={"Our Portfolio"}
           button2To={"/portfolio"}
-          basicInfoImage={seoTypes}
+            basicInfoImage={socials3D}
           />
 
-          <div className="left-container">
-            <div className="seo-home-info">
-              <div className="head-text">
-                <h1>Binary Bros Marketing Services</h1>
-              </div>
-              <div className="first-text">
-                <h1>
-                <span>Expose Your Brand</span> To The World Through Social Media Marketing
-                </h1>
-              </div>
-              <div className="seo-paragraph">
-                <h2>What is SEO.?</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Optio, voluptates. Dolorum, sint id dolore voluptatem ipsa
-                  inventore maiores quos non, accusantium laboriosam facere est
-                  laudantium? Tenetur veniam dignissimos tempore repellendus!
-                </p>
-              </div>
-              <div className="seo-home-buttons">
-                <a href="#">Hire Us</a>
-                <a href="#">See Pricing</a>
-              </div>
-            </div>
-            <div className="seo-home-image">
-              <img src={seoTypes} alt="Search Engine Optimization" />
-            </div>
+          {/*================== Market Insights Section ==============*/}
+          <div className="statistics-section">
+              <SocialMediaUsage />
           </div>
 
           {/*================== How we can help Section ================*/}
-          <div className="seo-reasons">
+          <GenericReasons 
+            subTitle={"Our Marketing Stratergies"}
+            Title={"<span>Here's</span> How We Can Help!"}
+            reasonsLeft={SocialMediaMarketingRight}
+            reasonsRight={SocialMediaMarketingLeft}
+          />
 
-            <div className="reasons-header">
-              <h2>
-                <span>Here's</span> How We Can Help.!
-              </h2>
-            </div>
-
-            <div className="reasons-content">
-
-              <div className="left-div">
-                {MarketingHelpRight.map((reason, index) => {
-                  return (
-                    <div className="single-seo-reason" key={index}>
-                      <h1>
-                        <i className="fas fa-check"></i> {reason.title}
-                      </h1>
-                      <p>{reason.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="right-div">
-                {MarketingHelpLeft.map((reason, index) => {
-                  return (
-                    <div className="single-seo-reason" key={index}>
-                      <h1>
-                        <i className="fas fa-check"></i> {reason.title}
-                      </h1>
-                      <p>{reason.description}</p>
-                    </div>
-                  );
-                })}
-              </div>
-
-
-          </div>
-          <div className="marketing-image">
-            <div className="call-to-action-text">
-              <h3>We Want to work with you</h3>
-              <h1>Ask Us <br/> Anything</h1>
-            </div>
-                <img src={BBbanner} alt="Digital marketing" />
-            <div className="call-to-action-form">
-              <form action="#">
-                <h1>Fill in Your Details</h1>
-                <div className="input-fields">
-                  <input type="text" placeholder="Your Name"/>
-                  <input type="text" placeholder="Phone Number"/>
-                  <input type="text" placeholder="Email Address"/>
-                  <input type="text" placeholder="Message"/>
-                </div>
-                <button>Submit</button>
-              </form>
-            </div>
-          </div>
-
+          {/*================ Social Media Platforms Section ===================*/}
+          <SocialMediaPlatforms />
 
          {/*=========================== FAQs Section ===================*/}
-         <div className="FAQs">
-            <div className="FAQs-header">
-              <h2>
-                Frequently Asked Questions - <span>FAQs</span>
-              </h2>
-            </div>
-            <div className="FAQs-content">
-              {socialMediaFAQ.map((question, index) => {
-                const isActive = activeQuestion === index;
-                return (
-                  <div className="FAQ-item" key={question.id}>
-                    <div className="FAQ-question" onClick={() => toggleQuestion(index)}>
-                      <h1>{question.question}</h1>
-                      <i className={`fa fa-${isActive ? 'minus' : 'plus'}`}></i>
-                    </div>
-                    <AnimatePresence>
-                      {isActive && (
-                        <motion.div 
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="FAQ-answer"
-                        >
-                          {question.answer}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-
-                  </div>
-                );
-              })}
-            </div>
-        </div>
-
+          <SimpleFAQ />
 
         {/*============================ Packages and Pricing Section =================*/}
             <div className="marketing-pricing">
-              <div className="marketing-header">
-                <h2>
-                  Our <span>Packages</span> and <span>Pricing</span>
-                </h2>
-              </div>
-              <WebDevelopmentPricingSection showHeader={false}/>
-            </div>
-
-
-        {/*=========================== Why Choose Us =======================*/}
-            <div className="choose">
-              <div className="choose-head">
-                <h3>The Binary Bros Team</h3>
-                <h1>
-                  Why Choose <span> Binary Bros </span> for SEO Services
-                </h1>
-              </div>
-
-              <div className="choose-cards">
-                <div className="choose-card-item">
-                  <div className="choose-item-icon">
-                    <i className="fas fa-user-tie"></i>{" "}
-                  </div>
-                  <div className="choose-item-info">
-                    Seasoned <br />
-                    Experts
-                  </div>
-                  <div className="choose-item-shadow">
-                    <p>Industry veterans with proven track records.</p>
-                  </div>
-                </div>
-
-                <div className="choose-card-item">
-                  <div className="choose-item-icon">
-                    <i className="fas fa-chart-line"></i> 
-                  </div>
-                  <div className="choose-item-info">
-                    Guaranteed <br /> Results
-                  </div>
-                  <div className="choose-item-shadow">
-                    <p>Drive tangible outcomes for your business.</p>
-                  </div>
-                </div>
-
-                <div className="choose-card-item">
-                  <div className="choose-item-icon">
-                    <i className="fas fa-comments"></i>{" "}
-                  </div>
-                  <div className="choose-item-info">
-                    Free <br />
-                    Consultation
-                  </div>
-                  <div className="choose-item-shadow">
-                    <p>Personalized advice tailored to your needs.</p>
-                  </div>
-                </div>
-
-                <div className="choose-card-item">
-                  <div className="choose-item-icon">
-                    <i className="fas fa-wallet"></i>
-                  </div>
-                  <div className="choose-item-info">
-                    Affordable <br />
-                     Packaging
-                  </div>
-                  <div className="choose-item-shadow">
-                    <p>High-quality services without breaking the bank.</p>
-                  </div>
-                </div>
+              <TypicalHeader Title={"Our <span>Packages</span> and <span>Pricing</span>"} subTitle={"Affordable Pricing"}/>
+              <div className="marketing-cards">
+                  <SocialMediaMarketingSection showHeader={false}/>
               </div>
             </div>
-          </div>
+
+
+            <ChooseUsCards />
         </div>
 
 
@@ -354,7 +186,7 @@ const SocialMediaMarketing = () => {
       </div>
 
       {/*==================================== CONTACT ============================================*/}
-      <section className="contact" id="contact">
+      <section className="contact" id="quote">
         <div className="contact">
           <QuotePage />
         </div>

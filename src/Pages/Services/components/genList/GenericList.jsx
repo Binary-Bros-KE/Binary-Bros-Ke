@@ -1,14 +1,12 @@
 import React from 'react'
 import showcase from "../../../../../public/home/web-development.png";
 import './GenricList.css'
+import TypicalHeader from '../typicalHeader/typicalHeader';
 
 const GenericList = () => {
   return (
         <div className="generic-list-wrapper">
-              <div className="generic-list-header">
-                <h3>Our Approach</h3>
-                <h2><span>Webiste </span>Specific To Your Brand</h2>
-              </div>
+          <TypicalHeader Title={"<span>Webiste </span>Specific To Your Brand"} subTitle={"Our Approach"}/>
               <div className="generic-list-content">
                 <div className="generic-list-image">
                   <img src={showcase} alt="" />
