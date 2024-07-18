@@ -9,7 +9,7 @@ const Button = ({ to, text, showArrow, width, onClick }) => {
   return (
     <div className="button-container" style={style}>
       <a href={to} className="button" onClick={onClick}>
-        <span>{text}</span>
+        <span dangerouslySetInnerHTML={{ __html: text }}></span>
         {showArrow && <i className="fas fa-long-arrow-alt-right"></i>}
       </a>
     </div>

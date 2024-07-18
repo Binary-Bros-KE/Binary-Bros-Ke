@@ -23,25 +23,21 @@
     justify-content: space-between;
     top: 0;
     right: 0;
-    max-width: 200px;
+    max-width: 250px;
     min-height: 200px;
     transform: translateY(150%) translateX(100%);
-    background-color: var(--black-color);
+    background-color: rgb(223, 221, 221);
     color: var(--white-color);
     padding: 10px;
     opacity: 0;
-    border-radius: 10px;
     z-index: 999;
     transition: all 0.4s ease-in-out;
-  }
-  .notication-div span {
-    color: aqua;
-    font-weight: var(--font-semi-bold);
+    border: 1px solid var(--primary-color);
   }
   
   .notication-div.visible-div {
     opacity: 1;
-    transform: translateY(150%) translateX(-45%);
+    transform: translateY(150%) translateX(-30%);
   }
   .notication-div p {
     font-size: 20px;
@@ -54,5 +50,6 @@
     right: -1rem;
     transform: rotate(-45deg);
     border-radius: 0;
-    background-color: var(--black-color);
+    background-color: rgb(223, 221, 221);
+    z-index: -999;
   }
