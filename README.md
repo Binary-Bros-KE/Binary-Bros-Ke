@@ -44,7 +44,7 @@ To run the portfolio website locally, follow these steps:
 
    npm run dev
 
-5. Open your browser and visit `http://localhost:3000` to see the portfolio website.
+5. Open your browser and visit `https://ongaga-blenick.netlify.app/` to see the portfolio website.
 
 Deployment
 
