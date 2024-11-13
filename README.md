@@ -30,7 +30,7 @@ To run the portfolio website locally, follow these steps:
 
 1. Clone the repository:
 
-   git clone https://github.com/[your-username]/[your-portfolio-repo].git
+   git clone https://github.com/Binary-Bros-KE/Binary-Bros-Ke/tree/main
    
 2. Navigate to the project directory:
    
