@@ -7,15 +7,21 @@ This is my personal portfolio website, built using React, Vite, and Tailwind CSS
 Features
 
 . Interactive and Responsive Design: The portfolio is designed to be visually appealing and responsive, providing an optimal user experience across different devices.
+
 . Project Showcase: Highlights some of my key projects, including descriptions, technologies used, and live demos or code repositories.
+
 . About Me Section: Provides an introduction and background information about myself, my skills, and my professional journey.
+
 . Contact Form: Allows visitors to reach out to me directly through a contact form integrated into the website.
 
 Technologies Used
 
 . React: A JavaScript library for building user interfaces.
+
 . Vite: A fast and opinionated build tool that provides a modern development experience for React projects.
+
 . Tailwind CSS: A utility-first CSS framework that enables rapid UI development by providing a set of pre-defined classes.
+
 . Other libraries/frameworks used: e.g., React Router, Axios, etc.
 
 Setup and Installation
