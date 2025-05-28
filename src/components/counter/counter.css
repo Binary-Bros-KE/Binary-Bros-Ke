@@ -19,7 +19,7 @@
 }
 /*============================== COUNTER FORMATTING===========================*/
 .counter {
-    margin: 2rem;
+    margin-block: 2rem;
     display: flex;
     flex-direction: column;
   }

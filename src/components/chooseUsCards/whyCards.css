@@ -18,7 +18,8 @@
 }
 
 .card-section-wrapper{
-  padding: 2rem 3rem;
+  padding: 2rem 0;
+  margin: 2rem 0;
 }
 
 .why-cards-header h1{

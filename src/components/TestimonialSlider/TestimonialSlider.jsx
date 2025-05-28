@@ -66,7 +66,7 @@ const TestimonialSlider = () => {
       </div>
 
       <section className="testimonialSlider">
-        <Slider ref={arrowRef} {...settings}>{clientDiscription}</Slider>
+        <Slider className="w" ref={arrowRef} {...settings}>{clientDiscription}</Slider>
         <div className="testimonial-slider-buttons">
           <button onClick={() => arrowRef.current.slickPrev()}>
             <i className="fa fa-chevron-left"></i>

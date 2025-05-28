@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import WebDevelopmentPricingSection from "../../components/pricingCards/webistedevelopment/WebDevelopmentPricingSection";
 import SeoPricingSection from "../../components/pricingCards/seo/SeoPricingSection";
@@ -12,35 +12,38 @@ const Pricing = () => {
     if (hash) {
       const element = document.getElementById(hash.substring(1));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, []);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container-section"
+    >
       <div className="text-lg pricing-container">
-
-        <div className="web_dev_cards" id='WebDevPricing'>
+        <div className="web_dev_cards" id="WebDevPricing">
           <WebDevelopmentPricingSection />
         </div>
 
-        <div className="web_dev_cards" id='SeoPricing'>
+        <div className="web_dev_cards" id="SeoPricing">
           <SeoPricingSection />
         </div>
 
-        <div className="web_dev_cards" id='MobileApplications'>
+        <div className="web_dev_cards" id="MobileApplications">
           <MobileAppsSection />
         </div>
-        
-        <div className="web_dev_cards" id='SocialMediaMarketing'>
+
+        <div className="web_dev_cards" id="SocialMediaMarketing">
           <SocialMediaMarketingSection />
         </div>
 
         <div className="web_dev_cards" id="BBPackages">
           <BBSpecialPackages />
         </div>
-
       </div>
     </motion.div>
   );

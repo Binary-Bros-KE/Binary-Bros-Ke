@@ -17,8 +17,8 @@
 
   /*=================== RECENT BLOGS FORMATTING =================*/
   .recentBlogs {
-    margin: 3rem 0;
-    padding: 0 2rem;
+    justify-content: center;
+    margin: 3rem 1rem;
   }
 
   .recentBlogs-header h1{
@@ -28,17 +28,27 @@
   .recentBlogs-header h3{
     color: var(--primary-color);
   }
+
   .recentBlogs-card-wrapper {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
     column-gap: 2rem;
+    gap: 2rem;
     padding: 2rem 0;
   }
 
+  @media screen and (max-width: 768px) {
+    .recentBlogs-card-wrapper {
+      padding: 2rem 0.5rem;
+    }
+  }
 
   .recent-blog-card-item {
     border: 2px solid rgba(14, 35, 46, 0.274);
     color: var(--white-color);
-    width: 400px;
+    max-width: 400px;
     padding: 1.5rem 1rem;
     box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.2);
   }

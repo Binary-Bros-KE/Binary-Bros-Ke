@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-        <AnimatedRoutes />
+      <AnimatedRoutes />
       <Notification />
       <ScrollToTop />
       <Footer />

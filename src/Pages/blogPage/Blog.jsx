@@ -4,7 +4,7 @@ import { blogPosts } from "../../constants/blogPosts"
 
 const Blog = () => {
   return (
-    <section className="blog">
+    <section className="blog container-section">
       <div className="blog-cards-wrapper">
         {blogPosts.map((blog, index) => {
           return(

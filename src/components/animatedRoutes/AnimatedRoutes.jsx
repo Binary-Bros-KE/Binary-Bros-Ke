@@ -43,7 +43,7 @@ const AnimatedRoutes = () => {
     const location = useLocation();
 
   return (
-  <AnimatePresence> 
+  <AnimatePresence>
     <Routes location={location} key={location.pathname}>
       {/*================== Essentials =======================*/} 
       <Route path='/' element={<Home />} />
@@ -84,7 +84,7 @@ const AnimatedRoutes = () => {
       <Route path='devOps' element={<DevOps />} />
 
        {/* 404 Not Found Route */}
-       <Route path='*' element={<NotFound />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
     </AnimatePresence> 
   )

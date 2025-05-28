@@ -11,15 +11,17 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <section className="quote-form-section" id="contact">
+      <section className="quote-form-section container-section" id="contact">
         <ContactForm />
       </section>
 
       <section className="Choose-Us-Cards">
-        <WhyCards />
+        <div className="container-section">
+          <WhyCards />
+        </div>
       </section>
 
-      <section className="contact-form-section" id="quote">
+      <section className="contact-form-section container-section" id="quote">
         <QuotePage />
       </section>
     </motion.div>

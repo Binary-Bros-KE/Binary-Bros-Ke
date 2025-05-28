@@ -47,7 +47,7 @@ const Clients = () => {
   
 
   return (
-    <section className="clients">
+    <section className="clients m-2">
         <div className="clients-header">
             <h3>Many Clients Who Trust Us</h3>
             <h1>Some of Our Clients</h1>

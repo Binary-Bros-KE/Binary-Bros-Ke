@@ -8,7 +8,7 @@ const Counter = () => {
 
   return (
     <>
-       <ScrollTrigger
+      <ScrollTrigger
         onEnter={() => setCounterOn(true)}
         onExit={() => setCounterOn(false)}
       >

@@ -44,7 +44,7 @@ const SocialMediaMarketing = () => {
     >
 
       {/*============= Page Home Banner ======================*/}
-      <div className="seo-home">
+      <div className="seo-home container-section">
         <div className="social-home-banner">
           <div className="banner-text">
             <div className="banner-text-header">

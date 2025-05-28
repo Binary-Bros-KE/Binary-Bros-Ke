@@ -99,7 +99,7 @@ const QuotePage = () => {
   }, [queryParams]);
 
   return (
-    <div className="quote-page">
+    <div className="quote-page container-section">
       <div className="quote-page-header">
         <h3>Get a Free Quote </h3>
         <h1>Request a Custom Quote<span>.</span></h1>

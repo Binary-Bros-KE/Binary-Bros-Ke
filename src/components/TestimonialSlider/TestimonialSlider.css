@@ -3,7 +3,6 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3.5rem;
-  
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
     --primary-color: #0084c8;
@@ -20,11 +19,12 @@
 
 .testimonial-slider{
     width: 100%;
-    padding: 2rem 1rem;
-    background-color: var(--primary-color);
+    padding: 2rem 0;
+    /* background-color: var(--primary-color); */
     position: relative;
     padding-bottom: 6rem;
 }
+
 .testimonialSlider{
     position: relative;
 }
@@ -39,24 +39,25 @@
     width: 100%;
     padding: 0 1rem;
     margin: 1rem 0;
-  }
-  
-  .testimonial-header h1{
+}
+
+.testimonial-header h1{
     font-size: 50px;
     color: white;
-  }
-  .testimonial-header h3{
-    color: white;
-  }
+}
 
-  @media screen and (max-width: 768px) {
+.testimonial-header h3{
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
     .testimonial-header h1{
         font-size: 30px;
-      }
-      .testimonial-shape{
+    }
+    .testimonial-shape{
         right: 5rem;
     }
-  }
+}
 
 .testimonial-card-container {
     background-color: white;

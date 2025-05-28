@@ -3,6 +3,7 @@
 
 /*============================ VARIABLES =========================*/
 :root {
+  /* --max-width: 1120px; */
   --header-height: 4rem;
 
   /*========== Colors ==========*/
@@ -49,7 +50,9 @@ a {
 /*==================== Info-Section FORMATTING =====================*/
 .navbar {
   position: fixed;
-  width: 100%;
+  max-width: 1633px;
+  /* width: 100%; */
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -57,8 +60,15 @@ a {
   overflow: hidden;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: var(--z-fixed);
+}
+
+@media screen and (min-width: 1634px) {
+  .navbar {
+    max-width: 1300px;
+  }
+  
 }
 
 .nav-socials {
@@ -76,7 +86,7 @@ a {
   background-color: white;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 769px) {
   .nav-socials {
     background-image: none;
     background-color: var(--primary-color);

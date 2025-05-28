@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={nav ? "navbar nav-height-test" : "navbar"}>
+      <div className={nav ? "navbar nav-height-test": "navbar"}>
         <div className="nav-socials">
           <div className="primary-info">
           <a href="mailto:binarybroske@gmail.com?subject=Hi,%20Service%20Inquiry">

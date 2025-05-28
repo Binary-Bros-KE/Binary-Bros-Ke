@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Button from '../genericButton/genButton';
-import "./sideNotifiation.css"
+import "./sideNotification.css"
 
 function Notification() {
   const [showDiv, setShowDiv] = useState(false);
