@@ -431,15 +431,24 @@ const Navbar = () => {
                             Us
                           </a>
                         </li>
-                        <li>
-                          <a className="dropdown__link" href="https://full-stack-web-developer-evans.netlify.app/" target="_blank">
+                        <li className="new__dropdown__link__icon relative">
+                          {/* <a className="dropdown__link" href="https://full-stack-web-developer-evans.netlify.app/" target="_blank">
                             <div className="dropdown__link__icon"></div> Our
                             Team
-                          </a>
+                          </a> */}
+                            <div className="text-[0.875rem] max-w-[1118px]:text-base font-medium transition-colors duration-300 relative max-[1118px]:py-4 pl-4 border-b-[1px] border-b-[#666666] hover:border-b-black min-[1118px]:border-b-0">
+                              <p className="text-[#666666] link-text">Our Team</p>
+                              <div className="flex flex-col pl-4">
+                                <a className="max-[1118px]:hover:text-[#000000] hover:text-[#0084c8] underline" href="https://full-stack-web-developer-evans.netlify.app/" target="_blank">Nyongesa Evans</a>
+                                <a className="pt-2 max-[1118px]:hover:text-[#000000] hover:text-[#0084c8] underline"href="https://ongaga-blenick.netlify.app/">Ongaga Blenick</a>
+                              </div>
+                            </div>
                         </li>
                         <li>
                           <a className="dropdown__link" href="/contact">
-                            <div className="dropdown__link__icon"></div> Support
+                            <div className="dropdown__link__icon">
+                            </div>
+                            Support
                           </a>
                         </li>
                         <li>
